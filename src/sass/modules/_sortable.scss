@@ -2,11 +2,9 @@
  ========================================================================== */
 
 .ui-sortable-helper {
-    -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
 }
 
 .ui-sortable-placeholder {
-    border: 1px dotted #114eb1;
+    border: 1px dotted $color-link;
 }
