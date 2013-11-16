@@ -1,3 +1,5 @@
 h1. Textpattern jQuery UI theme
 
+!https://travis-ci.org/textpattern/textpattern-jquery-ui-theme.png?branch=master!:https://travis-ci.org/textpattern/textpattern-jquery-ui-theme
+
 The jQuery UI theme used within the Textpattern CMS admin-side. *Currently under development.*
