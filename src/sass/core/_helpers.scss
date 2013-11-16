@@ -6,12 +6,30 @@
         
 @mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
     .no-svg & {
-        background-image: url('../img/' + $imgfilename + '.' + $imgtype);
+        background-image: url('images/' + $imgfilename + '.' + $imgtype);
         background-size: $imgwidth $imgheight;
     }
     .svg & {
-        background-image: url('../img/' + $imgfilename + '.svg');
+        background-image: url('images/' + $imgfilename + '.svg');
         background-size: $imgwidth $imgheight;
+    }
+}
+
+// higher resolution images for high resolution displays
+        
+@mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
+    $filename: $hdfile + '.' + $hdtype;
+    $hdfilename: $hdfile + '@2x.' + $hdtype;
+    background-image: url('images/' + $filename);
+    background-size: $hdwidth $hdheight;
+    @media print,
+        (-webkit-min-device-pixel-ratio: 2),
+        (min--moz-device-pixel-ratio: 2),
+        (-o-min-device-pixel-ratio: 2/1),
+        (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url('images/' + $hdfilename) !important;
     }
 }
 
