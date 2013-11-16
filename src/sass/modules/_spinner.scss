@@ -1,0 +1,43 @@
+/* Spinner - http://jqueryui.com/spinner/
+   ========================================================================== */
+
+.ui-spinner {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.ui-spinner .ui-spinner-input {
+    padding-right: 22px;
+}
+
+.ui-spinner-button {
+    position: absolute;
+    right: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 42%;
+    font-size: 0.5em;
+    overflow: hidden;
+    cursor: default;
+}
+
+/* vertical centre icon */
+.ui-spinner .ui-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -8px;
+}
+
+.ui-spinner-up {
+    top: 0;
+}
+
+.ui-spinner-down {
+    bottom: 0;
+}

@@ -1,0 +1,12 @@
+/* Tooltip - http://jqueryui.com/tooltip/
+   ========================================================================== */
+
+.ui-tooltip {
+    position: absolute;
+    z-index: 9999;
+    padding: 0.5em 1em;
+    max-width: 22em;
+    -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+}

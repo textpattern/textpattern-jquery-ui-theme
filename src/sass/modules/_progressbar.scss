@@ -1,0 +1,39 @@
+/* Progressbar - http://jqueryui.com/progressbar/
+   ========================================================================== */
+
+.ui-progressbar {
+    margin-bottom: 1em;
+    text-align: left;
+    overflow: hidden;
+}
+
+.ui-progressbar-value {
+    height: 16px;
+    background-color: #ffda44;
+    background-image: url("images/ui-progressbar.gif");
+}
+
+.ui-progressbar-indeterminate .ui-progressbar-value {
+    background-color: #f7f7f7;
+    background-image: url("images/ui-progressbar-indeterminate.gif");
+}
+
+@media print,
+    (-webkit-min-device-pixel-ratio: 2),
+    (min--moz-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+
+    .ui-progressbar-value.ui-widget-header {
+        background-image: url("images/ui-progressbar@2x.gif");
+        background-size: 16px 16px;
+    }
+
+    .ui-progressbar-indeterminate .ui-progressbar-value {
+        background-image: url("images/ui-progressbar-indeterminate@2x.gif");
+        background-size: 16px 16px;
+    }
+
+}

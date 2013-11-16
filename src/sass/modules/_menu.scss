@@ -1,0 +1,72 @@
+/* Menu - http://jqueryui.com/menu/
+   ========================================================================== */
+
+.ui-menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+}
+
+.ui-menu .ui-menu {
+    position: absolute;
+    margin-top: -3px;
+}
+
+.ui-menu .ui-menu-item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* support: IE10, see #8844 */
+    list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+
+.ui-menu .ui-menu-divider {
+    margin: 5px 0 5px 0;
+    border-width: 1px 0 0 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.ui-menu .ui-menu-item a {
+    display: block;
+    padding: 2px 0.4em;
+}
+
+.ui-menu .ui-state-active {
+    background-color: #dadada;
+}
+
+.ui-menu .ui-state-disabled {
+    margin: 0.4em 0 0.2em;
+}
+
+.ui-menu .ui-state-disabled a {
+    cursor: default;
+}
+
+/* icon support */
+
+.ui-menu-icons {
+    position: relative;
+}
+
+.ui-menu-icons .ui-menu-item a {
+    position: relative;
+    padding-left: 2em;
+}
+
+/* left-aligned */
+.ui-menu .ui-icon {
+    position: absolute;
+    top: 0.2em;
+    left: 0.2em;
+}
+
+/* right-aligned */
+.ui-menu .ui-menu-icon {
+    position: static;
+    float: right;
+}

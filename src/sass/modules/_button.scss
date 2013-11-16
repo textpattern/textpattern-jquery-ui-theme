@@ -1,0 +1,202 @@
+/* Button - http://jqueryui.com/button/
+   ========================================================================== */
+
+.ui-button {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.1em;
+    border: 1px solid #c4c4c4;
+    border-bottom-color: #aaaaaa;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+    line-height: 1.4;
+    vertical-align: baseline;
+    overflow: visible; /* the overflow property removes extra width in IE */
+    background-color: #eeeeee;
+    background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+    background-image: -moz-linear-gradient(#eeeeee, #dddddd);
+    background-image: -o-linear-gradient(#eeeeee, #dddddd);
+    background-image: linear-gradient(#eeeeee, #dddddd);
+}
+
+.ui-button:hover {
+    border: 1px solid #aaaaaa;
+    border-bottom-color: #919191;
+    text-decoration: none;
+    background-color: #f8f8f8;
+    background-image: -webkit-linear-gradient(#f8f8f8, #e7e7e7);
+    background-image: -moz-linear-gradient(#f8f8f8, #e7e7e7);
+    background-image: -o-linear-gradient(#f8f8f8, #e7e7e7);
+    background-image: linear-gradient(#f8f8f8, #e7e7e7);
+}
+
+.ui-button:active {
+    border: 1px solid #aaaaaa;
+    border-bottom-color: #919191;
+    -webkit-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+    background-color: #e6e6e6;
+    background-image: -webkit-linear-gradient(#e6e6e6, #d5d5d5);
+    background-image: -moz-linear-gradient(#e6e6e6, #d5d5d5);
+    background-image: -o-linear-gradient(#e6e6e6, #d5d5d5);
+    background-image: linear-gradient(#e6e6e6, #d5d5d5);
+}
+
+.boxshadow .ui-button.ui-state-focus {
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
+    -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
+    /* Opera */
+    z-index: 1;
+}
+
+.ui-button-icon-only {
+    width: 2.2em; /* to make room for the icon, a width needs to be set here */
+}
+
+button.ui-button-icon-only {
+    width: 2.4em; /* button elements seem to need a little more width */
+}
+
+.ui-button-icons-only {
+    width: 3.4em;
+}
+
+button.ui-button-icons-only {
+    width: 3.7em;
+}
+
+/* button rounded corners */
+
+.ui-button.ui-corner-all {
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+}
+
+.ui-button.ui-corner-right {
+    -moz-border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 0.5em 0.5em 0;
+}
+
+.ui-button.ui-corner-left {
+    -moz-border-radius: 0.5em 0 0 0.5em;
+    border-radius: 0.5em 0 0 0.5em;
+}
+
+/* button text element */
+
+.ui-button .ui-button-text {
+    display: block;
+    line-height: 1.4;
+}
+
+.ui-button-text-only .ui-button-text {
+    padding: 0.25em 0.75em;
+}
+
+.ui-button-icon-only .ui-button-text,
+.ui-button-icons-only .ui-button-text {
+    padding: 0.25em;
+    text-indent: -9999px;
+}
+
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+    padding: 0.25em 0.75em 0.25em 2.1em;
+}
+
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+    padding: 0.25em 2.1em 0.25em 0.75em;
+}
+
+.ui-button-text-icons .ui-button-text {
+    padding-left: 2.1em;
+    padding-right: 2.1em;
+}
+
+/* no icon support for input elements, provide padding by default */
+input.ui-button {
+    padding: 0.25em 0.75em;
+}
+
+/* button icon element(s) */
+
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.ui-button-icon-only .ui-icon {
+    left: 50%;
+    margin-left: -8px;
+}
+
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+    left: 0.5em;
+}
+
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+    right: 0.5em;
+}
+
+/* button sets */
+
+.ui-buttonset {
+    margin-right: 0.5em;
+}
+
+.ui-buttonset .ui-button {
+    margin-left: 0;
+    margin-right: -0.35em;
+}
+
+[aria-pressed="true"].ui-button {
+    border-color: #a3bef3;
+    border-bottom-color: #769eed;
+    background-color: #e3edfc;
+    background-image: -webkit-linear-gradient(#e3edfc, #c7dbfa);
+    background-image: -moz-linear-gradient(#e3edfc, #c7dbfa);
+    background-image: -o-linear-gradient(#e3edfc, #c7dbfa);
+    background-image: linear-gradient(#e3edfc, #c7dbfa);
+}
+
+[aria-pressed="true"].ui-button:hover {
+    border-color: #97b0ef;
+    border-bottom-color: #6b8fe8;
+    background-color: #f1f6fe;
+    background-image: -webkit-linear-gradient(#f1f6fe, #ccdefa);
+    background-image: -moz-linear-gradient(#f1f6fe, #ccdefa);
+    background-image: -o-linear-gradient(#f1f6fe, #ccdefa);
+    background-image: linear-gradient(#f1f6fe, #ccdefa);
+}
+
+[aria-pressed="true"].ui-button:active {
+    border-color: #97b0ef;
+    border-bottom-color: #6b8fe8;
+    background-color: #c7dbfa;
+    background-image: -webkit-linear-gradient(#c7dbfa, #b0cbf7);
+    background-image: -moz-linear-gradient(#c7dbfa, #b0cbf7);
+    background-image: -o-linear-gradient(#c7dbfa, #b0cbf7);
+    background-image: linear-gradient(#c7dbfa, #b0cbf7);
+}
+
+/* removes inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
