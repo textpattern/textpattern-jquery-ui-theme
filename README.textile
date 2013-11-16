@@ -1,0 +1,3 @@
+h1. Textpattern jQuery UI theme
+
+The jQuery UI theme used within the Textpattern CMS admin-side. *Currently under development.*
