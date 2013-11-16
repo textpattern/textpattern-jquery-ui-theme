@@ -56,8 +56,6 @@ module.exports = function (grunt) {
                 trailing: true,
                 browser: true,
                 globals: {
-                    $: false,
-                    jQuery: false,
                     module: true
                 }
             }
