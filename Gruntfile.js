@@ -28,7 +28,6 @@ module.exports = function (grunt) {
         copy: {
             dist: {
                 files: [
-                    {expand: true, cwd: 'src/', src: ['*'], dest: 'dist/hive/', filter: 'isFile'},
                     {expand: true, cwd: 'src/img/', src: ['**'], dest: 'dist/textpattern/images/'}
                 ]
             }
