@@ -1,34 +1,36 @@
 /* Accordion - http://jqueryui.com/accordion/
    ========================================================================== */
 
-.ui-accordion .ui-accordion-header {
-    position: relative;
-    display: block;
-    margin: 2px 0 0 0;
-    padding: 0.5em 1em;
-    font-size: 100%;
-    cursor: pointer;
-}
+.ui-accordion {
+    .ui-accordion-header {
+        position: relative;
+        display: block;
+        margin: 2px 0 0 0;
+        padding: 0.5em 1em;
+        font-size: 100%;
+        cursor: pointer;
 
-.ui-accordion .ui-accordion-header a {
-    color: #333333;
-    text-decoration: none;
-}
+        a {
+            color: $color-text;
+            text-decoration: none;
+        }
 
-.ui-accordion .ui-accordion-icons,
-.ui-accordion .ui-accordion-icons .ui-accordion-icons {
-    padding-left: 2em;
-}
+        .ui-accordion-header-icon {
+            position: absolute;
+            top: 50%;
+            left: 0.5em;
+            margin-top: -8px;
+        }
+    }
 
-.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
-    position: absolute;
-    top: 50%;
-    left: 0.5em;
-    margin-top: -8px;
-}
+    .ui-accordion-content {
+        border-top: 0;
+        padding: 1px 1em;
+        overflow: auto;
+    }
 
-.ui-accordion .ui-accordion-content {
-    border-top: 0;
-    padding: 1px 1em;
-    overflow: auto;
+    .ui-accordion-icons,
+    .ui-accordion-icons .ui-accordion-icons {
+        padding-left: 2em;
+    }
 }

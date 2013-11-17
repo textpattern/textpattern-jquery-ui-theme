@@ -2,126 +2,111 @@
    ========================================================================== */
 
 .ui-button {
+    /* correct font size not being inherited in all browsers */
+    font-size: 100%;
+    @include adjust-font-size-to(13px, 0.8);
+    @include text-shadow($text-shadow-light);
+    @include box-shadow($inset-highlighting);
+    @include background-clip;
+    @include box-sizing(border-box);
+    @include gradient-linear($color-gradient-from, $color-gradient-to);
+    @include transition(box-shadow 0.2s linear);
+
+    -webkit-appearance: none; // remove iOS Safari default styling
     position: relative;
     display: inline-block;
-    margin-right: 0.1em;
-    border: 1px solid #c4c4c4;
-    border-bottom-color: #aaaaaa;
+    margin: 0 0.1em 0 0;
+    border: solid 1px $color-gradient-border;
     padding: 0;
-    cursor: pointer;
+    height: 2.4615384em; // 32px / 13px
+    overflow: visible; // the overflow property removes extra width in IE
+    font-family: $font-sans-serif;
     text-align: center;
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
-    line-height: 1.4;
     vertical-align: baseline;
-    overflow: visible; /* the overflow property removes extra width in IE */
-    background-color: #eeeeee;
-    background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
-    background-image: -moz-linear-gradient(#eeeeee, #dddddd);
-    background-image: -o-linear-gradient(#eeeeee, #dddddd);
-    background-image: linear-gradient(#eeeeee, #dddddd);
+    color: $color-text;
+    cursor: pointer;
+
+    &:hover {
+        @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
+
+        border-color: darken($color-gradient-border, 13%);
+        text-decoration: none;
+    }
+
+    &:active {
+        @include box-shadow(inset 0 0.2em 0.25em rgba(#000000, 0.15));
+        @include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
+
+        border-color: darken($color-gradient-border, 13%);
+        color: darken($color-text, 10%);
+        text-decoration: none;
+    }
 }
 
-.ui-button:hover {
-    border: 1px solid #aaaaaa;
-    border-bottom-color: #919191;
+a.ui-button {
+    color: $color-text;
     text-decoration: none;
-    background-color: #f8f8f8;
-    background-image: -webkit-linear-gradient(#f8f8f8, #e7e7e7);
-    background-image: -moz-linear-gradient(#f8f8f8, #e7e7e7);
-    background-image: -o-linear-gradient(#f8f8f8, #e7e7e7);
-    background-image: linear-gradient(#f8f8f8, #e7e7e7);
-}
-
-.ui-button:active {
-    border: 1px solid #aaaaaa;
-    border-bottom-color: #919191;
-    -webkit-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
-    box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
-    background-color: #e6e6e6;
-    background-image: -webkit-linear-gradient(#e6e6e6, #d5d5d5);
-    background-image: -moz-linear-gradient(#e6e6e6, #d5d5d5);
-    background-image: -o-linear-gradient(#e6e6e6, #d5d5d5);
-    background-image: linear-gradient(#e6e6e6, #d5d5d5);
 }
 
 .boxshadow .ui-button.ui-state-focus {
+    @include box-shadow($inset-highlighting, 0 0 7px $color-link-hover);
+
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
-    -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
-    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
-    /* Opera */
-    z-index: 1;
 }
 
 .ui-button-icon-only {
-    width: 2.2em; /* to make room for the icon, a width needs to be set here */
+    width: 2.2em; // to make room for the icon, a width needs to be set here
 }
 
 button.ui-button-icon-only {
-    width: 2.4em; /* button elements seem to need a little more width */
+    width: 2.4em; // button elements seem to need a little more width
 }
 
 .ui-button-icons-only {
-    width: 3.4em;
+    width: 3.4em; // to make room for the icons, a width needs to be set here
 }
 
 button.ui-button-icons-only {
-    width: 3.7em;
+    width: 3.7em; // button elements seem to need a little more width
 }
 
 /* button rounded corners */
 
 .ui-button.ui-corner-all {
-    -moz-border-radius: 0.5em;
-    border-radius: 0.5em;
+    @include border-radius;
 }
 
 .ui-button.ui-corner-right {
-    -moz-border-radius: 0 0.5em 0.5em 0;
-    border-radius: 0 0.5em 0.5em 0;
+    @include border-radius(0 $default-border-radius $default-border-radius 0);
 }
 
 .ui-button.ui-corner-left {
-    -moz-border-radius: 0.5em 0 0 0.5em;
-    border-radius: 0.5em 0 0 0.5em;
+    @include border-radius($default-border-radius 0 0 $default-border-radius);
 }
 
 /* button text element */
 
 .ui-button .ui-button-text {
     display: block;
-    line-height: 1.4;
 }
 
 .ui-button-text-only .ui-button-text {
-    padding: 0.25em 0.75em;
+    padding: 0;
 }
 
 .ui-button-icon-only .ui-button-text,
 .ui-button-icons-only .ui-button-text {
-    padding: 0.25em;
     text-indent: -9999px;
 }
 
 .ui-button-text-icon-primary .ui-button-text,
 .ui-button-text-icons .ui-button-text {
-    padding: 0.25em 0.75em 0.25em 2.1em;
+    padding-left: 16px;
 }
 
 .ui-button-text-icon-secondary .ui-button-text,
 .ui-button-text-icons .ui-button-text {
-    padding: 0.25em 2.1em 0.25em 0.75em;
-}
-
-.ui-button-text-icons .ui-button-text {
-    padding-left: 2.1em;
-    padding-right: 2.1em;
-}
-
-/* no icon support for input elements, provide padding by default */
-input.ui-button {
-    padding: 0.25em 0.75em;
+    padding-right: 16px;
 }
 
 /* button icon element(s) */
@@ -154,49 +139,30 @@ input.ui-button {
 }
 
 /* button sets */
-
 .ui-buttonset {
     margin-right: 0.5em;
+
+    .ui-button {
+        margin-right: -0.35em;
+    }
 }
 
-.ui-buttonset .ui-button {
-    margin-left: 0;
-    margin-right: -0.35em;
-}
+label[aria-pressed="true"] {
+    &.ui-button {
+        @include gradient-linear($color-selected, $color-selecting);
 
-[aria-pressed="true"].ui-button {
-    border-color: #a3bef3;
-    border-bottom-color: #769eed;
-    background-color: #e3edfc;
-    background-image: -webkit-linear-gradient(#e3edfc, #c7dbfa);
-    background-image: -moz-linear-gradient(#e3edfc, #c7dbfa);
-    background-image: -o-linear-gradient(#e3edfc, #c7dbfa);
-    background-image: linear-gradient(#e3edfc, #c7dbfa);
-}
+        border-color: lighten($color-link, 42%);
+    }
 
-[aria-pressed="true"].ui-button:hover {
-    border-color: #97b0ef;
-    border-bottom-color: #6b8fe8;
-    background-color: #f1f6fe;
-    background-image: -webkit-linear-gradient(#f1f6fe, #ccdefa);
-    background-image: -moz-linear-gradient(#f1f6fe, #ccdefa);
-    background-image: -o-linear-gradient(#f1f6fe, #ccdefa);
-    background-image: linear-gradient(#f1f6fe, #ccdefa);
-}
+    &.ui-button:hover {
+        @include gradient-linear(lighten($color-selected, 3%), lighten($color-selecting, 2%));
 
-[aria-pressed="true"].ui-button:active {
-    border-color: #97b0ef;
-    border-bottom-color: #6b8fe8;
-    background-color: #c7dbfa;
-    background-image: -webkit-linear-gradient(#c7dbfa, #b0cbf7);
-    background-image: -moz-linear-gradient(#c7dbfa, #b0cbf7);
-    background-image: -o-linear-gradient(#c7dbfa, #b0cbf7);
-    background-image: linear-gradient(#c7dbfa, #b0cbf7);
-}
+        border-color: lighten($color-link, 27%);
+    }
 
-/* removes inner padding and border in Firefox 4+ */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+    &.ui-button:active {
+        @include gradient-linear($color-selecting, darken($color-selecting, 5%));
+
+        border-color: lighten($color-link, 27%);
+    }
 }
