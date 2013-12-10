@@ -15,11 +15,11 @@
     -webkit-appearance: none; // remove iOS Safari default styling
     position: relative;
     display: inline-block;
+    overflow: visible; // the overflow property removes extra width in IE
     margin: 0 0.1em 0 0;
     border: solid 1px $color-gradient-border;
-    padding: 0;
+    padding: 0.5384615em 0.75em;
     height: 2.4615384em; // 32px / 13px
-    overflow: visible; // the overflow property removes extra width in IE
     font-family: $font-sans-serif;
     text-align: center;
     vertical-align: baseline;
