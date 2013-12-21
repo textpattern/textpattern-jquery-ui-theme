@@ -41,6 +41,10 @@
         color: darken($color-text, 10%);
         text-decoration: none;
     }
+
+    &:active {
+        border-color: $color-link-focus;
+    }
 }
 
 a.ui-button {
@@ -51,11 +55,8 @@ a.ui-button {
 .ui-button.ui-state-focus {
     @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
 
+    border-color: $color-link-focus;
     outline: 0;
-}
-
-.no-boxshadow .ui-button.ui-state-focus {
-    outline: thin dotted $color-link-focus;
 }
 
 .ui-button-icon-only {
