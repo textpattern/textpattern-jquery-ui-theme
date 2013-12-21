@@ -41,10 +41,6 @@
         color: darken($color-text, 10%);
         text-decoration: none;
     }
-
-    &:active {
-        border-color: $color-link-focus;
-    }
 }
 
 a.ui-button {
