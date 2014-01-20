@@ -39,3 +39,10 @@
     background-color: $color-gradient-from;
     @include background-image(linear-gradient($color-gradient-from, $color-gradient-to));
 }
+
+// touch actions
+
+@mixin touch-action {
+    -ms-touch-action: none;
+        touch-action: none;
+}
