@@ -26,12 +26,6 @@
         background-position: 0 0;
         font-size: 0.7em;
     }
-
-    /* For IE8 - See #6727 */
-    &.ui-state-disabled .ui-slider-handle,
-    &.ui-state-disabled .ui-slider-range {
-        filter: inherit;
-    }
 }
 
 .ui-slider-horizontal {

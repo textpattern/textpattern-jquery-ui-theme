@@ -35,8 +35,7 @@
 }
 
 .ui-helper-zfix {
-    @include transparent;
-
+    opacity: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -120,14 +119,12 @@ a.ui-state-default:focus {
 }
 
 .ui-priority-secondary {
-    @include opacity(0.66);
-
+    opacity: 0.66;
     font-weight: normal;
 }
 
 .ui-state-disabled {
-    @include opacity(0.33);
-
+    opacity: 0.33;
     background-image: none;
     cursor: default !important;
 
@@ -151,18 +148,14 @@ a.ui-state-default:focus {
     background: rgba(0, 0, 0, 0.75);
 }
 
-.no-rgba .ui-widget-overlay {
-    background: url("images/overlay-no-rgba.png");
-}
-
 
 /* Shadows
    ========================================================================== */
 
 .ui-widget-shadow {
     @include border-radius;
-    @include opacity(0.33);
 
+    opacity: 0.33;
     margin: -0.5em 0 0 -0.5em;
     padding: 0.5em;
     background-color: #999999;

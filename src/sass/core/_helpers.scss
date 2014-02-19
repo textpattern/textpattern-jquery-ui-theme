@@ -2,19 +2,6 @@
 @import "compass";
 
 
-// SVG images with fallback for older browsers (via Modernizr)
-
-@mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
-    .no-svg & {
-        background-image: url('images/' + $imgfilename + '.' + $imgtype);
-        background-size: $imgwidth $imgheight;
-    }
-    .svg & {
-        background-image: url('images/' + $imgfilename + '.svg');
-        background-size: $imgwidth $imgheight;
-    }
-}
-
 // higher resolution images for high resolution displays
 
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
