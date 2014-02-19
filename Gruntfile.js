@@ -1,10 +1,11 @@
 module.exports = function (grunt) {
     'use strict';
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -30,6 +31,16 @@ module.exports = function (grunt) {
                 files: [
                     {expand: true, cwd: 'src/img/', src: ['**'], dest: 'dist/textpattern/images/'}
                 ]
+            }
+        },
+
+        cssmin: {
+            main: {
+                expand: true,
+                cwd: 'dist/textpattern/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'dist/textpattern/',
+                ext: '.min.css'
             }
         },
 
@@ -63,7 +74,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('sass', ['compass']);
+    grunt.registerTask('sass', ['compass', 'cssmin']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['jshint', 'sass', 'copy']);
     grunt.registerTask('travis', ['jshint', 'compass']);
