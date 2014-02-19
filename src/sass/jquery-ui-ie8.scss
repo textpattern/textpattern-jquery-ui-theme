@@ -5,6 +5,8 @@
 @import "core/helpers";
 
 
+/* fallbacks for lack of RGBa/opacity support in IE 8 */
+
 .ui-helper-zfix {
     filter: Alpha(Opacity=0);
 }
