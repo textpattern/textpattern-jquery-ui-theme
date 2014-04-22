@@ -44,8 +44,6 @@
 }
 
 .ui-spinner-button {
-    @include adjust-font-size-to(7px, 0.5);
-
     position: absolute;
     right: 0;
     display: block;
@@ -53,6 +51,8 @@
     padding: 0;
     width: 16px;
     height: 42%;
+    font-size: 0.53846154em;
+    line-height: 1.5714286em;
     overflow: hidden;
     cursor: default;
 }
