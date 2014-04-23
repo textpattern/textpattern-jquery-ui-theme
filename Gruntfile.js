@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
     'use strict';
 
+    // Load Grunt plugins.
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -10,13 +11,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        watch: {
-            sass: {
-                files: 'src/sass/**',
-                tasks: ['sass']
-            }
-        },
-
+        // Use 'config.rb' file to configure Compass.
         compass: {
             dev: {
                 options: {
@@ -26,6 +21,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // Copy files from `src/` to `dist/textpattern/`.
         copy: {
             dist: {
                 files: [
@@ -34,6 +30,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // Minified versions of CSS files within `dist/textpattern/`.
         cssmin: {
             main: {
                 expand: true,
@@ -44,6 +41,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // Check code quality of Gruntfile.js using JSHint.
         jshint: {
             files: ['Gruntfile.js'],
             options: {
@@ -69,13 +67,22 @@ module.exports = function (grunt) {
                     module: true
                 }
             }
+        },
+
+        // Directories watched and tasks performed by invoking `grunt watch`.
+        watch: {
+            sass: {
+                files: 'src/sass/**',
+                tasks: ['sass']
+            }
         }
 
     });
 
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('sass', ['compass', 'cssmin']);
-    grunt.registerTask('default', ['watch']);
+    // Register tasks.
     grunt.registerTask('build', ['jshint', 'sass', 'copy']);
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('sass', ['compass', 'cssmin']);
+    grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
