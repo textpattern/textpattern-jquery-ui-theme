@@ -31,7 +31,7 @@
     /* 1 */
     font-size: 100%;
     font-size: 1em;
-    line-height: 1.2307692em;
+    line-height: 1.3846154em; // 18px / 13px
     /* 2 */
     -webkit-appearance: none;
     position: relative;
@@ -40,8 +40,8 @@
     overflow: visible;
     margin: 0 0.1em 0 0;
     border: solid 1px $color-gradient-border;
-    padding: 0.5384615em 0.75em;
-    height: 2.4615384em; // 32px / 13px
+    padding: 0.30769231em 0.61538462em; // 4px / 13px + 8px / 13px
+    height: 2.1538462em; // 28px / 13px
     font-family: $font-sans-serif;
     text-align: center;
     vertical-align: baseline;
