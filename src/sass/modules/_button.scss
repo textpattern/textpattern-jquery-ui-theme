@@ -66,9 +66,9 @@
     }
 
     &:focus {
-        @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
+        @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus-glow);
 
-        border-color: $color-link-hover;
+        border-color: $color-link-focus;
         outline: 0;
     }
 }
@@ -89,10 +89,10 @@ a.ui-button {
  */
 
 .ui-button.ui-state-focus {
-    @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
+    @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus-glow);
 
     /* 1 */
-    border-color: $color-link-hover !important;
+    border-color: $color-link-focus !important;
     outline: 0;
 }
 
