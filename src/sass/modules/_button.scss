@@ -64,6 +64,13 @@
         color: darken($color-text, 10%);
         text-decoration: none;
     }
+
+    &:focus {
+        @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
+
+        border-color: $color-link-hover;
+        outline: 0;
+    }
 }
 
 /**
@@ -77,12 +84,15 @@ a.ui-button {
 
 /**
  * Focus styling for buttons.
+ *
+ * 1. `!important` required to override specificity.
  */
 
 .ui-button.ui-state-focus {
     @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
 
-    border-color: $color-link-focus;
+    /* 1 */
+    border-color: $color-link-hover !important;
     outline: 0;
 }
 
