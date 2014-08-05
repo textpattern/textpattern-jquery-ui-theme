@@ -3,3 +3,39 @@ h1. Textpattern jQuery UI theme
 !https://travis-ci.org/textpattern/textpattern-jquery-ui-theme.png?branch=master!:https://travis-ci.org/textpattern/textpattern-jquery-ui-theme
 
 The jQuery UI theme used within the Textpattern CMS admin-side. *Currently under development.*
+
+h2. Requirements
+
+Building this repository requires:
+
+* "Node.js":http://nodejs.org/ >=0.10.0
+* "Ruby":http://www.ruby-lang.org/en/
+* "Bundler":http://bundler.io/
+* "Grunt":http://gruntjs.com/ ~0.4.0
+
+h2. Setup
+
+h3. Installing required tools
+
+The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. First make sure you have base dependencies installed: "Ruby":http://www.ruby-lang.org/en/, "Node.js":http://nodejs.org/, "Bundler":http://bundler.io/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node and Ruby using their installers, Bunder with gem and the rest with npm:
+
+bc. $ gem install bundler
+$ npm install -g grunt-cli
+
+Consult the tools' documentation for more instructions.
+
+After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency managers:
+
+bc. $ cd textpattern-jquery-ui-theme
+$ npm install
+$ bundle install
+
+*npm* installs Node modules for Grunt, and *bundle* takes care of Ruby gems.
+
+h2. Building
+
+This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
+
+bc. $ grunt [task]
+
+Where the @[task]@ is either @test@, @build@ or @watch@. Watch will launch a task that watches for file changes. The project is automatically built if a source file is modified. The build task builds the project.
