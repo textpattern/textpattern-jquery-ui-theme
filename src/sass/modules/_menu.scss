@@ -10,6 +10,8 @@
  * Some classes and HTML elements generally added via JavaScript, more info -
  * http://jqueryui.com/menu/
  *
+ * 1. Correct font size not being inherited in all browsers.
+ *
  * Example HTML:
  *
  * <ul class="ui-menu">
@@ -60,6 +62,10 @@
  */
 
 .ui-menu {
+    /* 1 */
+    font-size: 100%;
+    font-size: 1em;
+    line-height: 1.3846154em; // 18px / 13px
     @include box-shadow;
 
     display: block;
