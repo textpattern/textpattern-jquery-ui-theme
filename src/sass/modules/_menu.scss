@@ -75,14 +75,19 @@
     .ui-menu-item {
         position: relative;
         margin: 0;
-        padding: 3px 1em 3px 0.4em;
+        padding: 3px 1em 3px 0.30769231em; // 4px / 13px
         cursor: pointer;
         /* support: IE 10, see #8844 */
         list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+
+        a {
+            color: $color-text;
+            text-decoration: none;
+        }
     }
 
     .ui-menu-divider {
-        margin: 5px 0;
+        margin: 0.30769231em 0; // 4px / 13px
         border-width: 1px 0 0 0;
         height: 0;
         font-size: 0;
@@ -91,8 +96,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        margin: -1px;
-        background-color: $color-selected;
+        background-color: $color-selecting;
     }
 
     // left-aligned
