@@ -49,12 +49,17 @@
 
         .ui-selectmenu-optgroup {
             margin: 0.5em 0 0 0;
-            padding: 2px 0.4em;
-            border: 0;
+            border-top: 1px solid $color-border;
+            padding: 2px 0.30769231em; // 4px / 13px
             height: auto;
             font-size: 1em;
             font-weight: bold;
             line-height: 1.5;
+
+            &:first-child {
+                margin: 0;
+                border: 0;
+            }
         }
     }
 }
@@ -84,11 +89,10 @@
 
     span.ui-selectmenu-text {
         display: block;
-        text-align: left;
         padding:  0.30769231em 2.1em 0.30769231em 0.30769231em; // 4px / 13px
-        line-height: 1.4;
-        overflow: hidden;
+        text-align: left;
         text-overflow: ellipsis;
         white-space: nowrap;
+        overflow: hidden;
     }
 }
