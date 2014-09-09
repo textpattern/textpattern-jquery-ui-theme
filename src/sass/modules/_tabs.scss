@@ -44,6 +44,7 @@
 
     .ui-tabs-nav {
         margin: 0;
+        padding: 0;
         background: none;
 
         li {
@@ -94,4 +95,15 @@
 
 .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
     cursor: pointer;
+}
+
+/**
+ * Tabs RTL support.
+ */
+
+html[dir="rtl"] .ui-tabs .ui-tabs-nav {
+    li,
+    .ui-tabs-anchor {
+        float: right;
+    }
 }
