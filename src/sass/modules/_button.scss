@@ -303,3 +303,17 @@ label[aria-pressed="true"] {
         border-color: lighten($color-link, 27%);
     }
 }
+
+/**
+ * Button RTL support.
+ */
+
+html[dir="rtl"] .ui-buttonset {
+    margin-right: 0;
+    margin-left: 0.5em;
+
+    .ui-button {
+        margin-right: 0;
+        margin-left: -0.35em;
+    }
+}
