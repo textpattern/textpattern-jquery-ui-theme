@@ -106,3 +106,21 @@
 .ui-selectmenu-open {
     display: block;
 }
+
+/**
+ * Selectmenu RTL support (needs further improvements in upstream project).
+ */
+
+html[dir="rtl"] {
+    .ui-selectmenu-button {
+        span.ui-icon {
+            right: auto;
+            left: 0.25em;
+        }
+
+        span.ui-selectmenu-text {
+            padding:  0.30769231em 0.30769231em 0.30769231em 2.1em; // 4px / 13px
+            text-align: right;
+        }
+    }
+}
