@@ -132,3 +132,33 @@
         padding-left: 2em;
     }
 }
+
+/**
+ * Menu RTL support.
+ */
+
+html[dir="rtl"] .ui-menu {
+    padding: 0;
+
+    .ui-menu-item {
+        position: relative;
+        margin: 0;
+        padding: 3px 0.30769231em 3px 1em; // 4px / 13px
+    }
+
+    // left-aligned (flipped to right)
+    .ui-icon {
+        left: auto;
+        right: 0.25em;
+    }
+
+    // right-aligned (flipped to left)
+    .ui-menu-icon {
+        right: auto;
+        left: 0;
+
+        &.ui-icon-carat-1-e {
+            background-position: -96px 0;
+        }
+    }
+}
