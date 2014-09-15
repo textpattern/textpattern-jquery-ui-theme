@@ -64,3 +64,19 @@
 .ui-spinner-down {
     bottom: 0;
 }
+
+/**
+ * Spinner RTL support.
+ */
+
+html[dir="rtl"] {
+    .ui-spinner .ui-spinner-input {
+        padding-right: 4px;
+        padding-left: 24px;
+    }
+
+    .ui-spinner-button {
+        right: auto;
+        left: 0;
+    }
+}
