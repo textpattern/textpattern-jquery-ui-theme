@@ -250,22 +250,12 @@
 
 html[dir="rtl"] {
     .ui-datepicker-prev {
-        right: 2px;
+        right: 0.2em;
         left: auto;
     }
 
     .ui-datepicker-next {
-        left: 2px;
-        right: auto;
-    }
-
-    .ui-datepicker-prev:hover {
-        right: 1px;
-        left: auto;
-    }
-
-    .ui-datepicker-next:hover {
-        left: 1px;
+        left: 0.2em;
         right: auto;
     }
 
