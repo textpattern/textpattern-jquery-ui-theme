@@ -71,7 +71,7 @@
  * Accordion RTL support.
  */
 
-html[dir="rtl"] .ui-accordion {
+[dir="rtl"] .ui-accordion {
     .ui-accordion-header .ui-accordion-header-icon {
         left: auto;
         right: 0.5em;

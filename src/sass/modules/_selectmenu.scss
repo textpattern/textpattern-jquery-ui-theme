@@ -112,7 +112,7 @@
  * Selectmenu RTL support (needs further improvements in upstream project).
  */
 
-html[dir="rtl"] {
+[dir="rtl"] {
     .ui-selectmenu-button {
         span.ui-icon {
             right: auto;

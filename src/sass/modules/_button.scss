@@ -308,7 +308,7 @@ label[aria-pressed="true"] {
  * Button RTL support.
  */
 
-html[dir="rtl"] .ui-buttonset {
+[dir="rtl"] .ui-buttonset {
     margin-right: 0;
     margin-left: 0.5em;
 

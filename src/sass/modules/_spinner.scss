@@ -69,7 +69,7 @@
  * Spinner RTL support.
  */
 
-html[dir="rtl"] {
+[dir="rtl"] {
     .ui-spinner .ui-spinner-input {
         padding-right: 4px;
         padding-left: 24px;

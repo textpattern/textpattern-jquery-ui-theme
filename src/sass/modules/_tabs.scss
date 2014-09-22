@@ -101,7 +101,7 @@
  * Tabs RTL support.
  */
 
-html[dir="rtl"] .ui-tabs .ui-tabs-nav {
+[dir="rtl"] .ui-tabs .ui-tabs-nav {
     li,
     .ui-tabs-anchor {
         float: right;

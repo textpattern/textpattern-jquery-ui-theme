@@ -248,7 +248,7 @@
  * Datepicker RTL support.
  */
 
-html[dir="rtl"] {
+[dir="rtl"] {
     .ui-datepicker-prev {
         right: 0.2em;
         left: auto;
