@@ -81,7 +81,7 @@
     .ui-menu-item {
         position: relative;
         margin: 0;
-        padding: 3px 1em 3px 0.30769231em; // 4px / 13px
+        padding: 0.30769231em 1em 0.30769231em 0.30769231em; // 4px / 13px
         cursor: pointer;
         /* support: IE 10, see #8844 */
         list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
@@ -141,7 +141,7 @@
     padding: 0;
 
     .ui-menu-item {
-        padding: 3px 0.30769231em 3px 1em; // 4px / 13px
+        padding: 0.30769231em 0.30769231em 0.30769231em 1em; // 4px / 13px
     }
 
     // left-aligned (flipped to right)
