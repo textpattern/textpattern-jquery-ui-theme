@@ -65,7 +65,7 @@
     /* 1 */
     font-size: 100%;
     font-size: 1em;
-    line-height: 1.3846154em; // 18px / 13px
+    line-height: 1.38461538461538em; // 18px / 13px
     @include box-shadow;
 
     display: block;
@@ -81,7 +81,7 @@
     .ui-menu-item {
         position: relative;
         margin: 0;
-        padding: 0.30769231em 1em 0.30769231em 0.30769231em; // 4px / 13px
+        padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em; // 4px / 13px
         cursor: pointer;
         /* support: IE 10, see #8844 */
         list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
@@ -93,7 +93,7 @@
     }
 
     .ui-menu-divider {
-        margin: 0.30769231em 0; // 4px / 13px
+        margin: 0.30769230769231em 0; // 4px / 13px
         border-width: 1px 0 0 0;
         height: 0;
         font-size: 0;
@@ -141,7 +141,7 @@
     padding: 0;
 
     .ui-menu-item {
-        padding: 0.30769231em 0.30769231em 0.30769231em 1em; // 4px / 13px
+        padding: 0.30769230769231em 0.30769230769231em 0.30769230769231em 1em; // 4px / 13px
     }
 
     // left-aligned (flipped to right)
