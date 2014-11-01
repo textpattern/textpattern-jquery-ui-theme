@@ -1,5 +1,8 @@
 # Require any additional Compass plugins here:
 
+# Toolkit - https://github.com/at-import/toolkit
+require 'toolkit'
+
 
 
 # Set this to the root of your project when deployed:
