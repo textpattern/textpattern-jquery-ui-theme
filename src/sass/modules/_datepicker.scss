@@ -92,10 +92,9 @@
 
     .ui-datepicker-prev,
     .ui-datepicker-next {
-        @include border-radius;
-
         position: absolute;
         top: 0.2em;
+        border-radius: $default-border-radius;
         width: 1.8em;
         height: 1.8em;
         background-color: transparent;
