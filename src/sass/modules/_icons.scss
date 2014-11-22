@@ -67,7 +67,7 @@
 }
 
 /**
- * 'Error' state icons.
+ * 'Error' state icons (also used for 'Destroy' button).
  *
  * Example HTML:
  *
@@ -79,6 +79,7 @@
 
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon,
+.destroy .ui-icon,
 .error .ui-icon {
     background-image: url("images/ui-icon-sprite-error.svg");
 }
