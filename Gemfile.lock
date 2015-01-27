@@ -29,4 +29,4 @@ PLATFORMS
 DEPENDENCIES
   compass (= 1.0.3)
   sass (= 3.4.10)
-  toolkit (= 2.6.0)
+  toolkit (= 2.7.0)
