@@ -34,9 +34,6 @@ module.exports = function (grunt)
         // Minified versions of CSS files within `dist/textpattern/`.
         cssmin: {
             main: {
-                options: {
-                    rebase: false
-                },
                 expand: true,
                 cwd: 'dist/textpattern/',
                 src: ['*.css', '!*.min.css'],
