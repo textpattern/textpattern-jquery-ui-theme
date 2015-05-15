@@ -73,7 +73,7 @@ module.exports = function (grunt)
 
         // Validate Sass files via scss-lint.
         scsslint: {
-            all: ['src/assets/sass/**/*.scss'],
+            all: ['src/sass/**/*.scss'],
             options: {
                 bundleExec: true,
                 colorizeOutput: false,
