@@ -12,23 +12,23 @@
 /* fallbacks for lack of RGBa/opacity support in IE 8 */
 
 .ui-helper-zfix {
-    filter: Alpha(Opacity=0);
+    filter: alpha(opacity=0);
 }
 
 .ui-priority-secondary {
-    filter: Alpha(Opacity=66);
+    filter: alpha(opacity=66);
 }
 
 .ui-state-disabled {
-    filter: Alpha(Opacity=33);
+    filter: alpha(opacity=33);
 
     .ui-icon {
-        filter: Alpha(Opacity=33); // fix inheritance bug
+        filter: alpha(opacity=33); // fix inheritance bug
     }
 }
 
 .ui-widget-shadow {
-    filter: Alpha(Opacity=33);
+    filter: alpha(opacity=33);
 }
 
 .ui-widget-overlay {

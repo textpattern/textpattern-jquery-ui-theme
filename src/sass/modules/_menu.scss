@@ -62,15 +62,17 @@
  */
 
 .ui-menu {
-    /* 1 */
-    font-size: 100%;
-    font-size: 1em;
-    line-height: 1.38461538461538em; // 18px / 13px
     @include box-shadow;
 
     display: block;
     margin: 0;
     padding: 0;
+
+    /* 1 */
+    font-size: 100%;
+    font-size: 1em;
+    line-height: 1.38461538461538em; // 18px / 13px
+
     outline: 0;
     list-style: none;
 
@@ -94,7 +96,7 @@
 
     .ui-menu-divider {
         margin: 0.30769230769231em 0; // 4px / 13px
-        border-width: 1px 0 0 0;
+        border-width: 1px 0 0;
         height: 0;
         font-size: 0;
         line-height: 0;
@@ -116,8 +118,8 @@
 
     // right-aligned
     .ui-menu-icon {
-        left: auto;
         right: 0;
+        left: auto;
     }
 }
 
@@ -146,8 +148,8 @@
 
     // left-aligned (flipped to right)
     .ui-icon {
-        left: auto;
         right: 0.25em;
+        left: auto;
     }
 
     // right-aligned (flipped to left)

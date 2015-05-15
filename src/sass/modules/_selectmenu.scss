@@ -68,7 +68,7 @@
 
     span.ui-selectmenu-text {
         display: block;
-        padding:  0.30769230769231em 1.75em 0.30769230769231em 0.30769230769231em; // 4px / 13px
+        padding: 0.30769230769231em 1.75em 0.30769230769231em 0.30769230769231em; // 4px / 13px
         text-align: left;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -80,16 +80,16 @@
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
     margin: 0;
     padding: 0;
-    display: none;
 
     .ui-menu {
         overflow: auto;
         overflow-x: hidden;
 
         .ui-selectmenu-optgroup {
-            margin: 0.5em 0 0 0;
+            margin: 0.5em 0 0;
             border-top: 1px solid $color-border;
             padding: 2px 0.30769230769231em; // 4px / 13px
             height: auto;
@@ -121,7 +121,7 @@
         }
 
         span.ui-selectmenu-text {
-            padding:  0.30769230769231em 0.30769230769231em 0.30769230769231em 1.75em; // 4px / 13px
+            padding: 0.30769230769231em 0.30769230769231em 0.30769230769231em 1.75em; // 4px / 13px
             text-align: right;
         }
     }

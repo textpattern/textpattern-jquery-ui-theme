@@ -111,8 +111,8 @@
  */
 
 .ui-state-default {
-    color: $color-text;
     border: 1px solid $color-border;
+    color: $color-text;
     background-color: darken($color-background-box, 2%);
 }
 
