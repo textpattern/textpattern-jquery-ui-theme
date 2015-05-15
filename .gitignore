@@ -12,6 +12,7 @@ Thumbs.db
 # Development files  #
 ######################
 .sass-cache
+/dist
 /node_modules
 /npm-debug.log
-/dist
+/scss-lint-report.xml
