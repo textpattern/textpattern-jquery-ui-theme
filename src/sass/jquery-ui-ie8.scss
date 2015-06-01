@@ -27,11 +27,8 @@
     }
 }
 
+.ui-widget-overlay,
 .ui-widget-shadow {
-    filter: alpha(opacity=33);
-}
-
-.ui-widget-overlay {
     background: url("images/overlay-no-rgba.png");
 }
 
