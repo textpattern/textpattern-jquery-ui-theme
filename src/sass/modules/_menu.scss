@@ -62,8 +62,6 @@
  */
 
 .ui-menu {
-    @include box-shadow;
-
     display: block;
     margin: 0;
     padding: 0;
@@ -73,6 +71,7 @@
     font-size: 1em;
     line-height: 1.38461538461538em; // 18px / 13px
 
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
     outline: 0;
     list-style: none;
 

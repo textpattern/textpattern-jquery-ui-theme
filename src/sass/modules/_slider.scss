@@ -21,9 +21,7 @@
     text-align: left;
 
     .ui-slider-handle {
-        @include box-shadow(0 0 0.5em rgba(0, 0, 0, 0.2));
-        @include touch-action;
-
+        touch-action: none;
         position: absolute;
         z-index: 2;
         border-radius: 50%;
@@ -31,6 +29,7 @@
         height: 20px;
         cursor: default;
         background-color: $color-background;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
     }
 
     .ui-slider-range {
