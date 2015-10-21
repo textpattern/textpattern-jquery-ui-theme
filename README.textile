@@ -22,7 +22,7 @@ The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass
 bc. $ gem install bundler
 $ npm install -g grunt-cli
 
-Consult the tools' documentation for more instructions.
+Consult the tools' documentation for more instructions. You might need to use @sudo npm install -g grunt-cli@ instead when installing on certain Unix-based systems.
 
 After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency managers:
 
@@ -30,7 +30,7 @@ bc. $ cd textpattern-jquery-ui-theme
 $ npm install
 $ bundle install
 
-*npm* installs Node modules for Grunt, and *bundle* takes care of Ruby gems.
+*npm* installs Node modules for Grunt, and *bundle* takes care of Ruby gems. You might need to use @sudo npm install@ instead when installing on certain Unix-based systems.
 
 h2. Building
 
