@@ -8,10 +8,10 @@
  * https://jqueryui.com/button/
  *
  * 1. Correct font size not being inherited in all browsers.
- * 2. Remove iOS Safari default styling.
- * 3. The `overflow` property removes extra width in IE.
- * 4. Improve usability and consistency of cursor style between image-type
+ * 2. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
+ * 3. The `overflow` property removes extra width in IE.
+ * 4. Remove iOS Safari default styling.
  *
  * Example HTML:
  *
@@ -21,54 +21,59 @@
  */
 
 .ui-button {
-    @include gradient-linear($color-gradient-from, $color-gradient-to);
+    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
 
-    transition: box-shadow 0.1s linear;
-    box-sizing: border-box;
-    background-clip: padding-box;
-    /* 1 */
-    font-size: 100%;
-    font-size: 1em;
-    line-height: 1.3846154em; // 18px / 13px
-    /* 2 */
-    -webkit-appearance: none;
-    position: relative;
     display: inline-block;
+    position: relative;
+    height: 2.1538462em; // 28px / 13px
+    margin: 0 0.1em 0 0;
+    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
+    border: 1px solid $color-button-border;
+    background-clip: padding-box;
+    color: $color-text-button;
+    font-family: $font-form;
+    /* 1 */
+    font-size: $base-font-size;
+    line-height: 1.3846154em; // 18px / 13px
+    text-align: center;
+    @if $flat-theme < 1 {
+        text-shadow: $text-shadow-light;
+        box-shadow: $inset-highlighting;
+    }
+    /* 2 */
+    cursor: pointer;
     /* 3 */
     overflow: visible;
-    margin: 0 0.1em 0 0;
-    border: solid 1px $color-gradient-border;
-    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    height: 2.1538462em; // 28px / 13px
-    font-family: $font-sans-serif;
-    text-align: center;
     vertical-align: baseline;
-    color: $color-text;
-    box-shadow: $inset-highlighting;
-    text-shadow: $text-shadow-light;
+    box-sizing: border-box;
     /* 4 */
-    cursor: pointer;
+    appearance: none;
 
     &:hover {
-        @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
+        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
 
-        border-color: darken($color-gradient-border, 13%);
+        border-color: darken($color-button-border, 13%);
+        color: $color-text-button-hover;
         text-decoration: none;
     }
 
     &:active {
-        @include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
+        @include gradient-linear(darken($color-button-gradient-from, 3%), darken($color-button-gradient-to, 3%));
 
-        border-color: darken($color-gradient-border, 13%);
-        color: darken($color-text, 10%);
-        box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
+        border-color: darken($color-button-border, 13%);
+        color: $color-text-button-active;
         text-decoration: none;
+        @if $flat-theme < 1 {
+            box-shadow: $inset-lowlighting;
+        }
     }
 
     &:focus {
         border-color: $color-link-focus;
-        box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
         outline: 0;
+        @if $flat-theme < 1 {
+            box-shadow: $inset-highlighting;
+        }
     }
 }
 
@@ -77,7 +82,7 @@
  */
 
 a.ui-button {
-    color: $color-text;
+    color: $color-text-button;
     text-decoration: none;
 }
 
@@ -90,8 +95,10 @@ a.ui-button {
 .ui-button.ui-state-focus {
     /* 1 */
     border-color: $color-link-focus !important;
-    box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
     outline: 0;
+    @if $flat-theme < 1 {
+        box-shadow: $inset-highlighting;
+    }
 }
 
 /**
@@ -160,28 +167,20 @@ button.ui-button-icons-only {
     width: 3.7em;
 }
 
-/**
- * Button rounded corners all.
- */
+@if $border-radius > 0 {
 
-.ui-button.ui-corner-all {
-    border-radius: $default-border-radius;
-}
+    .ui-button.ui-corner-all {
+        border-radius: $border-radius;
+    }
 
-/**
- * Button rounded corners on right only.
- */
+    .ui-button.ui-corner-right {
+        border-radius: 0 $border-radius $border-radius 0;
+    }
 
-.ui-button.ui-corner-right {
-    border-radius: 0 $default-border-radius $default-border-radius 0;
-}
+    .ui-button.ui-corner-left {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
 
-/**
- * Button rounded corners on left only.
- */
-
-.ui-button.ui-corner-left {
-    border-radius: $default-border-radius 0 0 $default-border-radius;
 }
 
 /**
@@ -265,10 +264,10 @@ button.ui-button-icons-only {
  */
 
 .ui-buttonset {
-    margin-right: 0.35em;
+    margin-right: 0.28em;
 
     .ui-button {
-        margin-right: -0.35em;
+        margin-right: -0.28em;
     }
 }
 
@@ -285,21 +284,21 @@ button.ui-button-icons-only {
 
 label.ui-state-active {
     &.ui-button {
-        @include gradient-linear($color-selected, $color-selecting);
+        @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
 
-        border-color: lighten($color-link, 42%);
+        border-color: $color-button-selected-border;
     }
 
     &.ui-button:hover {
-        @include gradient-linear(lighten($color-selected, 3%), lighten($color-selecting, 2%));
+        @include gradient-linear(lighten($color-button-selected-gradient-from, 3%), lighten($color-button-selected-gradient-to, 2%));
 
-        border-color: lighten($color-link, 27%);
+        border-color: darken($color-button-selected-border, 15%);
     }
 
     &.ui-button:active {
-        @include gradient-linear($color-selecting, darken($color-selecting, 5%));
+        @include gradient-linear(darken($color-button-selected-gradient-from, 5%), darken($color-button-selected-gradient-to, 5%));
 
-        border-color: lighten($color-link, 27%);
+        border-color: darken($color-button-selected-border, 15%);
     }
 }
 
@@ -313,6 +312,6 @@ label.ui-state-active {
 
     .ui-button {
         margin-right: 0;
-        margin-left: -0.35em;
+        margin-left: -0.28em;
     }
 }

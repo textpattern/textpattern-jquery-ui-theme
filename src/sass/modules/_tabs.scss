@@ -37,8 +37,8 @@
  * </div>
  */
 
-.ui-tabs {
-     /* 1 */
+.ui-tabs:not(.ui-tabs-vertical) {
+    /* 1 */
     position: relative;
     border: 0;
 
@@ -50,17 +50,21 @@
         li {
             position: relative;
             top: 0;
-            float: left;
             margin-right: 2px;
+            float: left;
             border-bottom-width: 0;
             list-style: none;
             white-space: nowrap;
-            box-shadow: inset 0 -0.2em 0.4em rgba(102, 102, 102, 0.15);
+            @if $flat-theme < 1 {
+                box-shadow: inset 0 -0.2em 0.4em rgba(#666666, 0.15);
+            }
 
             &.ui-tabs-active {
                 margin-bottom: -1px;
                 padding-bottom: 1px;
-                box-shadow: none;
+                @if $flat-theme < 1 {
+                    box-shadow: none;
+                }
             }
 
             &.ui-tabs-active .ui-tabs-anchor,
@@ -71,8 +75,8 @@
         }
 
         .ui-tabs-anchor {
-            float: left;
             padding: 0.5em 1em;
+            float: left;
             color: $color-text;
             text-decoration: none;
         }
@@ -81,8 +85,8 @@
     .ui-tabs-panel {
         display: block;
         margin: 0 0 1em;
-        border-width: 1px 0;
         padding: 1px 0;
+        border-width: 1px 0;
         background: none;
     }
 }
@@ -101,12 +105,30 @@
 
 [dir="rtl"] .ui-tabs .ui-tabs-nav {
     li {
-        float: right;
         margin-right: 0;
         margin-left: 2px;
+        float: right;
     }
 
     .ui-tabs-anchor {
         float: right;
+    }
+}
+
+/**
+ * Additonal styling for tabs vertical.
+ */
+
+.ui-tabs-vertical {
+    .ui-tabs-nav .ui-tabs-active {
+        background: $color-selected;
+    }
+
+    .ui-tabs-nav .ui-state-focus {
+        outline: none;
+
+        a {
+            outline: thin solid $color-link-focus;
+        }
     }
 }
