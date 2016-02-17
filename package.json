@@ -1,7 +1,7 @@
 {
   "name": "textpattern-jquery-ui-theme",
   "description": "The jQuery UI theme used within Textpattern CMS admin side.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "keywords": [
     "jquery-ui",
     "theme",
