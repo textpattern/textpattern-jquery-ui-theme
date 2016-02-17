@@ -2,50 +2,77 @@ module.exports = function (grunt)
 {
     'use strict';
 
-    // Load Grunt plugins.
-    grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-scss-lint');
+    // Load all Grunt tasks.
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // Use 'config.rb' file to configure Compass.
-        compass: {
-            dev: {
-                options: {
-                    config: 'config.rb',
-                    force: true
-                }
+        // Set up paths.
+        paths: {
+            src: {
+                sass: 'src/sass/',
+                img: 'src/img/'
+            },
+            dest: {
+                css: 'dist/textpattern/',
+                img: 'dist/textpattern/img/'
             }
         },
 
-        // Copy files from `src/` to `dist/textpattern/`.
+        // Clean distribution directory to start afresh.
+        clean: ['dist/'],
+
+        // Run some tasks in parallel to speed up the build process.
+        concurrent: {
+            dist: [
+                'css',
+                'copy',
+                'devUpdate'
+            ]
+        },
+
+        // Copy theme images.
         copy: {
             dist: {
                 files: [
-                    {expand: true, cwd: 'src/img/', src: ['**'], dest: 'dist/textpattern/images/'}
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.img %>',
+                        src: '**',
+                        dest: '<%= paths.dest.img %>'
+                    }
                 ]
             }
         },
 
-        // Minified versions of CSS files within `dist/textpattern/`.
+        // Minified version of CSS file.
         cssmin: {
-            main: {
+            dist: {
                 expand: true,
-                cwd: 'dist/textpattern/',
-                src: ['*.css', '!*.min.css'],
-                dest: 'dist/textpattern/',
+                cwd: '<%= paths.dest.css %>',
+                src: '*.css',
+                dest: '<%= paths.dest.css %>',
                 ext: '.min.css'
+            }
+        },
+
+        // Report on any available updates for dependencies.
+        devUpdate: {
+            main: {
+                options: {
+                    updateType: 'report',
+                    reportUpdated: false, // Don't report up-to-date packages.
+                    packages: {
+                        dependencies: true,
+                        devDependencies: true
+                    }
+                }
             }
         },
 
         // Check code quality of Gruntfile.js using JSHint.
         jshint: {
-            files: ['Gruntfile.js'],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -66,37 +93,63 @@ module.exports = function (grunt)
                 trailing: true,
                 browser: true,
                 globals: {
-                    module: true
+                    module: true,
+                    require: true
+                }
+            },
+            files: ['Gruntfile.js']
+        },
+
+        // Add vendor prefixed styles and other post-processing transformations.
+        postcss: {
+            options: {
+                processors: [
+                    require('autoprefixer')({
+                        browsers: ['last 2 versions']
+                    })
+                ]
+            },
+            dist: {
+                files: [
+                    {'<%= paths.dest.css %>jquery-ui.css': '<%= paths.dest.css %>jquery-ui.css'}
+                ]
+            }
+        },
+
+        // Sass configuration.
+        sass: {
+            options: {
+                outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
+                sourceMap: false
+            },
+            dist: {
+                files: {
+                    '<%= paths.dest.css %>jquery-ui.css': '<%= paths.src.sass %>jquery-ui.scss'
                 }
             }
         },
 
-        // Validate Sass files via scss-lint.
-        scsslint: {
-            all: ['src/sass/**/*.scss'],
+        // Validate Sass files via sass-lint.
+        sasslint: {
             options: {
-                bundleExec: true,
-                colorizeOutput: false,
-                config: '.scss-lint.yml',
-                force: true,
-                reporterOutput: 'scss-lint-report.xml'
-            }
+                configFile: '.sass-lint.yml'
+            },
+            target: ['<%= paths.src.sass %>**/*.scss']
         },
 
         // Directories watched and tasks performed by invoking `grunt watch`.
         watch: {
             sass: {
-                files: 'src/sass/**',
-                tasks: ['sass']
+                files: '<%= paths.src.sass %>**/*.scss',
+                tasks: 'css'
             }
         }
 
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'sass', 'copy']);
+    grunt.registerTask('build', ['clean', 'concurrent']);
+    grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'cssmin']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['scsslint', 'compass', 'cssmin']);
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('travis', ['jshint', 'compass']);
+    grunt.registerTask('travis', ['jshint', 'build']);
 };
