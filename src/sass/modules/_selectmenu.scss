@@ -20,7 +20,7 @@
  *         <option>Fast</option>
  *         <option>Faster</option>
  *     </select>
- *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" style="width:87px;">
+ *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all">
  *         <span class="ui-icon ui-icon-triangle-1-s"></span>
  *         <span class="ui-selectmenu-text">Medium</span>
  *     </span>
@@ -36,44 +36,8 @@
  * </div>
  */
 
-.ui-selectmenu-button {
-    display: inline-block;
-    position: relative;
-    //width: 14em; TODO: check this when jQuery UI 1.12.0 releases
-    background-color: $color-background;
-    /* 1 */
-    font-size: $base-font-size;
-    line-height: 1.38461538461538em; // 18px / 13px
-    text-decoration: none;
-    cursor: pointer;
-    overflow: hidden;
-    vertical-align: top;
-
-    &:focus {
-        border-color: $color-link-focus;
-        outline-width: 0;
-    }
-
-    span.ui-icon {
-        position: absolute;
-        top: 50%;
-        right: 0.2em;
-        left: auto;
-        margin-top: -8px;
-    }
-
-    span.ui-selectmenu-text {
-        display: block;
-        padding: 0.30769230769231em 1.75em 0.30769230769231em 0.30769230769231em; // 4px / 13px
-        text-align: left;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-}
-
 .ui-selectmenu-icon.ui-icon {
-    margin-top: 0;
+    margin: 0 -0.25em 0 0.25em;
     float: right;
 }
 
@@ -110,20 +74,41 @@
     display: block;
 }
 
+.ui-selectmenu-text {
+    display: block;
+    margin-right: 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ui-selectmenu-button.ui-button {
+    white-space: nowrap;
+}
+
+.ui-selectmenu-button:not(.ui-controlgroup-item) {
+    border-radius: $border-radius;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+    border-radius: 0 $border-radius $border-radius 0;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+    border-radius: $border-radius 0 0 $border-radius;
+}
+
 /**
- * Selectmenu RTL support (needs further improvements in upstream project).
+ * Selectmenu RTL support.
  */
 
 [dir="rtl"] {
-    .ui-selectmenu-button {
-        span.ui-icon {
-            right: auto;
-            left: 0.2em;
-        }
+    .ui-selectmenu-icon.ui-icon {
+        margin: 0 0.25em 0 -0.25em;
+        float: left;
+    }
 
-        span.ui-selectmenu-text {
-            padding: 0.30769230769231em 0.30769230769231em 0.30769230769231em 1.75em; // 4px / 13px
-            text-align: right;
-        }
+    .ui-selectmenu-text {
+        margin-right: 0;
+        margin-left: 1em;
     }
 }

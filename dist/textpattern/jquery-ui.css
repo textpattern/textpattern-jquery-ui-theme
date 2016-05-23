@@ -114,12 +114,23 @@ a.ui-state-default:focus {
 }
 
 /**
- * Hover/focus jQuery UI widget interaction states.
+ * Hover jQuery UI widget interaction states.
  */
-.ui-state-hover,
-.ui-state-focus {
+.ui-state-hover {
   border-color: #aaaaaa;
   background-color: #f7f7f7;
+}
+
+/**
+ * Focus jQuery UI widget interaction states.
+ */
+.ui-state-focus {
+  border-color: #0066ff;
+  outline-width: 0;
+}
+
+.ui-state-focus a {
+  outline-width: 0;
 }
 
 /**
@@ -202,13 +213,12 @@ a.ui-state-default:focus {
  * <div class="ui-widget-overlay"></div>
  */
 .ui-widget-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.75);
-  z-index: 1001;
 }
 
 /* Shadows
@@ -221,10 +231,7 @@ a.ui-state-default:focus {
  * <div class="ui-widget-shadow"></div>
  */
 .ui-widget-shadow {
-  margin: -0.5em 0 0 -0.5em;
-  padding: 0.5em;
-  border-radius: 0.5em;
-  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 5px #666666;
 }
 
 /* ==========================================================================
@@ -579,6 +586,10 @@ a.ui-state-default:focus {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .ui-button:hover {
@@ -605,14 +616,6 @@ a.ui-state-default:focus {
 }
 
 /**
- * Remove some styling from `a` links as buttons.
- */
-a.ui-button {
-  color: #333333;
-  text-decoration: none;
-}
-
-/**
  * Focus styling for buttons.
  *
  * 1. `!important` required to override specificity.
@@ -620,7 +623,6 @@ a.ui-button {
 .ui-button.ui-state-focus {
   /* 1 */
   border-color: #0066ff !important;
-  outline-width: 0;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
@@ -637,53 +639,17 @@ a.ui-button {
  * </a>
  */
 .ui-button-icon-only {
-  width: 2.2em;
+  width: 2.1538462em;
+  text-indent: -9999px;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 /**
- * `button` elements seem to need a little more width.
- *
- * Example HTML:
- *
- * <button class="ui-button ui-button-icon-only">
- *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
- *     <span class="ui-button-text">Button one icon, no text</span>
- * </button>
+ * No icon support for input elements.
  */
-button.ui-button-icon-only {
-  width: 2.4em;
-}
-
-/**
- * Double-icon-only button.
- *
- * To make room for the icon, a width needs to be set here.
- *
- * Example HTML:
- *
- * <a class="ui-button ui-button-icons-only">
- *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
- *     <span class="ui-button-text">Button two icons, no text</span>
- *     <span class="ui-button-icon-secondary ui-icon ui-icon-disk"></span>
- * </a>
- */
-.ui-button-icons-only {
-  width: 3.4em;
-}
-
-/**
- * `button` elements seem to need a little more width.
- *
- * Example HTML:
- *
- * <button class="ui-button ui-button-icons-only">
- *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
- *     <span class="ui-button-text">Button two icons, no text</span>
- *     <span class="ui-button-icon-secondary ui-icon ui-icon-disk"></span>
- * </button>
- */
-button.ui-button-icons-only {
-  width: 3.7em;
+input.ui-button.ui-button-icon-only {
+  text-indent: 0;
 }
 
 .ui-button.ui-corner-all {
@@ -699,88 +665,82 @@ button.ui-button-icons-only {
 }
 
 /**
- * Button text element.
- */
-.ui-button .ui-button-text {
-  display: block;
-}
-
-.ui-button-text-only .ui-button-text {
-  padding: 0;
-}
-
-.ui-button-icon-only .ui-button-text,
-.ui-button-icons-only .ui-button-text {
-  padding: 0;
-  text-indent: -9999px;
-}
-
-.ui-button-text-icon-primary .ui-button-text,
-.ui-button-text-icons .ui-button-text {
-  padding-left: 16px;
-}
-
-.ui-button-text-icon-secondary .ui-button-text,
-.ui-button-text-icons .ui-button-text {
-  padding-right: 16px;
-}
-
-/**
  * Button icon element(s).
  */
-.ui-button-icon-only .ui-icon,
-.ui-button-text-icon-primary .ui-icon,
-.ui-button-text-icon-secondary .ui-icon,
-.ui-button-text-icons .ui-icon,
-.ui-button-icons-only .ui-icon {
+.ui-button-icon-only .ui-icon {
   position: absolute;
   top: 50%;
-  margin-top: -8px;
-}
-
-.ui-button-icon-only .ui-icon {
   left: 50%;
+  margin-top: -8px;
   margin-left: -8px;
 }
 
-.ui-button-text-icon-primary .ui-button-icon-primary,
-.ui-button-text-icons .ui-button-icon-primary,
-.ui-button-icons-only .ui-button-icon-primary {
-  left: 0.5em;
+.ui-button.ui-icon-notext .ui-icon {
+  padding: 0;
+  text-indent: -9999px;
+  white-space: nowrap;
 }
 
-.ui-button-text-icon-secondary .ui-button-icon-secondary,
-.ui-button-text-icons .ui-button-icon-secondary,
-.ui-button-icons-only .ui-button-icon-secondary {
-  right: 0.5em;
+input.ui-button.ui-icon-notext .ui-icon {
+  padding: 0.4em 1em;
+  text-indent: 0;
+  white-space: normal;
 }
 
+/* Checkboxradio
+   ========================================================================== */
 /**
- * Button sets.
+ * jQuery UI Checkboxradio.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/checkboxradio/
  *
  * Example HTML:
  *
- * <p class="ui-buttonset">
- *     <input id="check1" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check1" class="ui-button ui-button-text-only ui-corner-left">
- *         <span class="ui-button-text">A</span>
- *     </label>
- *     <input id="check2" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check2" class="ui-button ui-button-text-only ui-state-active" aria-pressed="true">
- *         <span class="ui-button-text">B</span>
- *     </label>
- *     <input id="check3" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check3" class="ui-button ui-button-text-only ui-corner-right">
- *         <span class="ui-button-text">C</span>
- *     </label>
- * </p>
+ * <fieldset>
+ *     <legend>Select a Location:</legend>
+ *     <label for="radio-1">New York</label>
+ *     <input id="radio-1" name="radio-1" type="radio">
+ *     <label for="radio-2">Paris</label>
+ *     <input id="radio-2" name="radio-1" type="radio">
+ *     <label for="radio-3">London</label>
+ *     <input id="radio-3" name="radio-1" type="radio">
+ * </fieldset>
  */
-.ui-buttonset {
-  margin-right: 0.28em;
+.ui-checkboxradio-label .ui-icon-background {
+  border: 0;
+  border-radius: 0.12em;
+  box-shadow: inset 1px 1px 1px #cccccc;
 }
 
-.ui-buttonset .ui-button {
-  margin-right: -0.28em;
+.ui-checkboxradio-label .ui-state-highlight {
+  border-color: #cce0ff;
+  background-color: #e6f0ff;
+}
+
+.ui-checkboxradio-label .ui-state-hover {
+  border-color: inherit;
+  background-color: inherit;
+}
+
+.ui-checkboxradio-radio-label .ui-icon-background {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 1em;
+  overflow: visible;
+}
+
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon, .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+  width: 8px;
+  height: 8px;
+  border-width: 4px;
+  border-style: solid;
+  background-image: none;
+}
+
+.ui-checkboxradio-disabled {
+  pointer-events: none;
 }
 
 /**
@@ -811,17 +771,91 @@ label.ui-state-active.ui-button:active {
   border-color: #4a91ff;
 }
 
+/* Controlgroup
+   ========================================================================== */
 /**
- * Button RTL support.
+ * jQuery UI Controlgroup.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/controlgroup/
+ *
+ * Example HTML:
+ *
+ * <fieldset>
+ *     <legend>Favourite drink</legend>
+ *     <div id="radio">
+ *         <input id="tea" name="drink" type="radio">
+ *         <label for="tea">Tea</label>
+ *         <input id="coffee" name="drink" type="radio" checked="checked">
+ *         <label for="coffee">Coffee</label>
+ *         <input id="tequila" name="drink" type="radio">
+ *         <label for="tequila">Tequila</label>
+ *     </div>
+ * </fieldset>
  */
-[dir="rtl"] .ui-buttonset {
-  margin-right: 0;
-  margin-left: 0.5em;
+.ui-controlgroup {
+  display: inline-block;
+  vertical-align: top;
 }
 
-[dir="rtl"] .ui-buttonset .ui-button {
+.ui-controlgroup .ui-controlgroup-item {
   margin-right: 0;
-  margin-left: -0.28em;
+  margin-left: 0;
+  float: left;
+}
+
+.ui-controlgroup .ui-controlgroup-item:focus, .ui-controlgroup .ui-controlgroup-item.ui-visual-focus {
+  z-index: 9999;
+}
+
+.ui-controlgroup .ui-controlgroup-label {
+  padding: 0.4em 1em;
+}
+
+.ui-controlgroup .ui-controlgroup-label span {
+  font-size: 80%;
+}
+
+.ui-controlgroup .ui-state-highlight {
+  border-color: #cce0ff;
+  background-color: #e6f0ff;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-label + .ui-controlgroup-item {
+  border-left: 0;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
+  border-right: 0;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-item {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: none;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-label + .ui-controlgroup-item {
+  border-top: 0;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-label.ui-widget-content {
+  border-bottom: 0;
+}
+
+/**
+ * Spinner specific style fixes.
+ */
+.ui-controlgroup-vertical .ui-spinner-input {
+  width: calc(100% - 2.4em);
+}
+
+.ui-controlgroup-vertical .ui-spinner .ui-spinner-up {
+  border-top-style: solid;
 }
 
 /* Datepicker
@@ -942,6 +976,11 @@ label.ui-state-active.ui-button:active {
   margin-left: -8px;
 }
 
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+  background-color: #f7f7f7;
+}
+
 .ui-datepicker .ui-datepicker-title {
   margin: 0 2.2em;
   line-height: 1.8em;
@@ -1018,6 +1057,15 @@ label.ui-state-active.ui-button:active {
 
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
   float: left;
+}
+
+.ui-datepicker .ui-icon {
+  display: block;
+  top: 0.3em;
+  left: 0.5em;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 
 /**
@@ -1133,6 +1181,7 @@ label.ui-state-active.ui-button:active {
   top: 0;
   left: 0;
   padding: 0.2em;
+  outline: 0;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   z-index: 1002;
 }
@@ -1158,8 +1207,6 @@ label.ui-state-active.ui-button:active {
   width: 20px;
   height: 20px;
   margin: -10px 0 0;
-  border: 0;
-  background: none;
 }
 
 .ui-dialog .ui-dialog-content {
@@ -1185,54 +1232,6 @@ label.ui-state-active.ui-button:active {
 .ui-dialog .ui-dialog-buttonpane button {
   margin: 0.5em 0.4em 0.5em 0;
   cursor: pointer;
-}
-
-.ui-dialog .ui-resizable-n {
-  top: 0;
-  height: 2px;
-}
-
-.ui-dialog .ui-resizable-e {
-  right: 0;
-  width: 2px;
-}
-
-.ui-dialog .ui-resizable-s {
-  bottom: 0;
-  height: 2px;
-}
-
-.ui-dialog .ui-resizable-w {
-  left: 0;
-  width: 2px;
-}
-
-.ui-dialog .ui-resizable-se,
-.ui-dialog .ui-resizable-sw,
-.ui-dialog .ui-resizable-ne,
-.ui-dialog .ui-resizable-nw {
-  width: 7px;
-  height: 7px;
-}
-
-.ui-dialog .ui-resizable-se {
-  right: 0;
-  bottom: 0;
-}
-
-.ui-dialog .ui-resizable-sw {
-  bottom: 0;
-  left: 0;
-}
-
-.ui-dialog .ui-resizable-ne {
-  top: 0;
-  right: 0;
-}
-
-.ui-dialog .ui-resizable-nw {
-  top: 0;
-  left: 0;
 }
 
 /**
@@ -1321,15 +1320,18 @@ label.ui-state-active.ui-button:active {
 }
 
 .ui-menu .ui-menu-item {
-  position: relative;
   margin: 0;
-  padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em;
   cursor: pointer;
 }
 
 .ui-menu .ui-menu-item a {
   color: #333333;
   text-decoration: none;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  position: relative;
+  padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em;
 }
 
 .ui-menu .ui-menu-divider {
@@ -1365,18 +1367,18 @@ label.ui-state-active.ui-button:active {
   position: relative;
 }
 
-.ui-menu-icons .ui-menu-item {
+.ui-menu-icons .ui-menu-item-wrapper {
   padding-left: 2em;
 }
 
 /**
- * Menu RTL support (needs further improvements in upstream project).
+ * Menu RTL support.
  */
 [dir="rtl"] .ui-menu {
   padding: 0;
 }
 
-[dir="rtl"] .ui-menu .ui-menu-item {
+[dir="rtl"] .ui-menu .ui-menu-item-wrapper {
   padding: 0.30769230769231em 0.30769230769231em 0.30769230769231em 1em;
 }
 
@@ -1467,7 +1469,7 @@ label.ui-state-active.ui-button:active {
  *         <option>Fast</option>
  *         <option>Faster</option>
  *     </select>
- *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" style="width:87px;">
+ *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all">
  *         <span class="ui-icon ui-icon-triangle-1-s"></span>
  *         <span class="ui-selectmenu-text">Medium</span>
  *     </span>
@@ -1482,43 +1484,8 @@ label.ui-state-active.ui-button:active {
  *     </ul>
  * </div>
  */
-.ui-selectmenu-button {
-  display: inline-block;
-  position: relative;
-  background-color: #ffffff;
-  /* 1 */
-  font-size: 13px;
-  line-height: 1.38461538461538em;
-  text-decoration: none;
-  cursor: pointer;
-  overflow: hidden;
-  vertical-align: top;
-}
-
-.ui-selectmenu-button:focus {
-  border-color: #0066ff;
-  outline-width: 0;
-}
-
-.ui-selectmenu-button span.ui-icon {
-  position: absolute;
-  top: 50%;
-  right: 0.2em;
-  left: auto;
-  margin-top: -8px;
-}
-
-.ui-selectmenu-button span.ui-selectmenu-text {
-  display: block;
-  padding: 0.30769230769231em 1.75em 0.30769230769231em 0.30769230769231em;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .ui-selectmenu-icon.ui-icon {
-  margin-top: 0;
+  margin: 0 -0.25em 0 0.25em;
   float: right;
 }
 
@@ -1555,17 +1522,40 @@ label.ui-state-active.ui-button:active {
   display: block;
 }
 
-/**
- * Selectmenu RTL support (needs further improvements in upstream project).
- */
-[dir="rtl"] .ui-selectmenu-button span.ui-icon {
-  right: auto;
-  left: 0.2em;
+.ui-selectmenu-text {
+  display: block;
+  margin-right: 1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-[dir="rtl"] .ui-selectmenu-button span.ui-selectmenu-text {
-  padding: 0.30769230769231em 0.30769230769231em 0.30769230769231em 1.75em;
-  text-align: right;
+.ui-selectmenu-button.ui-button {
+  white-space: nowrap;
+}
+
+.ui-selectmenu-button:not(.ui-controlgroup-item) {
+  border-radius: 0.5em;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+/**
+ * Selectmenu RTL support.
+ */
+[dir="rtl"] .ui-selectmenu-icon.ui-icon {
+  margin: 0 0.25em 0 -0.25em;
+  float: left;
+}
+
+[dir="rtl"] .ui-selectmenu-text {
+  margin-right: 0;
+  margin-left: 1em;
 }
 
 /* Slider
@@ -1705,13 +1695,6 @@ label.ui-state-active.ui-button:active {
 
 .ui-spinner .ui-spinner-input {
   padding-right: 24px;
-}
-
-.ui-spinner .ui-icon {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -8px;
 }
 
 .ui-spinner-button {
@@ -1863,10 +1846,6 @@ label.ui-state-active.ui-button:active {
   background: #e6f0ff;
 }
 
-.ui-tabs-vertical .ui-tabs-nav .ui-state-focus {
-  outline-width: 0;
-}
-
 .ui-tabs-vertical .ui-tabs-nav .ui-state-focus a {
   outline: thin solid #0066ff;
 }
@@ -1914,6 +1893,7 @@ label.ui-state-active.ui-button:active {
  */
 .ui-icon {
   display: inline-block;
+  position: relative;
   width: 16px;
   height: 16px;
   background-image: url("img/ui-icon-sprite-333333.svg");
@@ -1924,11 +1904,23 @@ label.ui-state-active.ui-button:active {
   vertical-align: text-bottom;
 }
 
+.ui-widget-icon-block {
+  display: block;
+  left: 50%;
+  margin-left: -8px;
+}
+
+/**
+ * Default state icons.
+ */
 .ui-state-default .ui-icon,
 .destroy .ui-icon {
   background-image: url("img/ui-icon-sprite-555555.svg");
 }
 
+/**
+ * Weighted content icons and interaction state icons.
+ */
 .ui-widget-content .ui-icon,
 .ui-widget-header .ui-icon,
 .ui-state-hover .ui-icon,
@@ -1975,7 +1967,7 @@ label.ui-state-active.ui-button:active {
  * Example HTML:
  *
  * <p class="error">
- *     <span class="ui-icon ui-icon-closethick"></span>
+ *     <span class="ui-icon ui-icon-alert"></span>
  *     Error!
  * </p>
  */
@@ -2013,43 +2005,43 @@ label.ui-state-active.ui-button:active {
   background-position: 16px 16px;
 }
 
-.ui-icon-carat-1-n {
+.ui-icon-caret-1-n {
   background-position: 0 0;
 }
 
-.ui-icon-carat-1-ne {
+.ui-icon-caret-1-ne {
   background-position: -16px 0;
 }
 
-.ui-icon-carat-1-e {
+.ui-icon-caret-1-e {
   background-position: -32px 0;
 }
 
-.ui-icon-carat-1-se {
+.ui-icon-caret-1-se {
   background-position: -48px 0;
 }
 
-.ui-icon-carat-1-s {
+.ui-icon-caret-1-s {
   background-position: -64px 0;
 }
 
-.ui-icon-carat-1-sw {
+.ui-icon-caret-1-sw {
   background-position: -80px 0;
 }
 
-.ui-icon-carat-1-w {
+.ui-icon-caret-1-w {
   background-position: -96px 0;
 }
 
-.ui-icon-carat-1-nw {
+.ui-icon-caret-1-nw {
   background-position: -112px 0;
 }
 
-.ui-icon-carat-2-n-s {
+.ui-icon-caret-2-n-s {
   background-position: -128px 0;
 }
 
-.ui-icon-carat-2-e-w {
+.ui-icon-caret-2-e-w {
   background-position: -144px 0;
 }
 

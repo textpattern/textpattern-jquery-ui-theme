@@ -127,13 +127,25 @@ a.ui-state-default:focus {
 }
 
 /**
- * Hover/focus jQuery UI widget interaction states.
+ * Hover jQuery UI widget interaction states.
  */
 
-.ui-state-hover,
-.ui-state-focus {
+.ui-state-hover {
     border-color: darken($color-border, 13.5%);
     background-color: $color-background-box;
+}
+
+/**
+ * Focus jQuery UI widget interaction states.
+ */
+
+.ui-state-focus {
+    border-color: $color-link-focus;
+    outline-width: 0;
+
+    a {
+        outline-width: 0;
+    }
 }
 
 /**
@@ -229,13 +241,12 @@ a.ui-state-default:focus {
  */
 
 .ui-widget-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(#000000, 0.75);
-    z-index: 1001;
 }
 
 
@@ -251,10 +262,5 @@ a.ui-state-default:focus {
  */
 
 .ui-widget-shadow {
-    margin: -0.5em 0 0 -0.5em;
-    padding: 0.5em;
-    @if $border-radius > 0 {
-        border-radius: $border-radius;
-    }
-    background: rgba(#000000, 0.75);
+    box-shadow: 0 0 5px #666666;
 }
