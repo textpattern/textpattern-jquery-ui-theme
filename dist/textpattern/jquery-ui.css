@@ -1922,7 +1922,7 @@ label.ui-state-active.ui-button:active {
 /**
  * Weighted content icons and interaction state icons.
  *
- * TODO: Use `filter: brightness()` in future, instead of dedicated image.
+ * TODO: See `filter: brightness()` above.
  */
 .ui-widget-content .ui-icon,
 .ui-widget-header .ui-icon,
