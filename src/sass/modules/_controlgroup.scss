@@ -23,13 +23,12 @@
  */
 
 .ui-controlgroup {
-    display: inline-block;
-    vertical-align: top;
+    display: inline-flex;
+    flex-flow: row wrap;
 
     .ui-controlgroup-item {
         margin-right: 0;
         margin-left: 0;
-        float: left;
 
         &:focus,
         &.ui-visual-focus {
@@ -64,14 +63,19 @@
 }
 
 .ui-controlgroup-vertical {
+    flex-flow: column;
+
     .ui-controlgroup-item {
         display: block;
         width: 100%;
         margin-top: 0;
         margin-bottom: 0;
-        float: none;
         text-align: left;
         box-sizing: border-box;
+
+        [dir="rtl"] & {
+            text-align: right;
+        }
     }
 
     .ui-controlgroup-label {
