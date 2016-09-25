@@ -802,12 +802,10 @@ label.ui-state-active.ui-button:active {
  * </fieldset>
  */
 .ui-controlgroup {
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
 }
 
 .ui-controlgroup .ui-controlgroup-item {
@@ -841,9 +839,8 @@ label.ui-state-active.ui-button:active {
 }
 
 .ui-controlgroup-vertical {
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -ms-flex-flow: column;
+      flex-flow: column;
 }
 
 .ui-controlgroup-vertical .ui-controlgroup-item {
@@ -1379,7 +1376,7 @@ label.ui-state-active.ui-button:active {
 
 .ui-menu .ui-menu-item-wrapper {
   position: relative;
-  padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em;
+  padding: 0.30769230769231em 1em 0.30769230769231em 0.61538461538462em;
 }
 
 .ui-menu .ui-menu-divider {
@@ -1427,7 +1424,7 @@ label.ui-state-active.ui-button:active {
 }
 
 [dir="rtl"] .ui-menu .ui-menu-item-wrapper {
-  padding: 0.30769230769231em 0.30769230769231em 0.30769230769231em 1em;
+  padding: 0.30769230769231em 0.61538461538462em 0.30769230769231em 1em;
 }
 
 [dir="rtl"] .ui-menu .ui-icon {
@@ -1533,7 +1530,6 @@ label.ui-state-active.ui-button:active {
  * </div>
  */
 .ui-selectmenu-button {
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
@@ -1551,12 +1547,10 @@ label.ui-state-active.ui-button:active {
 }
 
 .ui-selectmenu-icon {
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2;
+  -ms-flex: none;
+      flex: none;
+  -ms-flex-order: 2;
+      order: 2;
   margin: 0 -0.25em 0 0.25em;
 }
 
