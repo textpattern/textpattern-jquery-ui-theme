@@ -554,9 +554,7 @@ a.ui-state-default:focus {
  *
  * Example HTML:
  *
- * <a class="ui-button ui-button-text-only">
- *     <span class="ui-button-text">Button</span>
- * </a>
+ * <a class="ui-button ui-corner-all ui-widget">Button</a>
  */
 .ui-button {
   background-color: #dddddd;
@@ -633,9 +631,10 @@ a.ui-state-default:focus {
  *
  * Example HTML:
  *
- * <a class="ui-button ui-button-icon-only">
- *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
- *     <span class="ui-button-text">Button one icon, no text</span>
+ * <a class="ui-button ui-corner-all ui-widget ui-button-icon-only">
+ *     <span class="ui-button-icon ui-icon ui-icon-gear"></span>
+ *     <span class="ui-button-icon-space"> </span>
+ *     Button one icon, no text
  * </a>
  */
 .ui-button-icon-only {
@@ -756,24 +755,22 @@ input.ui-button.ui-icon-notext .ui-icon {
  *
  * Example HTML:
  *
- * <input class="ui-helper-hidden-accessible" id="check" type="checkbox">
- * <label for="check" class="ui-button ui-button-text-only ui-state-active">
- *     <span class="ui-button-text">Toggle</span>
- * </label>
+ * <input class="ui-checkboxradio ui-helper-hidden-accessible" id="check" type="checkbox">
+ * <label for="check" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-checked ui-state-active">Dogs</label>
  */
-label.ui-state-active.ui-button {
+.ui-checkboxradio-checked.ui-button {
   background-color: #cce0ff;
   background-image: linear-gradient(#e6f0ff, #cce0ff);
   border-color: #96bfff;
 }
 
-label.ui-state-active.ui-button:hover {
+.ui-checkboxradio-checked.ui-button:hover {
   background-color: #d6e6ff;
   background-image: linear-gradient(#f5f9ff, #d6e6ff);
   border-color: #4a91ff;
 }
 
-label.ui-state-active.ui-button:active {
+.ui-checkboxradio-checked.ui-button:active {
   background-color: #b3d1ff;
   background-image: linear-gradient(#cde1ff, #b3d1ff);
   border-color: #4a91ff;
