@@ -1,7 +1,7 @@
 {
   "name": "textpattern-jquery-ui-theme",
   "description": "The jQuery UI theme used within Textpattern CMS admin side.",
-  "version": "4.6.1",
+  "version": "4.6.2",
   "keywords": [
     "jquery-ui",
     "theme",
@@ -17,7 +17,7 @@
     "url": "https://github.com/textpattern/textpattern-jquery-ui-theme/issues"
   },
   "devDependencies": {
-    "autoprefixer": "6.5.0",
+    "autoprefixer": "6.5.1",
     "grunt": "~1.0",
     "grunt-cli": "~1",
     "grunt-concurrent": "2.3.1",
