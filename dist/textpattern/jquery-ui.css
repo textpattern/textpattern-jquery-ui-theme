@@ -1458,7 +1458,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   background-image: url("img/ui-progressbar.gif");
   background-size: 16px 16px;
   height: 16px;
-  background-color: #cce0ff;
+  background-color: #f7c600;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
@@ -1479,15 +1479,7 @@ input.ui-button.ui-icon-notext .ui-icon {
  * </div>
  */
 .ui-progressbar-indeterminate .ui-progressbar-value {
-  background-image: url("img/ui-progressbar-indeterminate.gif");
-  background-size: 16px 16px;
   background-color: #cccccc;
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  .ui-progressbar-indeterminate .ui-progressbar-value {
-    background-image: url("img/ui-progressbar-indeterminate@2x.gif");
-  }
 }
 
 /* Selectmenu
