@@ -1,6 +1,7 @@
 # Textpattern jQuery UI theme
 
-[![Build Status](https://img.shields.io/travis/textpattern/textpattern-jquery-ui-theme/master.svg)](https://travis-ci.org/textpattern/textpattern-jquery-ui-theme)
+[![Build Status](https://img.shields.io/travis/textpattern/textpattern-jquery-ui-theme.svg)](https://travis-ci.org/textpattern/textpattern-jquery-ui-theme)
+[![devDependency Status](http://img.shields.io/david/dev/textpattern/textpattern-jquery-ui-theme.svg)](https://david-dm.org/textpattern/textpattern-jquery-ui-theme?type=dev)
 
 The jQuery UI theme used within the [Textpattern CMS](http://textpattern.com) admin-side.
 
