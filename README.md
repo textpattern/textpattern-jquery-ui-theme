@@ -1,9 +1,9 @@
 # Textpattern jQuery UI theme
 
 [![Build Status](https://img.shields.io/travis/textpattern/textpattern-jquery-ui-theme.svg)](https://travis-ci.org/textpattern/textpattern-jquery-ui-theme)
-[![devDependency Status](http://img.shields.io/david/dev/textpattern/textpattern-jquery-ui-theme.svg)](https://david-dm.org/textpattern/textpattern-jquery-ui-theme?type=dev)
+[![devDependency Status](https://img.shields.io/david/dev/textpattern/textpattern-jquery-ui-theme.svg)](https://david-dm.org/textpattern/textpattern-jquery-ui-theme?type=dev)
 
-The jQuery UI theme used within the [Textpattern CMS](http://textpattern.com) admin-side.
+The jQuery UI theme used within the [Textpattern CMS](https://textpattern.io/) admin-side.
 
 ## Supported web browsers
 
@@ -14,14 +14,14 @@ The jQuery UI theme used within the [Textpattern CMS](http://textpattern.com) ad
 
 Building this repository requires:
 
-* [Node.js](http://nodejs.org/) >=0.12.0
-* [Grunt](http://gruntjs.com/) >=0.4.0
+* [Node.js](https://nodejs.org/) >=4.0
+* [Grunt](https://gruntjs.com/) >=1.0
 
 ## Build setup
 
 ### Installing required tools
 
-The project uses [Grunt](http://gruntjs.com/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: [Node.js](http://nodejs.org/) and [Grunt](http://gruntjs.com/). You can install Node using the [installer](https://nodejs.org) and Grunt with npm:
+The project uses [Grunt](https://gruntjs.com/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: [Node.js](https://nodejs.org/) and [Grunt](https://gruntjs.com/). You can install Node using the [installer](https://nodejs.org/) and Grunt with npm:
 
 ```ShellSession
 $ npm install -g grunt-cli

@@ -23,7 +23,7 @@
 
     display: inline-block;
     position: relative;
-    height: 2.1538462em; // 28px / 13px
+    height: 2.307692307692308em; // 30px / 13px
     margin: 0 0.1em 0 0;
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     border: 1px solid $color-button-border;
@@ -32,12 +32,8 @@
     font-family: $font-form;
     /* 1 */
     font-size: $base-font-size;
-    line-height: 1.3846154em; // 18px / 13px
+    line-height: $base-line-height;
     text-align: center;
-    @if $flat-theme < 1 {
-        text-shadow: $text-shadow-light;
-        box-shadow: $inset-highlighting;
-    }
     /* 2 */
     cursor: pointer;
     /* 3 */
@@ -70,9 +66,6 @@
     &:focus {
         border-color: $color-link-focus;
         outline: 0;
-        @if $flat-theme < 1 {
-            box-shadow: $inset-highlighting;
-        }
     }
 }
 
@@ -85,9 +78,6 @@
 .ui-button.ui-state-focus {
     /* 1 */
     border-color: $color-link-focus !important;
-    @if $flat-theme < 1 {
-        box-shadow: $inset-highlighting;
-    }
 }
 
 /**

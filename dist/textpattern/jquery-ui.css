@@ -561,7 +561,7 @@ a.ui-state-default:focus {
   background-image: linear-gradient(#eeeeee, #dddddd);
   display: inline-block;
   position: relative;
-  height: 2.1538462em;
+  height: 2.307692307692308em;
   margin: 0 0.1em 0 0;
   padding: 0.30769230769231em 0.61538461538462em;
   border: 1px solid #cccccc;
@@ -570,10 +570,8 @@ a.ui-state-default:focus {
   font-family: Helvetica, Arial, sans-serif;
   /* 1 */
   font-size: 13px;
-  line-height: 1.3846154em;
+  line-height: 20px;
   text-align: center;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   /* 2 */
   cursor: pointer;
   /* 3 */
@@ -610,7 +608,6 @@ a.ui-state-default:focus {
 .ui-button:focus {
   border-color: #0066ff;
   outline: 0;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 /**
@@ -621,7 +618,6 @@ a.ui-state-default:focus {
 .ui-button.ui-state-focus {
   /* 1 */
   border-color: #0066ff !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 /**
@@ -718,16 +714,6 @@ input.ui-button.ui-icon-notext .ui-icon {
   border: 0;
   border-radius: 0.12em;
   box-shadow: inset 1px 1px 1px #cccccc;
-}
-
-.ui-checkboxradio-label .ui-state-highlight {
-  border-color: #cce0ff;
-  background-color: #e6f0ff;
-}
-
-.ui-checkboxradio-label .ui-state-hover {
-  border-color: inherit;
-  background-color: inherit;
 }
 
 .ui-checkboxradio-radio-label .ui-icon-background {
@@ -1350,7 +1336,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   outline: 0;
   /* 1 */
   font-size: 13px;
-  line-height: 1.38461538461538em;
+  line-height: 20px;
   list-style: none;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
@@ -1461,15 +1447,6 @@ input.ui-button.ui-icon-notext .ui-icon {
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
   background-size: 24px 24px;
   animation: progressbar-stripes linear 4s infinite;
-}
-
-@keyframes progressbar-stripes {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 48px 0;
-  }
 }
 
 /**
@@ -1888,7 +1865,7 @@ input.ui-button.ui-icon-notext .ui-icon {
  * Additonal styling for tabs vertical.
  */
 .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
-  background: #e6f0ff;
+  background: #fff9e1;
 }
 
 .ui-tabs-vertical .ui-tabs-nav .ui-state-focus a {

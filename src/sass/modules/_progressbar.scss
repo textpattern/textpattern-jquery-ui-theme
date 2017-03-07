@@ -38,16 +38,6 @@
     animation: progressbar-stripes linear 4s infinite;
 }
 
-@keyframes progressbar-stripes {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: 48px 0;
-    }
-}
-
 /**
  * Progressbar with indeterminate value.
  *
