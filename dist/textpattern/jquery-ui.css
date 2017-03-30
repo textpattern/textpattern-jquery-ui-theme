@@ -1820,8 +1820,8 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav .ui-tabs-anchor {
+  display: block;
   padding: 0.5em 1em;
-  float: left;
   color: #333333;
   text-decoration: none;
 }
@@ -1839,13 +1839,6 @@ input.ui-button.ui-icon-notext .ui-icon {
  */
 .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
   cursor: pointer;
-}
-
-/**
- * Tabs RTL support.
- */
-[dir="rtl"] .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-  float: right;
 }
 
 /**
