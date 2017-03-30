@@ -1762,10 +1762,6 @@ input.ui-button.ui-icon-notext .ui-icon {
  * Some classes and HTML elements generally added via JavaScript, more info -
  * https://jqueryui.com/tabs/
  *
- * 1. `position: relative` prevents IE scroll bug (elements with
- *    `position: relative` inside a parent container with `overflow: auto`
- *    appear as "fixed")
- *
  * Example HTML:
  *
  * <div class="ui-tabs>
@@ -1792,22 +1788,19 @@ input.ui-button.ui-icon-notext .ui-icon {
  * </div>
  */
 .ui-tabs:not(.ui-tabs-vertical) {
-  /* 1 */
-  position: relative;
   border: 0;
 }
 
 .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
+  height: 34px;
   margin: 0;
   padding: 0;
   background: none;
 }
 
 .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
-  position: relative;
-  top: 0;
-  margin-right: 2px;
-  float: left;
+  display: inline-block;
+  height: 33px;
   border-bottom-width: 0;
   list-style: none;
   white-space: nowrap;
@@ -1851,12 +1844,6 @@ input.ui-button.ui-icon-notext .ui-icon {
 /**
  * Tabs RTL support.
  */
-[dir="rtl"] .ui-tabs .ui-tabs-nav li {
-  margin-right: 0;
-  margin-left: 2px;
-  float: right;
-}
-
 [dir="rtl"] .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
   float: right;
 }
@@ -1941,8 +1928,7 @@ input.ui-button.ui-icon-notext .ui-icon {
  * TODO: Use `mask` in future.
  */
 .ui-state-default .ui-icon {
-  -webkit-filter: brightness(1.6666667);
-          filter: brightness(1.6666667);
+  filter: brightness(1.6666667);
 }
 
 /**
@@ -1955,8 +1941,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-state-active .ui-icon {
-  -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 /**
