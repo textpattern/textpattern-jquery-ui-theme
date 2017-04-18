@@ -1608,7 +1608,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   border-radius: 50%;
   background-color: #ffffff;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-  cursor: default;
+  cursor: pointer;
   z-index: 2;
   -ms-touch-action: none;
       touch-action: none;
