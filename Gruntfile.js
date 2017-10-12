@@ -11,7 +11,7 @@ module.exports = function (grunt)
         // Set up paths.
         paths: {
             src: {
-                sass: 'src/sass/'
+                sass: 'scss/'
             },
             dest: {
                 css: 'dist/textpattern/'

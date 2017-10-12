@@ -10,6 +10,14 @@ The jQuery UI theme used within the [Textpattern CMS](https://textpattern.com/) 
 * Internet Explorer 11.
 * Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
 
+## Installation
+
+The package can be included in your project via NPM, like so:
+
+```ShellSession
+$ npm install textpattern-jquery-ui-theme --save-dev
+```
+
 ## Requirements
 
 Building this repository requires:
