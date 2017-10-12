@@ -11,39 +11,15 @@ module.exports = function (grunt)
         // Set up paths.
         paths: {
             src: {
-                sass: 'src/sass/',
-                img: 'src/img/'
+                sass: 'src/sass/'
             },
             dest: {
-                css: 'dist/textpattern/',
-                img: 'dist/textpattern/img/'
+                css: 'dist/textpattern/'
             }
         },
 
         // Clean distribution directory to start afresh.
         clean: ['dist/'],
-
-        // Run some tasks in parallel to speed up the build process.
-        concurrent: {
-            dist: [
-                'css',
-                'copy'
-            ]
-        },
-
-        // Copy theme images.
-        copy: {
-            dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.img %>',
-                        src: '**',
-                        dest: '<%= paths.dest.img %>'
-                    }
-                ]
-            }
-        },
 
         // Minified version of CSS file.
         cssmin: {
@@ -131,7 +107,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent']);
+    grunt.registerTask('build', ['clean', 'css']);
     grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'cssmin']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
