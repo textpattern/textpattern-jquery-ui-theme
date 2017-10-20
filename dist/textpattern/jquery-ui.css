@@ -1145,7 +1145,8 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 [dir="rtl"] .ui-datepicker-prev span {
-  background-position: -48px -192px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 [dir="rtl"] .ui-datepicker-next {
@@ -1154,7 +1155,8 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 [dir="rtl"] .ui-datepicker-next span {
-  background-position: -80px -192px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 [dir="rtl"] .ui-datepicker-buttonpane {
@@ -1681,7 +1683,6 @@ input.ui-button.ui-icon-notext .ui-icon {
   display: block;
   position: absolute;
   border: 0;
-  background-position: 0 0;
   font-size: 0.7em;
   z-index: 1;
 }
@@ -1855,6 +1856,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 .ui-tabs .ui-tabs-nav {
+  padding: 0;
   background: none;
 }
 
