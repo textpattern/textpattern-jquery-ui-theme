@@ -35,7 +35,7 @@ The project uses [Grunt](https://gruntjs.com/) to run tasks and [Sass](http://sa
 $ npm install -g grunt-cli
 ```
 
-Consult the Grunt documentation for more instructions if necessary. You might need to use `sudo npm install -g grunt-cli` instead when installing on certain Unix-based systems.
+Consult the Grunt documentation for more instructions if necessary.
 
 ### Installing dependencies
 
@@ -46,7 +46,7 @@ $ cd textpattern-jquery-ui-theme
 $ npm install
 ```
 
-**npm** installs Node modules for Grunt. You might need to use `sudo npm install` instead when installing on certain Unix-based systems.
+**npm** installs Node modules for Grunt.
 
 ## Building
 
