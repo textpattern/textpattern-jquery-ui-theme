@@ -1389,7 +1389,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 
 .ui-menu .ui-menu-item-wrapper {
   position: relative;
-  padding: 0.30769230769231em 1em 0.30769230769231em 0.61538461538462em;
+  padding: 0.30769230769231em 0.61538461538462em;
 }
 
 .ui-menu .ui-menu-divider {
