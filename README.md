@@ -22,44 +22,32 @@ $ npm install textpattern-jquery-ui-theme --save-dev
 
 Building this repository requires:
 
-* [Node.js](https://nodejs.org/) >=4.0
-* [Grunt](https://gruntjs.com/) >=1.0
+* [Node.js](https://nodejs.org/) >=6.9
 
 ## Build setup
 
 ### Installing required tools
 
-The project uses [Grunt](https://gruntjs.com/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: [Node.js](https://nodejs.org/) and [Grunt](https://gruntjs.com/). You can install Node using the [installer](https://nodejs.org/) and Grunt with npm:
-
-```ShellSession
-$ npm install -g grunt-cli
-```
-
-Consult the Grunt documentation for more instructions if necessary.
+The project uses [Webpack](https://webpack.github.io/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have a recent version of [Node.js](https://nodejs.org/) installed. You can install Node.js using the [installer](https://nodejs.org/en/download/) or [package manager](https://nodejs.org/en/download/package-manager/).
 
 ### Installing dependencies
 
-After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency manager:
+After you have Node.js taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency manager:
 
 ```ShellSession
 $ cd textpattern-jquery-ui-theme
 $ npm install
 ```
 
-**npm** installs Node modules for Grunt.
+**npm** installs Webpack and any necessary JavaScript packages.
 
 ## Building
 
-This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
+This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run the build:
 
 ```ShellSession
-$ grunt @task@
+$ npm run build
 ```
-
-Where the `@task@` is either `build` or `watch`.
-
-* The `build` task builds the project.
-* The `watch` task will launch a task that watches for file changes; the project is then automatically built if a source file is modified.
 
 ## Pre-built version
 
