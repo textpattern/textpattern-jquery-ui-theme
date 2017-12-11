@@ -210,8 +210,8 @@ a.ui-state-default:focus {
  */
 
 .ui-priority-secondary {
-    font-weight: normal;
     opacity: 0.66;
+    font-weight: normal;
 }
 
 /**
@@ -220,9 +220,9 @@ a.ui-state-default:focus {
 
 .ui-state-disabled {
     background-image: none;
-    cursor: default !important;
     opacity: 0.33;
     pointer-events: none;
+    cursor: default !important;
 
     a {
         text-decoration: none;

@@ -4,6 +4,7 @@ var fs = require('fs');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -28,13 +29,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        { loader: 'css-loader', options: { minimize: false, importLoaders: 1 } },
-                        { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } }
-                    ]
-                })
+                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
             },
         ]
     },
@@ -48,8 +43,15 @@ module.exports = {
             failOnError: false,
             quiet: false
         }),
-        new ExtractTextPlugin('[name]', {
-            allChunks: true
+        new ExtractTextPlugin('jquery-ui.css'),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.css$/g,
+            cssProcessorOptions: {
+                safe: true,
+                discardComments: {
+                    removeAll: true
+                }
+            }
         }),
     ]
 };

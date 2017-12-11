@@ -23,19 +23,20 @@
 
 .ui-progressbar-value {
     height: 6px;
-    background-color: $color-accent-gradient-to;
-    background-image: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.25) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0.25) 75%,
-        transparent 75%,
-        transparent
-    );
-    background-size: 24px 24px;
     animation: progressbar-stripes linear 4s infinite;
+    background-color: $color-accent-gradient-to;
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.25) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0.25) 75%,
+            transparent 75%,
+            transparent
+        );
+    background-size: 24px 24px;
 }
 
 /**

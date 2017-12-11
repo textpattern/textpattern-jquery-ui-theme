@@ -47,7 +47,7 @@
 
         .ui-tabs-anchor {
             display: block;
-            padding: 0.38461538461538em 1em;
+            padding: 0.3846154em 1em; // 5px / 13px
         }
 
         li {
@@ -81,6 +81,7 @@
         border-bottom-width: 0;
         list-style: none;
         white-space: nowrap;
+
         @if $flat-theme < 1 {
             box-shadow: inset 0 -0.2em 0.4em rgba(#666666, 0.15);
         }
@@ -88,6 +89,7 @@
         &.ui-tabs-active {
             margin-bottom: -1px;
             padding-bottom: 1px;
+
             @if $flat-theme < 1 {
                 box-shadow: none;
             }

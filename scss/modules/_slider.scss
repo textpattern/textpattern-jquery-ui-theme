@@ -26,9 +26,11 @@
         height: 20px;
         border-radius: 50%;
         background-color: $color-background;
+
         @if $flat-theme < 1 {
             box-shadow: $standard-shadow;
         }
+
         cursor: pointer;
         z-index: 2;
         touch-action: none;
