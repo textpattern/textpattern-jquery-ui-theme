@@ -302,10 +302,10 @@ rules:
   selector-max-class: 4
 
   # Limit the number of combinators in a selector.
-  selector-max-combinators: 3
+  selector-max-combinators: 4
 
   # Limit the number of compound selectors in a selector.
-  selector-max-compound-selectors: 4
+  selector-max-compound-selectors: 5
 
   # Limit the number of adjacent empty lines within selectors.
   selector-max-empty-lines: 0

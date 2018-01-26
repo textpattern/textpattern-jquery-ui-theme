@@ -53,18 +53,6 @@ a:focus .ui-icon {
 }
 
 /**
- * Weighted content icons and interaction state icons.
- */
-
-.ui-widget-content .ui-icon,
-.ui-widget-header .ui-icon,
-.ui-state-hover .ui-icon,
-.ui-state-focus .ui-icon,
-.ui-state-active .ui-icon {
-    filter: none;
-}
-
-/**
  * 'Succes' state icons.
  *
  * Example HTML:
@@ -140,6 +128,25 @@ a:focus .ui-icon {
 .ui-icon-inversed,
 #messagepane .ui-icon {
     filter: brightness(5);
+}
+
+/**
+ * Weighted content icons and interaction state icons.
+ */
+
+button,
+[type="reset"],
+[type="submit"],
+input[type="button"],
+.txp-button,
+.ui-widget-content .ui-icon,
+.ui-widget-header .ui-icon,
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-state-active .ui-icon {
+    .ui-icon {
+        filter: none;
+    }
 }
 
 /* Icon set.
