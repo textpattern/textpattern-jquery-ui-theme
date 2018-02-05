@@ -4,8 +4,7 @@ $flat-theme:                 0 !default; // 0 = no, 1 = yes
 
 // font families
 
-$font-body:                  Helvetica, Arial, sans-serif !default;
-$font-form:                  Helvetica, Arial, sans-serif !default;
+$font-body:                  system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
 $font-code:                  Menlo, Consolas, Monaco, monospace !default;
 
 // typography grid
@@ -14,18 +13,6 @@ $base-font-size:             13px !default;
 $base-line-height:           20px !default;
 $small-font-size:            11px !default;
 $small-line-height:          16px !default;
-
-// layout grid
-
-$grid-gutter:                1em !default; // 13px
-$standard-column:            42em !default; // 520px / 13px
-$text-column:                57em !default; // 741px / 13px
-
-// layout grid (using desktop first in this project)
-
-$container-max-width:        116em !default; // 1508px / 13px
-$break-large:                60em !default; // 960px / 16px (breakpoints are 16px = 1em measurements)
-$break-small:                47em !default; // 752px / 16px (breakpoints are 16px = 1em measurements)
 
 // borders
 
