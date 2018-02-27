@@ -33,7 +33,7 @@
 
         cursor: pointer;
         z-index: 2;
-        touch-action: none;
+        touch-action: manipulation;
     }
 
     .ui-slider-range {
