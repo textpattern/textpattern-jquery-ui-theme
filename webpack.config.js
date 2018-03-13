@@ -1,10 +1,8 @@
 const distDir = __dirname + '/dist/textpattern';
 
-var fs = require('fs');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
-var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = [
     {
@@ -18,18 +16,19 @@ module.exports = [
         module: {
             rules: [
                 {
-                    test: /\.(sass|scss)$/,
+                    test: /\.(scss)$/,
                     use: ExtractTextPlugin.extract({
+                        // Inject CSS to page.
                         fallback: 'style-loader',
                         use: [
+                            // Translates CSS into CommonJS modules.
                             { loader: 'css-loader', options: { minimize: false, importLoaders: 2 } },
+                            // Run postCSS actions.
                             { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
-                            { loader: 'sass-loader', options: { outputStyle: 'expanded', precision: 7 } }
+                            // Compiles Sass to CSS.
+                            { loader: 'sass-loader', options: { precision: 7 } }
                         ]
                     })
-                }, {
-                    test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
                 },
             ]
         },
@@ -44,15 +43,6 @@ module.exports = [
                 quiet: false
             }),
             new ExtractTextPlugin('jquery-ui.min.css'),
-            new OptimizeCssAssetsPlugin({
-                assetNameRegExp: /\.css$/g,
-                cssProcessorOptions: {
-                    safe: true,
-                    discardComments: {
-                        removeAll: true
-                    }
-                }
-            }),
         ]
     }, {
         entry: {
@@ -65,18 +55,20 @@ module.exports = [
         module: {
             rules: [
                 {
-                    test: /\.(sass|scss)$/,
+                    test: /\.(scss)$/,
                     use: ExtractTextPlugin.extract({
+                        // Inject CSS to page.
                         fallback: 'style-loader',
                         use: [
+                            // Translates CSS into CommonJS modules.
                             { loader: 'css-loader', options: { minimize: false, importLoaders: 2 } },
+                            // Run postCSS actions.
                             { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
+                            // Compiles Sass to CSS.
                             { loader: 'sass-loader', options: { outputStyle: 'expanded', precision: 7 } }
+
                         ]
                     })
-                }, {
-                    test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
                 },
             ]
         },

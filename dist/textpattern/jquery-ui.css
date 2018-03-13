@@ -90,7 +90,6 @@
  */
 .ui-widget-header {
   background-color: #dddddd;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
   background-image: linear-gradient(#eeeeee, #dddddd);
   font-weight: bold;
 }
@@ -233,8 +232,7 @@ a.ui-state-default:focus {
  * <div class="ui-widget-shadow"></div>
  */
 .ui-widget-shadow {
-  -webkit-box-shadow: 0 0 5px #666666;
-          box-shadow: 0 0 5px #666666;
+  box-shadow: 0 0 5px #666666;
 }
 
 /* ==========================================================================
@@ -255,22 +253,18 @@ a.ui-state-default:focus {
  * </div>
  */
 .ui-draggable {
-  -webkit-transition: -webkit-box-shadow 0.1s linear;
-  transition: -webkit-box-shadow 0.1s linear;
   transition: box-shadow 0.1s linear;
-  transition: box-shadow 0.1s linear, -webkit-box-shadow 0.1s linear;
 }
 
 .ui-draggable-handle {
-  touch-action: none;
+  touch-action: manipulation;
 }
 
 /**
  * Class added when element is actively being dragged.
  */
 .ui-draggable-dragging {
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
@@ -298,7 +292,7 @@ a.ui-state-default:focus {
   display: block;
   position: absolute;
   font-size: 0.1px;
-  touch-action: none;
+  touch-action: manipulation;
 }
 
 /**
@@ -394,7 +388,7 @@ a.ui-state-default:focus {
  * </ol>
  */
 .ui-selectable {
-  touch-action: none;
+  touch-action: manipulation;
 }
 
 /**
@@ -430,12 +424,11 @@ a.ui-state-default:focus {
  * </ul>
  */
 .ui-sortable-helper {
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 .ui-sortable-handle {
-  touch-action: none;
+  touch-action: manipulation;
 }
 
 .ui-sortable-placeholder {
@@ -562,7 +555,6 @@ a.ui-state-default:focus {
  */
 .ui-button {
   background-color: #dddddd;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
   background-image: linear-gradient(#eeeeee, #dddddd);
   display: inline-block;
   position: relative;
@@ -585,8 +577,7 @@ a.ui-state-default:focus {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 3 */
   cursor: pointer;
   /* 4 */
@@ -596,7 +587,6 @@ a.ui-state-default:focus {
 
 .ui-button:hover {
   background-color: #e8e8e8;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#e8e8e8));
   background-image: linear-gradient(#f8f8f8, #e8e8e8);
   border-color: #aaaaaa;
   color: #333333;
@@ -605,13 +595,11 @@ a.ui-state-default:focus {
 
 .ui-button:active {
   background-color: #d6d6d6;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d6d6d6));
   background-image: linear-gradient(#e6e6e6, #d6d6d6);
   border-color: #aaaaaa;
   color: #1a1a1a;
   text-decoration: none;
-  -webkit-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 .ui-button:focus {
@@ -646,8 +634,7 @@ a.ui-state-default:focus {
   width: 2.1538462em;
   text-indent: -9999px;
   white-space: nowrap;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /**
@@ -723,8 +710,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 .ui-checkboxradio-label .ui-icon-background {
   border: 0;
   border-radius: 0.12em;
-  -webkit-box-shadow: inset 1px 1px 1px #cccccc;
-          box-shadow: inset 1px 1px 1px #cccccc;
+  box-shadow: inset 1px 1px 1px #cccccc;
 }
 
 .ui-checkboxradio-radio-label .ui-icon-background {
@@ -757,21 +743,18 @@ input.ui-button.ui-icon-notext .ui-icon {
  */
 .ui-checkboxradio-checked.ui-button {
   background-color: #cce0ff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6f0ff), to(#cce0ff));
   background-image: linear-gradient(#e6f0ff, #cce0ff);
   border-color: #96bfff;
 }
 
 .ui-checkboxradio-checked.ui-button:hover {
   background-color: #d6e6ff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f9ff), to(#d6e6ff));
   background-image: linear-gradient(#f5f9ff, #d6e6ff);
   border-color: #4a91ff;
 }
 
 .ui-checkboxradio-checked.ui-button:active {
   background-color: #b3d1ff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#cde1ff), to(#b3d1ff));
   background-image: linear-gradient(#cde1ff, #b3d1ff);
   border-color: #4a91ff;
 }
@@ -799,11 +782,8 @@ input.ui-button.ui-icon-notext .ui-icon {
  * </fieldset>
  */
 .ui-controlgroup {
-  display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .ui-controlgroup .ui-controlgroup-item {
@@ -837,9 +817,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 .ui-controlgroup-vertical {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column;
+  flex-flow: column;
 }
 
 .ui-controlgroup-vertical .ui-controlgroup-item {
@@ -848,8 +826,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   margin-top: 0;
   margin-bottom: 0;
   text-align: left;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 [dir="rtl"] .ui-controlgroup-vertical .ui-controlgroup-item {
@@ -957,8 +934,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   display: none;
   width: 17em;
   padding: 0.2em 0.2em 0;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 .ui-datepicker .ui-datepicker-header {
@@ -1210,13 +1186,18 @@ input.ui-button.ui-icon-notext .ui-icon {
  * </div>
  */
 .ui-dialog {
-  position: absolute;
+  display: flex;
+  position: fixed;
   top: 0;
   left: 0;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 95%;
+  max-height: 95%;
+  margin: auto;
   padding: 0.2em;
   outline: 0;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   z-index: 1002;
 }
 
@@ -1254,6 +1235,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 
 .ui-dialog .ui-dialog-content {
   position: relative;
+  flex: 1;
   padding: 0.5em 1em;
   border: 0;
   background: none;
@@ -1364,8 +1346,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   font-size: 13px;
   line-height: 20px;
   list-style: none;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 .ui-menu .ui-menu {
@@ -1558,7 +1539,6 @@ input.ui-button.ui-icon-notext .ui-icon {
  * </div>
  */
 .ui-selectmenu-button {
-  display: -webkit-inline-box;
   display: inline-flex;
 }
 
@@ -1575,10 +1555,8 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 .ui-selectmenu-icon {
-  -webkit-box-flex: 0;
-          flex: none;
-  -webkit-box-ordinal-group: 3;
-          order: 2;
+  flex: none;
+  order: 2;
   margin: 0.15em -0.25em 0 0.25em;
 }
 
@@ -1659,8 +1637,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   background: transparent;
   color: #0066ff;
   text-decoration: underline;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .no-ui-button .ui-selectmenu-button:focus {
@@ -1705,11 +1682,10 @@ input.ui-button.ui-icon-notext .ui-icon {
   height: 20px;
   border-radius: 50%;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 2;
-  touch-action: none;
+  touch-action: manipulation;
 }
 
 .ui-slider .ui-slider-range {
@@ -1931,15 +1907,13 @@ input.ui-button.ui-icon-notext .ui-icon {
   border-bottom-width: 0;
   list-style: none;
   white-space: nowrap;
-  -webkit-box-shadow: inset 0 -0.2em 0.4em rgba(102, 102, 102, 0.15);
-          box-shadow: inset 0 -0.2em 0.4em rgba(102, 102, 102, 0.15);
+  box-shadow: inset 0 -0.2em 0.4em rgba(102, 102, 102, 0.15);
 }
 
 .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active {
   margin-bottom: -1px;
   padding-bottom: 1px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 /**
@@ -2000,8 +1974,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   position: absolute;
   max-width: 22em;
   padding: 0.5em 1em;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   z-index: 9999;
 }
 
@@ -2039,16 +2012,20 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 a.ui-icon,
-a:not(.ui-button) .ui-icon {
+a:not(.ui-button) .ui-icon,
+button:not(.ui-button) .ui-icon {
   opacity: 0.66;
 }
 
 a:hover.ui-icon,
 a:hover .ui-icon,
+button:not(.ui-button):hover .ui-icon,
 a:active.ui-icon,
 a:active .ui-icon,
+button:not(.ui-button):active .ui-icon,
 a:focus.ui-icon,
-a:focus .ui-icon {
+a:focus .ui-icon,
+button:not(.ui-button):focus .ui-icon {
   opacity: 1;
 }
 
@@ -2151,8 +2128,8 @@ input[type="button"] .ui-icon,
 .ui-state-hover .ui-icon .ui-icon,
 .ui-state-focus .ui-icon .ui-icon,
 .ui-state-active .ui-icon .ui-icon {
-  -webkit-filter: none;
-          filter: none;
+  -webkit-filter: none !important;
+          filter: none !important;
 }
 
 /* Icon set.
