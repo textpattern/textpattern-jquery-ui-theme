@@ -1187,22 +1187,22 @@ input.ui-button.ui-icon-notext .ui-icon {
  */
 .ui-dialog {
   display: flex;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  flex-direction: column;
-  align-items: stretch;
-  max-width: 95%;
-  max-height: 95%;
-  margin: auto;
+  flex-flow: column;
+  max-width: 90vw;
+  max-height: 90vh;
   padding: 0.2em;
   outline: 0;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   z-index: 1002;
 }
 
 .ui-dialog .ui-dialog-titlebar {
   position: relative;
+  flex: none;
   padding: 0.4em 1em;
 }
 
@@ -1235,11 +1235,11 @@ input.ui-button.ui-icon-notext .ui-icon {
 
 .ui-dialog .ui-dialog-content {
   position: relative;
-  flex: 1;
+  flex: 1 1 auto;
   padding: 0.5em 1em;
   border: 0;
   background: none;
-  overflow: auto;
+  overflow: scroll;
 }
 
 .ui-dialog .ui-dialog-buttonpane {
