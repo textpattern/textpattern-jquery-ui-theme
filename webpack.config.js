@@ -1,8 +1,8 @@
 const distDir = __dirname + '/dist/textpattern';
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-var StyleLintPlugin = require('stylelint-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = [
     {
