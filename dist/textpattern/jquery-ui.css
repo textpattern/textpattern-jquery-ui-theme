@@ -1239,7 +1239,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   padding: 0.5em 1em;
   border: 0;
   background: none;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .ui-dialog .ui-dialog-buttonpane {
@@ -2118,9 +2118,9 @@ button:not(.ui-button):focus .ui-icon {
 /**
  * Weighted content icons and interaction state icons.
  */
-button .ui-icon,
+button:not(.destroy) .ui-icon,
 [type="reset"] .ui-icon,
-[type="submit"] .ui-icon,
+[type="submit"]:not(.destroy) .ui-icon,
 input[type="button"] .ui-icon,
 .txp-button .ui-icon,
 .ui-widget-content .ui-icon .ui-icon,
