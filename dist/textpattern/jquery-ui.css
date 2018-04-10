@@ -716,7 +716,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 
 .ui-checkboxradio-label.ui-checkboxradio-checked .ui-icon {
   border: 0;
-  background: #777777 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+  background: #585858 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 }
 
 .ui-checkboxradio-label.ui-checkboxradio-checked.ui-state-focus .ui-icon {
@@ -732,7 +732,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon {
-  border: 0.3846154em solid #777777;
+  border: 0.3846154em solid #585858;
   border-radius: 100%;
   background: #ffffff;
 }
