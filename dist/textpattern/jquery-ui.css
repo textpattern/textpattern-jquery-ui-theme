@@ -33,7 +33,7 @@
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 20px;
   list-style: none;
   text-decoration: none;
@@ -74,7 +74,7 @@
  * Normalize font size of nested jQuery UI widgets to avoid style inheritance.
  */
 .ui-widget .ui-widget {
-  font-size: 13px;
+  font-size: 1rem;
 }
 
 /**
@@ -470,7 +470,7 @@ a.ui-state-default:focus {
   position: relative;
   margin: 2px 0 0;
   padding: 0.5em 1em;
-  font-size: 13px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -566,7 +566,7 @@ a.ui-state-default:focus {
   color: #333333;
   font-family: inherit;
   /* 1 */
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 20px;
   text-align: center;
   -webkit-user-select: none;
@@ -818,7 +818,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 .ui-controlgroup .ui-controlgroup-label span {
-  font-size: 80%;
+  font-size: 11px;
 }
 
 .ui-controlgroup .ui-state-highlight {
@@ -996,7 +996,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 
 .ui-datepicker .ui-datepicker-title {
   margin: 0 2.2em;
-  line-height: 1.8em;
+  line-height: 1.8461538em;
   text-align: center;
 }
 
@@ -1361,7 +1361,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   border-color: #d4d4d4;
   outline: 0;
   /* 1 */
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 20px;
   list-style: none;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
@@ -1604,9 +1604,9 @@ input.ui-button.ui-icon-notext .ui-icon {
   margin: 0.5em 0 0;
   padding: 2px 0.6153846em;
   border-top: 1px solid #cccccc;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 20px;
 }
 
 .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup:first-child {
@@ -1710,7 +1710,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   display: block;
   position: absolute;
   border: 0;
-  font-size: 0.7em;
+  font-size: 10px;
   z-index: 1;
 }
 
@@ -1818,7 +1818,7 @@ input.ui-button.ui-icon-notext .ui-icon {
   height: 42%;
   margin: 0;
   padding: 0;
-  font-size: 0.5384615em;
+  font-size: 0.5384615rem;
   line-height: 1.5714286em;
   cursor: default;
   overflow: hidden;
