@@ -1,7 +1,7 @@
 const distDir = __dirname + '/dist/textpattern';
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = [
@@ -17,23 +17,23 @@ module.exports = [
             rules: [
                 {
                     test: /\.(scss)$/,
-                    use: ExtractTextPlugin.extract({
-                        // Inject CSS to page.
-                        fallback: 'style-loader',
-                        use: [
-                            // Translates CSS into CommonJS modules.
-                            { loader: 'css-loader', options: { minimize: false, importLoaders: 2 } },
-                            // Run postCSS actions.
-                            { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
-                            // Compiles Sass to CSS.
-                            { loader: 'sass-loader', options: { precision: 7 } }
-                        ]
-                    })
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        // Translates CSS into CommonJS modules.
+                        { loader: 'css-loader', options: { minimize: false, importLoaders: 2 } },
+                        // Run postCSS actions.
+                        { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
+                        // Compiles Sass to CSS.
+                        { loader: 'sass-loader', options: { precision: 7 } }
+                    ]
                 },
             ]
         },
         plugins: [
             new CleanWebpackPlugin(distDir),
+            new MiniCssExtractPlugin({
+                filename: 'jquery-ui.min.css'
+            }),
             new StyleLintPlugin({
                 configFile: '.stylelintrc.yml',
                 syntax: 'scss',
@@ -42,7 +42,6 @@ module.exports = [
                 failOnError: false,
                 quiet: false
             }),
-            new ExtractTextPlugin('jquery-ui.min.css'),
         ]
     }, {
         entry: {
@@ -56,24 +55,22 @@ module.exports = [
             rules: [
                 {
                     test: /\.(scss)$/,
-                    use: ExtractTextPlugin.extract({
-                        // Inject CSS to page.
-                        fallback: 'style-loader',
-                        use: [
-                            // Translates CSS into CommonJS modules.
-                            { loader: 'css-loader', options: { minimize: false, importLoaders: 2 } },
-                            // Run postCSS actions.
-                            { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
-                            // Compiles Sass to CSS.
-                            { loader: 'sass-loader', options: { outputStyle: 'expanded', precision: 7 } }
-
-                        ]
-                    })
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        // Translates CSS into CommonJS modules.
+                        { loader: 'css-loader', options: { minimize: false, importLoaders: 2 } },
+                        // Run postCSS actions.
+                        { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
+                        // Compiles Sass to CSS.
+                        { loader: 'sass-loader', options: { outputStyle: 'expanded', precision: 7 } }
+                    ]
                 },
             ]
         },
         plugins: [
-            new ExtractTextPlugin('jquery-ui.css'),
+            new MiniCssExtractPlugin({
+                filename: 'jquery-ui.css'
+            }),
         ]
     }
 ];
