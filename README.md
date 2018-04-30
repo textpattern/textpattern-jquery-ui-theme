@@ -22,7 +22,7 @@ $ npm install textpattern-jquery-ui-theme --save-dev
 
 Building this repository requires:
 
-* [Node.js](https://nodejs.org/) >=6.9
+* [Node.js](https://nodejs.org/)
 
 ## Build setup
 
