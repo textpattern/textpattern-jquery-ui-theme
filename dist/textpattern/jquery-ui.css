@@ -1897,7 +1897,6 @@ input.ui-button.ui-icon-notext .ui-icon {
   padding: 0.3846154em 1em;
 }
 
-.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
 .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
 .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
   cursor: text;
