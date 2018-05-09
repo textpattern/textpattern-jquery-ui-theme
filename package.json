@@ -19,7 +19,7 @@
   "devDependencies": {
     "autoprefixer": "8.4.1",
     "clean-webpack-plugin": "0.1.19",
-    "cross-env": "5.1.4",
+    "cross-env": "5.1.5",
     "css-loader": "0.28.11",
     "mini-css-extract-plugin": "0.4.0",
     "node-sass": "4.9.0",
