@@ -17,7 +17,7 @@
     "url": "https://github.com/textpattern/textpattern-jquery-ui-theme/issues"
   },
   "devDependencies": {
-    "autoprefixer": "8.6.0",
+    "autoprefixer": "8.6.3",
     "clean-webpack-plugin": "0.1.19",
     "cross-env": "5.1.6",
     "css-loader": "0.28.11",
