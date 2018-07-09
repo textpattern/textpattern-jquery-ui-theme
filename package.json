@@ -22,7 +22,7 @@
     "cross-env": "5.2.0",
     "css-loader": "0.28.11",
     "mini-css-extract-plugin": "0.4.1",
-    "node-sass": "4.9.0",
+    "node-sass": "4.9.2",
     "postcss-loader": "2.1.5",
     "sass-loader": "7.0.3",
     "stylelint": "9.3.0",
