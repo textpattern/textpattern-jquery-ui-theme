@@ -23,14 +23,14 @@
     "css-loader": "1.0.0",
     "mini-css-extract-plugin": "0.4.1",
     "node-sass": "4.9.2",
-    "postcss-loader": "2.1.5",
+    "postcss-loader": "2.1.6",
     "sass-loader": "7.0.3",
     "stylelint": "9.3.0",
     "stylelint-order": "0.8.1",
     "stylelint-scss": "3.1.1",
     "stylelint-webpack-plugin": "0.10.5",
     "webpack": "4.16.1",
-    "webpack-cli": "3.0.8"
+    "webpack-cli": "3.1.0"
   },
   "browserslist": [
     "> 0.5%",
