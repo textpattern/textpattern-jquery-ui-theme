@@ -1,8 +1,6 @@
-# http://docs.travis-ci.com
-
 language: node_js
 node_js:
-  - "10"
+  - "11"
 sudo: false
 cache:
   directories:
