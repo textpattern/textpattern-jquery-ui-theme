@@ -1080,16 +1080,14 @@ input.ui-button.ui-icon-notext .ui-icon {
   left: auto;
 }
 [dir=rtl] .ui-datepicker-prev span {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 [dir=rtl] .ui-datepicker-next {
   right: auto;
   left: 0.2em;
 }
 [dir=rtl] .ui-datepicker-next span {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 [dir=rtl] .ui-datepicker-buttonpane {
   clear: right;
@@ -1402,8 +1400,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 
 .ui-progressbar-value {
   height: 6px;
-  -webkit-animation: progressbar-stripes linear 4s infinite;
-          animation: progressbar-stripes linear 4s infinite;
+  animation: progressbar-stripes linear 4s infinite;
   background-color: #f7c600;
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
   background-size: 24px 24px;
