@@ -39,8 +39,11 @@ rules:
     - true
     -
       ignoreAtRules:
+        - function
+        - if
         - include
         - mixin
+        - return
 
   # Disallow vendor prefixes for at-rules.
   at-rule-no-vendor-prefix: true
@@ -64,7 +67,7 @@ rules:
   block-closing-brace-newline-before: always-multi-line
 
   # Require a single space or disallow whitespace after the closing brace of blocks.
-  block-closing-brace-space-after: always-single-line
+  #block-closing-brace-space-after:
 
   # Require a single space or disallow whitespace before the closing brace of blocks.
   block-closing-brace-space-before: always-single-line
@@ -76,7 +79,7 @@ rules:
   block-opening-brace-newline-after: always-multi-line
 
   #Require a newline or disallow whitespace before the opening brace of blocks.
-  block-opening-brace-newline-before: never-single-line
+  #block-opening-brace-newline-before:
 
   # Require a single space or disallow whitespace after the opening brace of blocks.
   block-opening-brace-space-after: always-single-line
@@ -262,11 +265,7 @@ rules:
   max-empty-lines: 3
 
   # Limit the length of a line.
-  max-line-length:
-    - 80
-    -
-      ignore:
-        - non-comments
+  #max-line-length:
 
   # Limit the depth of nesting.
   max-nesting-depth: 4
@@ -344,7 +343,7 @@ rules:
   no-missing-end-of-source-newline: true
 
   # Disallow unknown animations.
-  no-unknown-animations: true
+  #no-unknown-animations: true
 
   # Require or disallow a leading zero for fractional numbers less than 1.
   number-leading-zero: always
@@ -439,10 +438,10 @@ rules:
   selector-max-class: 4
 
   # Limit the number of combinators in a selector.
-  selector-max-combinators: 3
+  selector-max-combinators: 4
 
   # Limit the number of compound selectors in a selector.
-  selector-max-compound-selectors: 4
+  selector-max-compound-selectors: 5
 
   # Limit the number of adjacent empty lines within selectors.
   selector-max-empty-lines: 0
@@ -556,14 +555,24 @@ rules:
  # SMACSS-like property order rules (stylelint-order plugin).
   order/properties-order:
 
+    # Heading.
+
+    - content
+    - quotes
+
     # Box.
 
     - display
+    - visibility
+
     - position
+    - z-index
     - top
     - right
     - bottom
     - left
+
+    - box-sizing
 
     - flex
     - flex-basis
@@ -581,7 +590,6 @@ rules:
     - width
     - min-width
     - max-width
-
     - height
     - min-height
     - max-height
@@ -601,7 +609,12 @@ rules:
     - float
     - clear
 
-    - resize
+    - overflow
+    - overflow-x
+    - overflow-y
+
+    - clip
+    - zoom
 
     - columns
     - column-gap
@@ -611,23 +624,39 @@ rules:
     - column-count
     - column-width
 
-    - grid-gap
-    - grid-template-columns
+    - table-layout
+    - empty-cells
+    - caption-side
+    - border-spacing
+    - border-collapse
+    - list-style
+    - list-style-position
+    - list-style-type
+    - list-style-image
+
+    # Animation.
+
+    - transform
+    - transform-origin
+    - transform-style
+    - backface-visibility
+    - perspective
+    - perspective-origin
+
+    - transition
+    - transition-property
+    - transition-duration
+    - transition-timing-function
+    - transition-delay
 
     - animation
     - animation-name
+    - animation-duration
+    - animation-play-state
     - animation-timing-function
-
-    - transform
-    - transform-box
-    - transform-origin
-    - transform-style
-
-    - transition
-    - transition-delay
-    - transition-duration
-    - transition-property
-    - transition-timing-function
+    - animation-delay
+    - animation-iteration-count
+    - animation-direction
 
     # Border.
 
@@ -666,20 +695,24 @@ rules:
     - outline-style
     - outline-width
 
+    - stroke-width
+    - stroke-linecap
+    - stroke-dasharray
+    - stroke-dashoffset
+    - stroke
+
     # Background.
 
+    - 'opacity'
+
     - background
-    - background-attachment
-    - background-clip
     - background-color
     - background-image
     - background-repeat
     - background-position
     - background-size
-
+    - box-shadow
     - fill
-
-    - opacity
 
     # Text.
 
@@ -688,55 +721,65 @@ rules:
     - font
     - font-family
     - font-size
-    - font-smoothing
+    - font-size-adjust
+    - font-stretch
+    - font-effect
     - font-style
     - font-variant
     - font-weight
 
+    - font-emphasize
+    - font-emphasize-position
+    - font-emphasize-style
+
     - letter-spacing
     - line-height
     - list-style
+    - word-spacing
 
     - text-align
+    - text-align-last
     - text-decoration
     - text-indent
+    - text-justify
     - text-overflow
+    - text-overflow-ellipsis
+    - text-overflow-mode
     - text-rendering
+    - text-outline
     - text-shadow
     - text-transform
     - text-wrap
+    - word-wrap
+    - word-break
 
+    - text-emphasis
+    - text-emphasis-color
+    - text-emphasis-style
+    - text-emphasis-position
+
+    - vertical-align
     - white-space
     - word-spacing
+    - hyphens
 
-    # Cursor.
-
-    - cursor
-    - pointer-events
-    - user-select
+    - src
 
     # Other.
 
-    - appearance
-    - border-collapse
-    - border-spacing
-    - box-shadow
-    - box-sizing
-    - caption-side
-    - content
+    - tab-size
+    - counter-reset
+    - counter-increment
+    - resize
     - cursor
-    - empty-cells
-    - overflow
-    - overflow-x
-    - overflow-y
-    - quotes
+    - pointer-events
     - speak
-    - table-layout
-    - vertical-align
-    - visibility
-    - will-change
-    - z-index
-
+    - user-select
+    - nav-index
+    - nav-up
+    - nav-right
+    - nav-down
+    - nav-left
 
  # Additonal SCSS rules (stylelint-scss plugin).
 
@@ -763,9 +806,6 @@ rules:
 
   # Disallow duplicate dollar variables within a stylesheet.
   scss/no-duplicate-dollar-variables: true
-
-  # Require a media feature value be a `$`-variable or disallow `$`-variables in media feature values.
-  scss/media-feature-value-dollar-variable: always
 
   # Disallow linebreaks after Sass operators.
   scss/operator-no-newline-after: true

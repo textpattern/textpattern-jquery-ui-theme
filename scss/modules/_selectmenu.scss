@@ -60,9 +60,9 @@
 
 .ui-selectmenu-text {
     display: block;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
 }
 
 .ui-selectmenu-menu {
@@ -129,8 +129,8 @@
         background: transparent;
         color: $color-link;
         font-family: inherit;
-        user-select: auto;
         cursor: pointer;
+        user-select: auto;
 
         &:hover,
         &:active {

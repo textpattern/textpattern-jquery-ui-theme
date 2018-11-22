@@ -22,6 +22,7 @@
 
     .ui-slider-handle {
         position: absolute;
+        z-index: 2;
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -32,16 +33,15 @@
         }
 
         cursor: pointer;
-        z-index: 2;
         touch-action: manipulation;
     }
 
     .ui-slider-range {
         display: block;
         position: absolute;
+        z-index: 1;
         border: 0;
         font-size: 10px;
-        z-index: 1;
     }
 }
 

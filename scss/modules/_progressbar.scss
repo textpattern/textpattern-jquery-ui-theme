@@ -16,10 +16,10 @@
 
 .ui-progressbar {
     margin-bottom: 1em;
+    overflow: hidden;
     border-radius: 4px;
     background-color: #e7e7e7;
     text-align: left;
-    overflow: hidden;
 }
 
 .ui-progressbar-value {
