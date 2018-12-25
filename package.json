@@ -20,7 +20,7 @@
     "autoprefixer": "9.4.3",
     "clean-webpack-plugin": "1.0.0",
     "cross-env": "5.2.0",
-    "css-loader": "2.0.1",
+    "css-loader": "2.1.0",
     "dart-sass": "1.15.2",
     "fibers": "3.1.1",
     "mini-css-extract-plugin": "0.5.0",
