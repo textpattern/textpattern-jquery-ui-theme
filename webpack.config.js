@@ -38,7 +38,7 @@ module.exports = [
             ]
         },
         plugins: [
-            new CleanWebpackPlugin(distDir),
+            new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
                 filename: 'jquery-ui.min.css'
             }),
