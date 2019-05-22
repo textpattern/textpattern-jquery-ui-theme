@@ -1,7 +1,6 @@
 const distDir = __dirname + '/dist/textpattern';
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const Fiber = require('fibers');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
@@ -29,7 +28,6 @@ module.exports = [
                             loader: 'sass-loader',
                             options: {
                                 implementation: require('dart-sass'),
-                                fiber: Fiber,
                                 outputStyle: 'expanded'
                             }
                         }
@@ -74,7 +72,6 @@ module.exports = [
                             loader: 'sass-loader',
                             options: {
                                 implementation: require('dart-sass'),
-                                fiber: Fiber,
                                 outputStyle: 'expanded'
                             }
                         }
