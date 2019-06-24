@@ -49,41 +49,5 @@ module.exports = [
                 quiet: false
             }),
         ]
-    }, {
-        entry: {
-            'jquery-ui.css': './scss/jquery-ui.scss'
-        },
-        output: {
-            path: distDir,
-            filename: '.Trashes'
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.(scss)$/,
-                    use: [
-                        MiniCssExtractPlugin.loader,
-                        // Translates CSS into CommonJS modules.
-                        { loader: 'css-loader', options: { importLoaders: 2 } },
-                        // Run postCSS actions.
-                        { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
-                        // Compiles Sass to CSS.
-                        {
-                            loader: 'sass-loader',
-                            options: {
-                                implementation: require('dart-sass'),
-                                outputStyle: 'expanded'
-                            }
-                        }
-
-                    ]
-                },
-            ]
-        },
-        plugins: [
-            new MiniCssExtractPlugin({
-                filename: 'jquery-ui.css'
-            }),
-        ]
     }
 ];
