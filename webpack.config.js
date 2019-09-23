@@ -6,7 +6,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
     entry: {
-        'jquery-ui.min.css': './scss/jquery-ui.scss'
+        'jquery-ui.css': './scss/jquery-ui.scss'
     },
     output: {
         path: distDir,
@@ -27,7 +27,9 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
-                            outputStyle: 'expanded'
+                            sassOptions: {
+                                outputStyle: 'expanded'
+                            }
                         }
                     }
                 ]
@@ -36,9 +38,6 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin({
-            filename: 'jquery-ui.min.css'
-        }),
         new StyleLintPlugin({
             configFile: '.stylelintrc.yml',
             syntax: 'scss',
@@ -46,6 +45,9 @@ module.exports = {
             files: '**/*.scss',
             failOnError: false,
             quiet: false
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'jquery-ui.css'
         }),
     ]
 };

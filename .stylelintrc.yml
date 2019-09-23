@@ -825,9 +825,6 @@ rules:
   # Disallow duplicate dollar variables within a stylesheet.
   scss/no-duplicate-dollar-variables: true
 
-  # Disallow duplicate dollar variables within a stylesheet.
-  scss/no-duplicate-dollar-variables: true
-
   # Disallow linebreaks after Sass operators.
   scss/operator-no-newline-after: true
 
