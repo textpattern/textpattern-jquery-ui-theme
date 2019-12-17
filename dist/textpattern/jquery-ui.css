@@ -1156,7 +1156,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 .ui-dialog {
   display: -webkit-box;
   display: flex;
-  position: fixed;
+  position: absolute;
   z-index: 1002;
   top: 0;
   left: 0;
