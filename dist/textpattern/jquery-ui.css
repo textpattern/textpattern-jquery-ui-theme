@@ -1945,7 +1945,8 @@ button:not(.ui-button):focus .ui-icon {
  * Default state icons.
  */
 .ui-state-default .ui-icon {
-  filter: brightness(1.6666667);
+  -webkit-filter: brightness(1.6666667);
+          filter: brightness(1.6666667);
 }
 
 /**
@@ -1960,7 +1961,8 @@ button:not(.ui-button):focus .ui-icon {
  */
 .success .ui-icon,
 .success.ui-icon {
-  filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(90%);
+  -webkit-filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(90%);
+          filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(90%);
 }
 
 /**
@@ -1976,7 +1978,8 @@ button:not(.ui-button):focus .ui-icon {
 .ui-state-highlight .ui-icon,
 .warning .ui-icon,
 .warning.ui-icon {
-  filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(112%);
+  -webkit-filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(112%);
+          filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(112%);
 }
 
 /**
@@ -1995,7 +1998,8 @@ button:not(.ui-button):focus .ui-icon {
 .error.ui-icon,
 .destroy .ui-icon,
 .destroy.ui-icon {
-  filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(65%);
+  -webkit-filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(65%);
+          filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(65%);
 }
 
 /**
@@ -2010,7 +2014,8 @@ button:not(.ui-button):focus .ui-icon {
  */
 .information .ui-icon,
 .information.ui-icon {
-  filter: brightness(2) sepia(1) hue-rotate(150deg) saturate(600%) brightness(80%);
+  -webkit-filter: brightness(2) sepia(1) hue-rotate(150deg) saturate(600%) brightness(80%);
+          filter: brightness(2) sepia(1) hue-rotate(150deg) saturate(600%) brightness(80%);
 }
 
 /**
@@ -2018,7 +2023,8 @@ button:not(.ui-button):focus .ui-icon {
  */
 .ui-icon-inversed,
 #messagepane .ui-icon {
-  filter: brightness(5);
+  -webkit-filter: brightness(5);
+          filter: brightness(5);
 }
 
 /**
@@ -2034,7 +2040,8 @@ input[type=button] .ui-icon,
 .ui-state-hover .ui-icon .ui-icon,
 .ui-state-focus .ui-icon .ui-icon,
 .ui-state-active .ui-icon .ui-icon {
-  filter: none !important;
+  -webkit-filter: none !important;
+          filter: none !important;
 }
 
 /* Icon set.
