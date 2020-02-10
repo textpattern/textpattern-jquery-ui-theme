@@ -90,7 +90,6 @@
  */
 .ui-widget-header {
   background-color: #dddddd;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
   background-image: linear-gradient(#eeeeee, #dddddd);
   font-weight: bold;
 }
@@ -252,7 +251,6 @@ a.ui-state-default:focus {
  * </div>
  */
 .ui-draggable {
-  -webkit-transition: box-shadow 0.1s linear;
   transition: box-shadow 0.1s linear;
 }
 
@@ -552,7 +550,6 @@ a.ui-state-default:focus {
  */
 .ui-button {
   background-color: #dddddd;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
   background-image: linear-gradient(#eeeeee, #dddddd);
   display: inline-block;
   position: relative;
@@ -583,7 +580,6 @@ a.ui-state-default:focus {
 }
 .ui-button:hover {
   background-color: #e8e8e8;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#e8e8e8));
   background-image: linear-gradient(#f8f8f8, #e8e8e8);
   border-color: #aaaaaa;
   color: #333333;
@@ -591,7 +587,6 @@ a.ui-state-default:focus {
 }
 .ui-button:active {
   background-color: #d6d6d6;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#d6d6d6));
   background-image: linear-gradient(#e6e6e6, #d6d6d6);
   border-color: #aaaaaa;
   color: #1a1a1a;
@@ -749,19 +744,16 @@ input.ui-button.ui-icon-notext .ui-icon {
  */
 .ui-checkboxradio-checked.ui-button {
   background-color: #cce0ff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6f0ff), to(#cce0ff));
   background-image: linear-gradient(#e6f0ff, #cce0ff);
   border-color: #96bfff;
 }
 .ui-checkboxradio-checked.ui-button:hover {
   background-color: #d6e6ff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f9ff), to(#d6e6ff));
   background-image: linear-gradient(#f5f9ff, #d6e6ff);
   border-color: #4a91ff;
 }
 .ui-checkboxradio-checked.ui-button:active {
   background-color: #b3d1ff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#cde1ff), to(#b3d1ff));
   background-image: linear-gradient(#cde1ff, #b3d1ff);
   border-color: #4a91ff;
 }
@@ -789,11 +781,8 @@ input.ui-button.ui-icon-notext .ui-icon {
  * </fieldset>
  */
 .ui-controlgroup {
-  display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 .ui-controlgroup .ui-controlgroup-item {
   margin-right: 0;
@@ -821,9 +810,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 .ui-controlgroup-vertical {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column;
+  flex-flow: column;
 }
 .ui-controlgroup-vertical .ui-controlgroup-item {
   display: block;
@@ -1093,16 +1080,14 @@ input.ui-button.ui-icon-notext .ui-icon {
   left: auto;
 }
 [dir=rtl] .ui-datepicker-prev span {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 [dir=rtl] .ui-datepicker-next {
   right: auto;
   left: 0.2em;
 }
 [dir=rtl] .ui-datepicker-next span {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 [dir=rtl] .ui-datepicker-buttonpane {
   clear: right;
@@ -1154,15 +1139,12 @@ input.ui-button.ui-icon-notext .ui-icon {
  * </div>
  */
 .ui-dialog {
-  display: -webkit-box;
   display: flex;
   position: fixed;
   z-index: 1002;
   top: 0;
   left: 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column;
+  flex-flow: column;
   max-width: 90vw;
   max-height: 90vh;
   padding: 0.2em;
@@ -1172,8 +1154,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 .ui-dialog .ui-dialog-titlebar {
   position: relative;
-  -webkit-box-flex: 0;
-          flex: none;
+  flex: none;
   padding: 0.4em 1em;
 }
 .ui-dialog .ui-dialog-title {
@@ -1201,8 +1182,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 .ui-dialog .ui-dialog-content {
   position: relative;
-  -webkit-box-flex: 1;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 0.5em 1em;
   overflow: auto;
   border: 0;
@@ -1420,8 +1400,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 
 .ui-progressbar-value {
   height: 6px;
-  -webkit-animation: progressbar-stripes linear 4s infinite;
-          animation: progressbar-stripes linear 4s infinite;
+  animation: progressbar-stripes linear 4s infinite;
   background-color: #f7c600;
   background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
   background-size: 24px 24px;
@@ -1486,7 +1465,6 @@ input.ui-button.ui-icon-notext .ui-icon {
  * </div>
  */
 .ui-selectmenu-button {
-  display: -webkit-inline-box;
   display: inline-flex;
 }
 
@@ -1503,10 +1481,8 @@ input.ui-button.ui-icon-notext .ui-icon {
 }
 
 .ui-selectmenu-icon {
-  -webkit-box-flex: 0;
-          flex: none;
-  -webkit-box-ordinal-group: 3;
-          order: 2;
+  flex: none;
+  order: 2;
   margin: 0.2em -0.2307692em 0 0.2307692em;
 }
 
