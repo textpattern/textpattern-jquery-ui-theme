@@ -1,7 +1,7 @@
 # Textpattern jQuery UI theme
 
-[![Greenkeeper](https://badges.greenkeeper.io/textpattern/textpattern-jquery-ui-theme.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/textpattern/textpattern-jquery-ui-theme.svg)](https://travis-ci.org/textpattern/textpattern-jquery-ui-theme)
+[![Known Vulnerabilities](https://snyk.io/test/github/textpattern/textpattern-jquery-ui-theme/badge.svg?targetFile=package.json)](https://snyk.io/test/github/textpattern/textpattern-jquery-ui-theme?targetFile=package.json)
+[![Build Status](https://travis-ci.org/textpattern/textpattern-jquery-ui-theme.svg?branch=master)](https://travis-ci.org/textpattern/textpattern-jquery-ui-theme)
 
 The jQuery UI theme used within the [Textpattern CMS](https://textpattern.com/) admin-side.
 
