@@ -1,7 +1,10 @@
 # Textpattern jQuery UI theme
 
-[![Known Vulnerabilities](https://snyk.io/test/github/textpattern/textpattern-jquery-ui-theme/badge.svg?targetFile=package.json)](https://snyk.io/test/github/textpattern/textpattern-jquery-ui-theme?targetFile=package.json)
 [![Build Status](https://travis-ci.org/textpattern/textpattern-jquery-ui-theme.svg?branch=master)](https://travis-ci.org/textpattern/textpattern-jquery-ui-theme)
+[![Known Vulnerabilities](https://snyk.io/test/github/textpattern/textpattern-jquery-ui-theme/badge.svg?targetFile=package.json)](https://snyk.io/test/github/textpattern/textpattern-jquery-ui-theme?targetFile=package.json)
+[![Dependencies Status](https://david-dm.org/textpattern/textpattern-jquery-ui-theme/status.svg)](https://david-dm.org/textpattern/textpattern-jquery-ui-theme)
+[![devDependencies Status](https://david-dm.org/textpattern/textpattern-jquery-ui-theme/dev-status.svg)](https://david-dm.org/textpattern/textpattern-jquery-ui-theme?type=dev)
+[![optionalDependencies Status](https://david-dm.org/textpattern/textpattern-jquery-ui-theme/optional-status.svg)](https://david-dm.org/textpattern/textpattern-jquery-ui-theme?type=optional)
 
 The jQuery UI theme used within the [Textpattern CMS](https://textpattern.com/) admin-side.
 
