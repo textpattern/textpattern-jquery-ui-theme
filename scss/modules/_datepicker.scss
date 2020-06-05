@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../setup/colours";
+@use "../setup/settings";
+
 /* Datepicker
    ========================================================================== */
 
@@ -83,8 +87,8 @@
     width: 17em;
     padding: 0.2em 0.2em 0;
 
-    @if $flat-theme < 1 {
-        box-shadow: $standard-shadow;
+    @if settings.$flat-theme < 1 {
+        box-shadow: settings.$standard-shadow;
     }
 
     .ui-datepicker-header {
@@ -100,8 +104,8 @@
         height: 1.8em;
         margin-top: -0.9em;
 
-        @if $border-radius > 0 {
-            border-radius: $border-radius;
+        @if settings.$border-radius > 0 {
+            border-radius: settings.$border-radius;
         }
 
         background-color: transparent;
@@ -127,7 +131,7 @@
 
     .ui-datepicker-prev-hover,
     .ui-datepicker-next-hover {
-        background-color: $color-background-box;
+        background-color: colours.$color-background-box;
     }
 
     .ui-datepicker-title {
@@ -168,15 +172,15 @@
         }
 
         a.ui-state-active {
-            border-color: lighten($color-link, 42%);
+            border-color: color.adjust(colours.$color-link, $lightness: 42%);
         }
 
         a.ui-state-highlight:hover {
-            border-color: lighten($color-warning-text, 8%);
+            border-color: color.adjust(colours.$color-warning-text, $lightness: 8%);
         }
 
         a.ui-state-active:hover {
-            border-color: lighten($color-link, 27%);
+            border-color: color.adjust(colours.$color-link, $lightness: 27%);
         }
 
         &.ui-datepicker-week-col {
@@ -185,11 +189,11 @@
         }
 
         &.ui-datepicker-today a {
-            background-color: $color-warning-background;
+            background-color: colours.$color-warning-background;
         }
 
         &.ui-datepicker-current-day a {
-            background-color: $color-selected;
+            background-color: colours.$color-selected;
         }
     }
 

@@ -1,11 +1,11 @@
 // import global variables
-@import "setup/settings";
+@use "setup/settings";
 
 // import Compass, Compass Plugins and any additional mixins
-@import "setup/helpers";
+@use "setup/helpers";
 
 // import colourscheme
-@import "setup/colours";
+@use "setup/colours";
 
 
 
@@ -13,7 +13,7 @@
    Global
    ========================================================================== */
 
-@import "modules/core";
+@use "modules/core";
 
 
 
@@ -22,10 +22,10 @@
    ========================================================================== */
 
 // comment out any components that are not required
-@import "modules/draggable";
-@import "modules/resizable";
-@import "modules/selectable";
-@import "modules/sortable";
+@use "modules/draggable";
+@use "modules/resizable";
+@use "modules/selectable";
+@use "modules/sortable";
 
 
 
@@ -34,20 +34,20 @@
    ========================================================================== */
 
 // comment out any components that are not required
-@import "modules/accordion";
-@import "modules/autocomplete";
-@import "modules/button";
-@import "modules/checkboxradio";
-@import "modules/controlgroup";
-@import "modules/datepicker";
-@import "modules/dialog";
-@import "modules/menu";
-@import "modules/progressbar";
-@import "modules/selectmenu";
-@import "modules/slider";
-@import "modules/spinner";
-@import "modules/tabs";
-@import "modules/tooltip";
+@use "modules/accordion";
+@use "modules/autocomplete";
+@use "modules/button";
+@use "modules/checkboxradio";
+@use "modules/controlgroup";
+@use "modules/datepicker";
+@use "modules/dialog";
+@use "modules/menu";
+@use "modules/progressbar";
+@use "modules/selectmenu";
+@use "modules/slider";
+@use "modules/spinner";
+@use "modules/tabs";
+@use "modules/tooltip";
 
 
 
@@ -56,4 +56,4 @@
    ========================================================================== */
 
 // comment out any components that are not required
-@import "modules/icons";
+@use "modules/icons";

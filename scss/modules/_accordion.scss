@@ -1,3 +1,5 @@
+@use "../setup/colours";
+
 /* Accordion
    ========================================================================== */
 
@@ -37,7 +39,7 @@
         cursor: pointer;
 
         a {
-            color: $color-text;
+            color: colours.$color-text;
             text-decoration: none;
         }
 

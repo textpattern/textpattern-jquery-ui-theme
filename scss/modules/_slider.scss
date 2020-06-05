@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/settings";
+
 /* Slider
    ========================================================================== */
 
@@ -26,10 +29,10 @@
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: $color-background;
+        background-color: colours.$color-background;
 
-        @if $flat-theme < 1 {
-            box-shadow: $standard-shadow;
+        @if settings.$flat-theme < 1 {
+            box-shadow: settings.$standard-shadow;
         }
 
         cursor: pointer;

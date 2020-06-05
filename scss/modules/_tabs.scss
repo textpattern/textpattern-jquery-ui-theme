@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/settings";
+
 /* Tabs
    ========================================================================== */
 
@@ -41,7 +44,7 @@
         background: none;
 
         &:not(.switcher-list) .ui-tabs-anchor {
-            color: $color-text;
+            color: colours.$color-text;
             text-decoration: none;
         }
 
@@ -58,7 +61,7 @@
         }
 
         .ui-state-focus a {
-            outline: thin solid $color-link-focus;
+            outline: thin solid colours.$color-link-focus;
         }
     }
 
@@ -81,7 +84,7 @@
         list-style: none;
         white-space: nowrap;
 
-        @if $flat-theme < 1 {
+        @if settings.$flat-theme < 1 {
             box-shadow: inset 0 -0.2em 0.4em rgba(#666666, 0.15);
         }
 
@@ -89,7 +92,7 @@
             margin-bottom: -1px;
             padding-bottom: 1px;
 
-            @if $flat-theme < 1 {
+            @if settings.$flat-theme < 1 {
                 box-shadow: none;
             }
         }
@@ -110,11 +113,11 @@
 
 .ui-tabs-vertical {
     .ui-tabs-nav {
-        border-bottom: 1px solid $color-gradient-to;
+        border-bottom: 1px solid colours.$color-gradient-to;
 
         li {
             display: block;
-            border: 1px solid $color-gradient-to;
+            border: 1px solid colours.$color-gradient-to;
             border-bottom: 1px solid transparent;
         }
     }
