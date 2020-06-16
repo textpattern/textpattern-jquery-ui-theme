@@ -1025,3 +1025,62 @@ rules:
     - orientation
     - size
     - marks
+
+ # Additional SCSS rules (stylelint-scss plugin).
+
+  # Disallow `@extend` with missing placeholders.
+  scss/at-extend-no-missing-placeholder: true
+
+  # Check for equality to null is unnecessarily explicit since `null` is falsey in Sass.
+  scss/at-if-no-null: true
+
+  # Since leading underscores are not needed, they can be omitted.
+  scss/at-import-no-partial-leading-underscore: true
+
+  # Require or disallow extension in `@import` commands.
+  scss/at-import-partial-extension: never
+
+  # Disallow parentheses in conditional @ rules (if, elsif, while).
+  scss/at-rule-conditional-no-parentheses: true
+
+  # Disallow unknown at-rules. Should be used instead of stylelint's `at-rule-no-unknown`.
+  scss/at-rule-no-unknown: true
+
+  # Disallow empty comments.
+  scss/comment-no-empty: true
+
+  # Require a newline after the colon in `$`-variable declarations.
+  scss/dollar-variable-colon-newline-after: always-multi-line
+
+  # Require a single space or disallow whitespace before the colon in `$`-variable declarations.
+  scss/dollar-variable-colon-space-before: never
+
+  # Disallow Sass variables that are used without interpolation with CSS features that use custom identifiers.
+  scss/dollar-variable-no-missing-interpolation: true
+
+  # Disallow quoted strings inside the quote function.
+  scss/function-quote-no-quoted-strings-inside: true
+
+  # Disallow duplicate dollar variables within a stylesheet.
+  scss/no-duplicate-dollar-variables: true
+
+  # Disallow duplicate mixins within a stylesheet.
+  scss/no-duplicate-mixins: true
+
+  # Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.
+  scss/no-global-function-names: true
+
+  # Disallow linebreaks after Sass operators.
+  scss/operator-no-newline-after: true
+
+  # Disallow linebreaks before Sass operators.
+  scss/operator-no-newline-before: true
+
+  # Disallow unspaced operators in Sass operations.
+  scss/operator-no-unspaced: true
+
+  # Disallow non-CSS `@import`s in partial files.
+  scss/partial-no-import: true
+
+  # Prevents unneeded nesting selectors.
+  scss/selector-no-redundant-nesting-selector: true
