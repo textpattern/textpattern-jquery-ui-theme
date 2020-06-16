@@ -1,4 +1,4 @@
-@use "../setup/colours";
+@use "../../setup";
 
 /* Accordion
    ========================================================================== */
@@ -39,7 +39,8 @@
         cursor: pointer;
 
         a {
-            color: colours.$color-text;
+            outline: 0;
+            color: var(--color-text);
             text-decoration: none;
         }
 

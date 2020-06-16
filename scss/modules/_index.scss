@@ -1,0 +1,31 @@
+@use "sass:meta";
+
+@media screen {
+    // jQuery UI core
+    @include meta.load-css("jquery-ui/core");
+
+    // jQuery UI icons
+    @include meta.load-css("jquery-ui/icons");
+
+    // jQuery UI interactions
+    @include meta.load-css("jquery-ui/draggable");
+    @include meta.load-css("jquery-ui/resizable");
+    @include meta.load-css("jquery-ui/selectable");
+    @include meta.load-css("jquery-ui/sortable");
+
+    // jQuery UI widgets
+    @include meta.load-css("jquery-ui/accordion");
+    @include meta.load-css("jquery-ui/autocomplete");
+    @include meta.load-css("jquery-ui/button");
+    @include meta.load-css("jquery-ui/checkboxradio");
+    @include meta.load-css("jquery-ui/controlgroup");
+    @include meta.load-css("jquery-ui/datepicker");
+    @include meta.load-css("jquery-ui/dialog");
+    @include meta.load-css("jquery-ui/menu");
+    @include meta.load-css("jquery-ui/progressbar");
+    @include meta.load-css("jquery-ui/selectmenu");
+    @include meta.load-css("jquery-ui/slider");
+    @include meta.load-css("jquery-ui/spinner");
+    @include meta.load-css("jquery-ui/tabs");
+    @include meta.load-css("jquery-ui/tooltip");
+}

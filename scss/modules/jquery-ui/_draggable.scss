@@ -1,4 +1,4 @@
-@use "../setup/settings";
+@use "../../setup";
 
 /* Draggable
  ========================================================================== */
@@ -31,5 +31,5 @@
 .ui-draggable-dragging {
     z-index: 1000;
     opacity: 0.66;
-    box-shadow: settings.$standard-shadow;
+    box-shadow: var(--standard-shadow);
 }

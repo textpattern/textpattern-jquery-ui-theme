@@ -1,6 +1,4 @@
-@use "sass:color";
-@use "../setup/colours";
-@use "../setup/settings";
+@use "../../setup";
 
 /* Datepicker
    ========================================================================== */
@@ -87,8 +85,8 @@
     width: 17em;
     padding: 0.2em 0.2em 0;
 
-    @if settings.$flat-theme < 1 {
-        box-shadow: settings.$standard-shadow;
+    @if setup.$flat-theme < 1 {
+        box-shadow: var(--standard-shadow);
     }
 
     .ui-datepicker-header {
@@ -104,8 +102,8 @@
         height: 1.8em;
         margin-top: -0.9em;
 
-        @if settings.$border-radius > 0 {
-            border-radius: settings.$border-radius;
+        @if setup.$border-radius > 0 {
+            border-radius: setup.$border-radius;
         }
 
         background-color: transparent;
@@ -131,12 +129,12 @@
 
     .ui-datepicker-prev-hover,
     .ui-datepicker-next-hover {
-        background-color: colours.$color-background-box;
+        background-color: var(--color-background-box);
     }
 
     .ui-datepicker-title {
         margin: 0 2.2em;
-        line-height: 1.8461538em; // 24px / 13px
+        line-height: 1.846153846153846; // 24px / 13px
         text-align: center;
 
         select {
@@ -171,29 +169,9 @@
             text-align: center;
         }
 
-        a.ui-state-active {
-            border-color: color.adjust(colours.$color-link, $lightness: 42%);
-        }
-
-        a.ui-state-highlight:hover {
-            border-color: color.adjust(colours.$color-warning-text, $lightness: 8%);
-        }
-
-        a.ui-state-active:hover {
-            border-color: color.adjust(colours.$color-link, $lightness: 27%);
-        }
-
         &.ui-datepicker-week-col {
             padding: 0.32em 0;
             text-align: center;
-        }
-
-        &.ui-datepicker-today a {
-            background-color: colours.$color-warning-background;
-        }
-
-        &.ui-datepicker-current-day a {
-            background-color: colours.$color-selected;
         }
     }
 

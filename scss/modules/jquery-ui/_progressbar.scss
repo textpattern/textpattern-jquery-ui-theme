@@ -1,0 +1,113 @@
+@use "../../setup";
+
+/* Progressbar
+   ========================================================================== */
+
+/**
+ * jQuery UI Progressbar.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/progressbar/
+ *
+ * Example HTML:
+ *
+ * <div class="ui-progressbar">
+ *     <div class="ui-progressbar-value" style="width: 37%;"></div>
+ * </div>
+ */
+
+.ui-progressbar {
+    margin-bottom: 1em;
+    overflow: hidden;
+    background-color: var(--color-background-box);
+    text-align: left;
+}
+
+@include setup.dark-mode {
+    .ui-progressbar {
+        border-color: var(--color-border-extra-dark);
+    }
+}
+
+.ui-progressbar-value {
+    height: 6px;
+    animation: progressbar-stripes linear 4s infinite;
+    background-color: var(--color-accent-gradient-to);
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.33) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.33) 50%,
+            rgba(255, 255, 255, 0.33) 75%,
+            transparent 75%,
+            transparent
+        );
+    background-size: 24px 24px;
+}
+
+/**
+ * Progressbar with indeterminate value.
+ *
+ * Example HTML:
+ *
+ * <div class="ui-progressbar ui-progressbar-indeterminate">
+ *     <div class="ui-progressbar-value" style="width:100%;">
+ *         <div class="ui-progressbar-overlay"></div>
+ *     </div>
+ * </div>
+ */
+
+.ui-progressbar-indeterminate .ui-progressbar-value {
+    background-color: var(--color-border);
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.25) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0.25) 75%,
+            transparent 75%,
+            transparent
+        );
+}
+
+@include setup.dark-mode {
+    .ui-progressbar-value {
+        background-image:
+            linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.33) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.33) 50%,
+                rgba(255, 255, 255, 0.33) 75%,
+                transparent 75%,
+                transparent
+            );
+    }
+
+    .ui-progressbar-indeterminate .ui-progressbar-value {
+        background-image:
+            linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.25) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.25) 50%,
+                rgba(255, 255, 255, 0.25) 75%,
+                transparent 75%,
+                transparent
+            );
+    }
+}
+
+/**
+ * Reverse the progressbar direction in RTL languages.
+ */
+
+[dir="rtl"] .ui-progressbar-value, {
+    animation-direction: reverse;
+}

@@ -1,5 +1,4 @@
-@use "../setup/colours";
-@use "../setup/settings";
+@use "../../setup";
 
 /* Selectmenu
    ========================================================================== */
@@ -44,21 +43,21 @@
 }
 
 .ui-selectmenu-button:not(.ui-controlgroup-item) {
-    border-radius: settings.$border-radius;
+    border-radius: setup.$border-radius;
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-    border-radius: 0 settings.$border-radius settings.$border-radius 0;
+    border-radius: 0 setup.$border-radius setup.$border-radius 0;
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-    border-radius: settings.$border-radius 0 0 settings.$border-radius;
+    border-radius: setup.$border-radius 0 0 setup.$border-radius;
 }
 
 .ui-selectmenu-icon {
     flex: none;
     order: 2;
-    margin: 0.2em -0.2307692em 0 0.2307692em;
+    margin: 0.2em -0.230769230769231em 0 0.230769230769231em;
 }
 
 .ui-selectmenu-text {
@@ -83,11 +82,11 @@
         .ui-selectmenu-optgroup {
             height: auto;
             margin: 0.5em 0 0;
-            padding: 2px 0.6153846em; // 8px / 13px
-            border-top: 1px solid colours.$color-border;
+            padding: 2px 0.61538461538462em; // 8px / 13px
+            border-top: 1px solid var(--color-border);
             font-size: 1rem;
             font-weight: bold;
-            line-height: settings.$base-line-height;
+            line-height: setup.$base-line-height;
 
             &:first-child {
                 margin: 0;
@@ -107,15 +106,15 @@
 
 [dir="rtl"] {
     .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-        border-radius: settings.$border-radius 0 0 settings.$border-radius;
+        border-radius: setup.$border-radius 0 0 setup.$border-radius;
     }
 
     .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-        border-radius: 0 settings.$border-radius settings.$border-radius 0;
+        border-radius: 0 setup.$border-radius setup.$border-radius 0;
     }
 
     .ui-selectmenu-icon {
-        margin: 0.2em 0.2307692em 0 -0.2307692em;
+        margin: 0.2em 0.230769230769231em 0 -0.230769230769231em;
     }
 }
 
@@ -130,7 +129,7 @@
         padding: 0;
         border: 0;
         background: transparent;
-        color: colours.$color-link;
+        color: var(--color-link);
         font-family: inherit;
         cursor: pointer;
         user-select: auto;
@@ -138,16 +137,16 @@
         &:hover,
         &:active {
             background: transparent;
-            color: colours.$color-link-hover;
+            color: var(--color-link-hover);
             text-decoration: underline;
 
-            @if settings.$flat-theme < 1 {
+            @if setup.$flat-theme < 1 {
                 box-shadow: none;
             }
         }
 
         &:focus {
-            outline: thin solid colours.$color-link-focus;
+            outline: thin solid var(--color-link-focus);
         }
 
         .ui-selectmenu-icon {

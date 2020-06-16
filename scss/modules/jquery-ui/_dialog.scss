@@ -1,4 +1,4 @@
-@use "../setup/settings";
+@use "../../setup";
 
 /* Dialog
    ========================================================================== */
@@ -48,8 +48,8 @@
     overflow: hidden;
     outline: 0;
 
-    @if settings.$flat-theme < 1 {
-        box-shadow: settings.$standard-shadow;
+    @if setup.$flat-theme < 1 {
+        box-shadow: var(--standard-shadow);
     }
 
     .ui-dialog-titlebar {

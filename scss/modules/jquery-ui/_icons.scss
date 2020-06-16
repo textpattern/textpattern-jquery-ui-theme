@@ -1,3 +1,5 @@
+@use "../../setup";
+
 /* Icons
    ========================================================================== */
 
@@ -23,6 +25,17 @@
     background-size: 16px 16px;
     vertical-align: baseline;
     text-indent: -9999px;
+}
+
+@include setup.dark-mode {
+    .ui-icon,
+    .no-ui-button .ui-button .ui-icon {
+        filter: brightness(3) sepia(1) hue-rotate(168deg) saturate(33%);
+    }
+
+    .ui-button .ui-icon {
+        filter: none;
+    }
 }
 
 .ui-widget-icon-block {
@@ -70,7 +83,14 @@ button:not(.ui-button):focus .ui-icon {
 
 .success .ui-icon,
 .success.ui-icon {
-    filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(90%);
+    filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(100%);
+}
+
+@include setup.dark-mode {
+    .success .ui-icon,
+    .success.ui-icon {
+        filter: brightness(2.4) sepia(1) hue-rotate(82deg) saturate(250%) brightness(100%);
+    }
 }
 
 /**
@@ -87,7 +107,15 @@ button:not(.ui-button):focus .ui-icon {
 .ui-state-highlight .ui-icon,
 .warning .ui-icon,
 .warning.ui-icon {
-    filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(112%);
+    filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(115%);
+}
+
+@include setup.dark-mode {
+    .ui-state-highlight .ui-icon,
+    .warning .ui-icon,
+    .warning.ui-icon {
+        filter: brightness(2.4) sepia(1) hue-rotate(4deg) saturate(500%) brightness(120%);
+    }
 }
 
 /**
@@ -110,6 +138,17 @@ button:not(.ui-button):focus .ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(65%);
 }
 
+@include setup.dark-mode {
+    .ui-state-error .ui-icon,
+    .ui-state-error-text .ui-icon,
+    .error .ui-icon,
+    .error.ui-icon,
+    .destroy .ui-icon,
+    .destroy.ui-icon {
+        filter: brightness(2.3) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(85%);
+    }
+}
+
 /**
  * 'Information' state icons.
  *
@@ -126,13 +165,26 @@ button:not(.ui-button):focus .ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(150deg) saturate(600%) brightness(80%);
 }
 
+@include setup.dark-mode {
+    .information .ui-icon,
+    .information.ui-icon {
+        filter: brightness(2.3) sepia(1) hue-rotate(150deg) saturate(600%) brightness(85%);
+    }
+}
+
 /**
  * 'White out' (inversed) icons.
  */
 
 .ui-icon-inversed,
-#messagepane .ui-icon {
+.messagepane .ui-icon {
     filter: brightness(5);
+}
+
+@include setup.dark-mode {
+    .ui-icon-inversed {
+        filter: brightness(5);
+    }
 }
 
 /**

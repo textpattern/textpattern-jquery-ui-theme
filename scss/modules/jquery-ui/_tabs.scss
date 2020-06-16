@@ -1,5 +1,4 @@
-@use "../setup/colours";
-@use "../setup/settings";
+@use "../../setup";
 
 /* Tabs
    ========================================================================== */
@@ -44,16 +43,20 @@
         background: none;
 
         &:not(.switcher-list) .ui-tabs-anchor {
-            color: colours.$color-text;
+            color: var(--color-text);
             text-decoration: none;
         }
 
         .ui-tabs-anchor {
             display: block;
-            padding: 0.3846154em 1em; // 5px / 13px
+            padding: 0.38461538461538em 1em;
         }
 
         li {
+            &:hover {
+                filter: brightness(1.05);
+            }
+
             &.ui-state-disabled .ui-tabs-anchor,
             &.ui-tabs-loading .ui-tabs-anchor {
                 cursor: text;
@@ -61,7 +64,7 @@
         }
 
         .ui-state-focus a {
-            outline: thin solid colours.$color-link-focus;
+            outline: thin solid var(--color-link-focus);
         }
     }
 
@@ -71,6 +74,12 @@
         padding: 1px 0;
         border-width: 1px 0;
         background: none;
+    }
+}
+
+@include setup.dark-mode {
+    .ui-tabs .ui-tabs-nav li:hover {
+        filter: brightness(1.1);
     }
 }
 
@@ -84,15 +93,27 @@
         list-style: none;
         white-space: nowrap;
 
-        @if settings.$flat-theme < 1 {
-            box-shadow: inset 0 -0.2em 0.4em rgba(#666666, 0.15);
+        @if setup.$flat-theme < 1 {
+            box-shadow: inset 0 -0.25em 0.5em hsla(0, 0%, 40%, 0.15);
         }
 
         &.ui-tabs-active {
             margin-bottom: -1px;
             padding-bottom: 1px;
 
-            @if settings.$flat-theme < 1 {
+            @if setup.$flat-theme < 1 {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+@if setup.$flat-theme < 1 {
+    @include setup.dark-mode {
+        .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
+            box-shadow: inset 0 -0.25em 0.5em hsla(0, 0%, 0%, 0.3);
+
+            &.ui-tabs-active {
                 box-shadow: none;
             }
         }
@@ -113,11 +134,11 @@
 
 .ui-tabs-vertical {
     .ui-tabs-nav {
-        border-bottom: 1px solid colours.$color-gradient-to;
+        border-bottom: 1px solid var(--color-border);
 
         li {
             display: block;
-            border: 1px solid colours.$color-gradient-to;
+            border: 1px solid var(--color-border);
             border-bottom: 1px solid transparent;
         }
     }

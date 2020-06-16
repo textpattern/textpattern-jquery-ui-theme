@@ -1,5 +1,4 @@
-@use "../setup/colours";
-@use "../setup/settings";
+@use "../../setup";
 
 /* Menu
    ========================================================================== */
@@ -70,18 +69,18 @@
     margin: 0;
     padding: 0;
 
-    @if settings.$flat-theme < 1 {
-        border-color: colours.$color-border-light;
+    @if setup.$flat-theme < 1 {
+        border-color: var(--color-border-light);
     }
 
     outline: 0;
     list-style: none;
     /* 1 */
     font-size: 1rem;
-    line-height: settings.$base-line-height;
+    line-height: setup.$base-line-height;
 
-    @if settings.$flat-theme < 1 {
-        box-shadow: settings.$standard-shadow;
+    @if setup.$flat-theme < 1 {
+        box-shadow: var(--standard-shadow);
     }
 
     .ui-menu {
@@ -96,7 +95,7 @@
         cursor: pointer;
 
         a {
-            color: colours.$color-text;
+            color: var(--color-text);
             text-decoration: none;
         }
 
@@ -130,10 +129,12 @@
 
     .ui-state-focus,
     .ui-state-active {
-        background-color: colours.$color-selected;
+        background-color: var(--color-selected);
     }
 
-    .ui-icon { // left-aligned
+    // left-aligned
+
+    .ui-icon {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -141,7 +142,9 @@
         margin: auto 0;
     }
 
-    .ui-menu-icon { // right-aligned
+    // right-aligned
+
+    .ui-menu-icon {
         right: 0;
         left: auto;
     }
@@ -176,12 +179,16 @@
         }
     }
 
-    .ui-icon { // left-aligned (flipped to right)
+    // left-aligned (flipped to right)
+
+    .ui-icon {
         right: 0.3076923em;
         left: auto;
     }
 
-    .ui-menu-icon { // right-aligned (flipped to left)
+    // right-aligned (flipped to left)
+
+    .ui-menu-icon {
         right: auto;
         left: 0;
     }

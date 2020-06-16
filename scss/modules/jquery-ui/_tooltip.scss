@@ -1,4 +1,4 @@
-@use "../setup/settings";
+@use "../../setup";
 
 /* Tooltip
    ========================================================================== */
@@ -25,7 +25,7 @@
     max-width: 22em;
     padding: 0.5em 1em;
 
-    @if settings.$flat-theme < 1 {
-        box-shadow: settings.$standard-shadow;
+    @if setup.$flat-theme < 1 {
+        box-shadow: var(--standard-shadow);
     }
 }
