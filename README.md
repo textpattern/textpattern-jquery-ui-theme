@@ -7,7 +7,6 @@ The jQuery UI theme used within the [Textpattern CMS](https://textpattern.com/) 
 
 ## Supported web browsers
 
-* Internet Explorer 11.
 * Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
 
 ## Installation
