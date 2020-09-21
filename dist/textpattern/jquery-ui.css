@@ -1482,7 +1482,8 @@ input[type=button] .ui-icon,
 
   .ui-accordion .ui-accordion-icons,
 .ui-accordion .ui-accordion-icons .ui-accordion-icons {
-    padding-left: 2em;
+    -webkit-padding-start: 2em;
+            padding-inline-start: 2em;
   }
 
   /**
@@ -1491,12 +1492,6 @@ input[type=button] .ui-icon,
   [dir=rtl] .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
     right: 0.5em;
     left: auto;
-  }
-
-  [dir=rtl] .ui-accordion .ui-accordion-icons,
-[dir=rtl] .ui-accordion .ui-accordion-icons .ui-accordion-icons {
-    padding-right: 2em;
-    padding-left: 0;
   }
 
   /* Autocomplete
@@ -1568,7 +1563,6 @@ input[type=button] .ui-icon,
     /* 4 */
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
             user-select: none;
   }
 
@@ -1864,11 +1858,7 @@ input[type=button] .ui-icon,
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    text-align: left;
-  }
-
-  [dir=rtl] .ui-controlgroup-vertical .ui-controlgroup-item {
-    text-align: right;
+    text-align: start;
   }
 
   .ui-controlgroup-vertical .ui-controlgroup-label + .ui-controlgroup-item {
@@ -2103,7 +2093,7 @@ input[type=button] .ui-icon,
 
   .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
 .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
-    border-left-width: 0;
+    border-inline-start-width: 0;
   }
 
   .ui-datepicker-multi .ui-datepicker-buttonpane {
@@ -2160,12 +2150,6 @@ input[type=button] .ui-icon,
   [dir=rtl] .ui-datepicker-buttonpane button.ui-datepicker-current,
 [dir=rtl] .ui-datepicker-group {
     float: right;
-  }
-
-  [dir=rtl] .ui-datepicker-group-last .ui-datepicker-header,
-[dir=rtl] .ui-datepicker-group-middle .ui-datepicker-header {
-    border-right-width: 0;
-    border-left-width: 1px;
   }
 
   /* Dialog
@@ -2263,7 +2247,7 @@ input[type=button] .ui-icon,
     padding: 0.5em;
     border-width: 1px 0 0;
     background-image: none;
-    text-align: left;
+    text-align: start;
   }
 
   .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
@@ -2275,12 +2259,10 @@ input[type=button] .ui-icon,
   }
 
   .ui-dialog .ui-dialog-buttonpane button {
-    margin: 0.5em 0.4em 0.5em 0;
+    margin: 0.5em 0;
+    -webkit-margin-end: 0.4em;
+            margin-inline-end: 0.4em;
     cursor: pointer;
-  }
-
-  [dir=rtl] .ui-dialog .ui-dialog-buttonpane button {
-    margin: 0.5em 0 0.5em 0.4em;
   }
 
   /**
@@ -2385,7 +2367,9 @@ input[type=button] .ui-icon,
   .ui-menu .ui-menu-item label {
     display: block;
     margin: -0.3076923em -0.6153846em;
-    padding: 0.3076923em 0.6153846em 0.3076923em 2em;
+    padding: 0.3076923em 0.6153846em;
+    -webkit-padding-start: 2em;
+            padding-inline-start: 2em;
     cursor: pointer;
   }
 
@@ -2441,14 +2425,6 @@ input[type=button] .ui-icon,
   /**
    * Menu RTL support.
    */
-  [dir=rtl] .ui-menu {
-    padding: 0;
-  }
-
-  [dir=rtl] .ui-menu .ui-menu-item label {
-    padding: 0.3076923em 2em 0.3076923em 0.6153846em;
-  }
-
   [dir=rtl] .ui-menu .ui-menu-item label [type=checkbox],
 [dir=rtl] .ui-menu .ui-menu-item label [type=radio] {
     right: 0.3076923em;
@@ -2584,7 +2560,9 @@ input[type=button] .ui-icon,
   .ui-selectmenu-icon {
     flex: none;
     order: 2;
-    margin: 0.2em -0.2307692308em 0 0.2307692308em;
+    margin: 0.2em 0.2307692308em 0;
+    -webkit-margin-end: -0.2307692308em;
+            margin-inline-end: -0.2307692308em;
   }
 
   .ui-selectmenu-text {
@@ -2638,10 +2616,6 @@ input[type=button] .ui-icon,
     border-radius: 0 0.5em 0.5em 0;
   }
 
-  [dir=rtl] .ui-selectmenu-icon {
-    margin: 0.2em 0.2307692308em 0 -0.2307692308em;
-  }
-
   /**
    * Selectmenu plain buttons.
    */
@@ -2655,7 +2629,6 @@ input[type=button] .ui-icon,
     font-family: inherit;
     cursor: pointer;
     -webkit-user-select: auto;
-       -moz-user-select: auto;
             user-select: auto;
   }
 
@@ -2699,7 +2672,7 @@ input[type=button] .ui-icon,
     box-sizing: border-box;
     border-color: var(--color-border);
     background-color: var(--color-background-box);
-    text-align: left;
+    text-align: start;
   }
 
   .ui-slider:hover {
@@ -2844,7 +2817,8 @@ input[type=button] .ui-icon,
   }
 
   .ui-spinner .ui-spinner-input {
-    padding-right: 24px;
+    -webkit-padding-end: 24px;
+            padding-inline-end: 24px;
   }
 
   .ui-spinner-button {
@@ -2872,11 +2846,6 @@ input[type=button] .ui-icon,
   /**
    * Spinner RTL support.
    */
-  [dir=rtl] .ui-spinner .ui-spinner-input {
-    padding-right: 4px;
-    padding-left: 24px;
-  }
-
   [dir=rtl] .ui-spinner-button {
     right: auto;
     left: 0;
