@@ -41,7 +41,7 @@
     "not IE 11"
   ],
   "scripts": {
-    "build": "webpack -p --progress"
+    "build": "webpack --progress"
   },
   "license": "GPL-2.0"
 }
