@@ -11,12 +11,10 @@
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
     $filename: $hdfile + "." + $hdtype !default;
     $hdfilename: $hdfile + "@2x." + $hdtype !default;
-    background-image: url("img/" + $filename);
+    background-image: url("../img/" + $filename);
     background-size: $hdwidth $hdheight;
 
-    @media (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-        background-image: url("img/" + $hdfilename);
-    }
+    @media (min-resolution: 1.25dppx), (min-resolution: 120dpi) { background-image: url("../img/" + $hdfilename); }
 }
 
 // standard gradients
