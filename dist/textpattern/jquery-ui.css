@@ -575,7 +575,6 @@ a.ui-state-default:focus {
   /* 4 */
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
@@ -1550,7 +1549,6 @@ input.ui-button.ui-icon-notext .ui-icon {
   font-family: inherit;
   cursor: pointer;
   -webkit-user-select: auto;
-     -moz-user-select: auto;
       -ms-user-select: auto;
           user-select: auto;
 }
