@@ -298,6 +298,18 @@ a.ui-state-default:focus {
     text-indent: -9999px;
   }
 
+  .ui-icon-medium {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+  }
+
+  .ui-icon-large {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+  }
+
   body.darkmode .ui-icon,
 body.darkmode .no-ui-button .ui-button .ui-icon {
     filter: brightness(3) sepia(1) hue-rotate(168deg) saturate(33%);
