@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
+    mode: 'production',
     entry: {
         'jquery-ui.css': './scss/jquery-ui.scss'
     },

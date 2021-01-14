@@ -444,7 +444,7 @@ body.darkmode .information.ui-icon {
    * 'White out' (inversed) icons.
    */
   .ui-icon-inversed,
-.messagepane .ui-icon {
+#messagepane .ui-icon {
     filter: brightness(5);
   }
 
@@ -1554,7 +1554,6 @@ input[type=button] .ui-icon,
     display: inline-block;
     position: relative;
     box-sizing: border-box;
-    height: 2.3076923077em;
     margin: 0;
     padding: 0.3076923077em 0.6153846154em;
     /* 1 */
@@ -2204,6 +2203,7 @@ input[type=button] .ui-icon,
     top: 0;
     left: 0;
     flex-flow: column;
+    min-width: 300px;
     max-width: 90vw;
     max-height: 90vh;
     padding: 0.2em;
@@ -2247,7 +2247,9 @@ input[type=button] .ui-icon,
 
   .ui-dialog .ui-dialog-content {
     position: relative;
+    box-sizing: border-box;
     flex: 1 1 auto;
+    min-width: 100%;
     padding: 0.5em 1em;
     overflow: auto;
     border: 0;

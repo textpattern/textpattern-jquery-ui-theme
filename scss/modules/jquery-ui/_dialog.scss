@@ -42,6 +42,7 @@
     top: 0;
     left: 0;
     flex-flow: column;
+    min-width: 300px;
     max-width: 90vw;
     max-height: 90vh;
     padding: 0.2em;
@@ -87,7 +88,9 @@
 
     .ui-dialog-content {
         position: relative;
+        box-sizing: border-box;
         flex: 1 1 auto;
+        min-width: 100%;
         padding: 0.5em 1em;
         overflow: auto;
         border: 0;
