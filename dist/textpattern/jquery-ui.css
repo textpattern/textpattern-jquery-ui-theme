@@ -79,16 +79,16 @@
    * General style for jQuery widget content.
    */
   .ui-widget-content {
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background);
+    border: 1px solid var(--clr-brdr);
+    background-color: var(--clr-bkgd);
   }
 
   /**
    * General style for jQuery widget headers.
    */
   .ui-widget-header {
-    background-color: var(--color-gradient-to);
-    background-image: linear-gradient(var(--color-gradient-from), var(--color-gradient-to));
+    background-color: var(--clr-grad-to);
+    background-image: linear-gradient(var(--clr-grad-from), var(--clr-grad-to));
     font-weight: bold;
   }
 
@@ -98,9 +98,9 @@
    * Default jQuery UI widget interaction state.
    */
   .ui-state-default {
-    border: 1px solid var(--color-border);
-    background-color: var(--color-background-box);
-    color: var(--color-text);
+    border: 1px solid var(--clr-brdr);
+    background-color: var(--clr-bkgd-box);
+    color: var(--clr-text);
   }
 
   .ui-state-default.ui-state-hover {
@@ -112,7 +112,7 @@
    */
   a.ui-state-default:hover,
 a.ui-state-default:focus {
-    color: var(--color-text);
+    color: var(--clr-text);
     text-decoration: none;
   }
 
@@ -120,19 +120,19 @@ a.ui-state-default:focus {
    * Hover jQuery UI widget interaction states.
    */
   .ui-state-hover {
-    border-color: var(--color-border-extra-dark);
-    background-color: var(--color-background-box);
+    border-color: var(--clr-brdr-x-dark);
+    background-color: var(--clr-bkgd-box);
   }
 
   body.darkmode .ui-state-hover {
-    border-color: var(--color-border-extra-light);
+    border-color: var(--clr-brdr-x-lite);
   }
 
   /**
    * Focus jQuery UI widget interaction states.
    */
   .ui-state-focus {
-    border-color: var(--color-link-focus);
+    border-color: var(--clr-focus);
     outline: 0;
   }
 
@@ -144,14 +144,14 @@ a.ui-state-default:focus {
    * Highlight colour for jQuery UI widgets currently in 'selecting' state.
    */
   .ui-selecting {
-    background-color: var(--color-selecting);
+    background-color: var(--clr-selecting);
   }
 
   /**
    * Highlight colour for jQuery UI widgets currently in 'selected' state.
    */
   .ui-selected {
-    background-color: var(--color-selected);
+    background-color: var(--clr-selected);
   }
 
   /* Interaction cues
@@ -160,52 +160,52 @@ a.ui-state-default:focus {
    * jQuery UI highlight cue colouring.
    */
   .ui-state-highlight {
-    border: 1px solid var(--color-warning-border);
-    background-color: var(--color-warning-background);
+    border: 1px solid var(--clr-warning-brdr);
+    background-color: var(--clr-warning-bkgd);
   }
 
   .ui-state-highlight.ui-state-hover {
-    border-color: var(--color-warning-text);
+    border-color: var(--clr-warning-text);
   }
 
   body.darkmode .ui-state-highlight.ui-state-hover {
-    --color-warning-text-dark: hsl(40, 100%, 40%);
-    border-color: var(--color-warning-text-dark);
+    --clr-warning-text-dark: hsl(40, 100%, 40%);
+    border-color: var(--clr-warning-text-dark);
   }
 
   /**
    * Active jQuery UI widget interaction state.
    */
   .ui-state-active {
-    border-color: var(--color-link);
-    background-color: var(--color-selected);
+    border-color: var(--clr-a);
+    background-color: var(--clr-selected);
   }
 
   .ui-state-active.ui-state-hover {
-    border-color: var(--color-link-hover);
+    border-color: var(--clr-a-interact);
   }
 
   body.darkmode .ui-state-active.ui-state-hover {
-    --color-link-hover-dark: hsl(210, 100%, 60%);
-    border-color: var(--color-link-hover-dark);
+    --clr-a-interact-dark: hsl(210, 100%, 60%);
+    border-color: var(--clr-a-interact-dark);
   }
 
   /**
    * jQuery UI error cue colouring.
    */
   .ui-state-error {
-    border: 1px solid var(--color-error-border);
-    background-color: var(--color-error-background);
-    color: var(--color-error-text);
+    border: 1px solid var(--clr-error-brdr);
+    background-color: var(--clr-error-bkgd);
+    color: var(--clr-error-text);
   }
 
   .ui-state-error.ui-state-hover {
-    border-color: var(--color-error-text);
+    border-color: var(--clr-error-text);
   }
 
   body.darkmode .ui-state-error.ui-state-hover {
-    --color-error-text-dark: hsl(337, 100%, 40%);
-    border-color: var(--color-error-text-dark);
+    --clr-error-text-dark: hsl(337, 100%, 40%);
+    border-color: var(--clr-error-text-dark);
   }
 
   /**
@@ -1399,7 +1399,7 @@ input[type=button] .ui-icon,
   .ui-selectable-helper {
     position: absolute;
     z-index: 100;
-    border: 1px dotted var(--color-link);
+    border: 1px dotted var(--clr-a);
   }
 
   /* Sortable
@@ -1434,7 +1434,7 @@ input[type=button] .ui-icon,
   }
 
   .ui-sortable-placeholder {
-    border: 1px dotted var(--color-link);
+    border: 1px dotted var(--clr-a);
   }
 
   /* Accordion
@@ -1475,7 +1475,7 @@ input[type=button] .ui-icon,
 
   .ui-accordion .ui-accordion-header a {
     outline: 0;
-    color: var(--color-text);
+    color: var(--clr-text);
     text-decoration: none;
   }
 
@@ -1549,8 +1549,8 @@ input[type=button] .ui-icon,
    * <a class="ui-button ui-corner-all ui-widget">Button</a>
    */
   .ui-button {
-    background-color: var(--color-button-gradient-to);
-    background-image: linear-gradient(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    background-color: var(--clr-btn-grad-to);
+    background-image: linear-gradient(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
     display: inline-block;
     position: relative;
     box-sizing: border-box;
@@ -1558,9 +1558,9 @@ input[type=button] .ui-icon,
     padding: 0.3076923077em 0.6153846154em;
     /* 1 */
     overflow: visible;
-    border: 1px solid var(--color-button-border);
+    border: 1px solid var(--clr-btn-brdr);
     background-clip: padding-box;
-    color: var(--color-text-button);
+    color: var(--clr-text-btn);
     font-family: inherit;
     /* 2 */
     font-size: 1rem;
@@ -1579,28 +1579,28 @@ input[type=button] .ui-icon,
 
   .ui-button:hover {
     filter: brightness(1.05);
-    color: var(--color-text-button-hover);
+    color: var(--clr-text-btn-hover);
     text-decoration: none;
   }
 
   .ui-button:active {
     filter: brightness(0.95);
-    color: var(--color-text-button-active);
+    color: var(--clr-text-btn-active);
     text-decoration: none;
-    box-shadow: var(--inset-lowlighting);
+    box-shadow: var(--inset-lolite);
   }
 
   .ui-button:focus {
-    border-color: var(--color-link-focus);
+    border-color: var(--clr-focus);
     outline: 2px solid transparent;
-    color: var(--color-text-button-active);
+    color: var(--clr-text-btn-active);
   }
 
   /**
    * Remove some styling from `a` links as buttons.
    */
   a.ui-button {
-    color: var(--color-text-button);
+    color: var(--clr-text-btn);
     text-decoration: none;
   }
 
@@ -1610,7 +1610,7 @@ input[type=button] .ui-icon,
    * 1. `!important` required to override specificity.
    */
   .ui-button.ui-state-focus {
-    border-color: var(--color-link-focus) !important;
+    border-color: var(--clr-focus) !important;
     /* 1 */
   }
 
@@ -1706,43 +1706,43 @@ input[type=button] .ui-icon,
    */
   .ui-checkboxradio-label .ui-icon-background {
     box-sizing: border-box;
-    border: 1px solid var(--color-border-extra-dark);
+    border: 1px solid var(--clr-brdr-x-dark);
     border-radius: 0.2em;
-    background-color: var(--color-background-form);
+    background-color: var(--clr-bkgd-form);
   }
 
   .ui-checkboxradio-label.ui-checkboxradio-checked .ui-icon {
     border: 0;
-    background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+    background: var(--clr-text-demoted) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
   }
 
   .ui-checkboxradio-label.ui-checkboxradio-checked.ui-state-focus .ui-icon {
-    background-color: var(--color-link-focus);
+    background-color: var(--clr-focus);
   }
 
   .ui-checkboxradio-label.ui-checkboxradio-checked:hover .ui-icon {
-    background-color: var(--color-text);
+    background-color: var(--clr-text);
   }
 
   body.darkmode .ui-checkboxradio-label .ui-icon-background {
-    border-color: var(--color-text-footnote);
-    background-color: var(--color-text-enforced-white);
+    border-color: var(--clr-text-demoted);
+    background-color: var(--clr-text-enforced-white);
   }
 
   body.darkmode .ui-checkboxradio-label.ui-checkboxradio-checked .ui-icon {
-    background-color: var(--color-background);
+    background-color: var(--clr-bkgd);
   }
 
   body.darkmode .ui-checkboxradio-label.ui-checkboxradio-checked.ui-button:hover .ui-icon {
-    background-color: var(--color-border-extra-dark);
+    background-color: var(--clr-brdr-x-dark);
   }
 
   body.darkmode .ui-checkboxradio-label.ui-checkboxradio-checked.ui-state-focus .ui-icon {
-    background-color: var(--color-link-focus);
+    background-color: var(--clr-focus);
   }
 
   body.darkmode .ui-checkboxradio-label.ui-checkboxradio-checked:hover .ui-icon {
-    background-color: var(--color-text);
+    background-color: var(--clr-text);
   }
 
   .ui-checkboxradio-radio-label .ui-icon-background {
@@ -1750,38 +1750,38 @@ input[type=button] .ui-icon,
   }
 
   .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon {
-    border: 5px solid var(--color-text-footnote);
+    border: 5px solid var(--clr-text-demoted);
     border-radius: 100%;
-    background: var(--color-background-form);
+    background: var(--clr-bkgd-form);
   }
 
   .ui-checkboxradio-radio-label.ui-checkboxradio-checked.ui-state-focus .ui-icon {
-    border-color: var(--color-link-focus);
-    background-color: var(--color-background-form);
+    border-color: var(--clr-focus);
+    background-color: var(--clr-bkgd-form);
   }
 
   .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
-    border-color: var(--color-text);
-    background-color: var(--color-background-form);
+    border-color: var(--clr-text);
+    background-color: var(--clr-bkgd-form);
   }
 
   body.darkmode .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon {
-    border-color: var(--color-background);
-    background-color: var(--color-text-enforced-white);
+    border-color: var(--clr-bkgd);
+    background-color: var(--clr-text-enforced-white);
   }
 
   body.darkmode .ui-checkboxradio-radio-label.ui-checkboxradio-checked.ui-button:hover .ui-icon {
-    background-color: var(--color-text-enforced-white);
+    background-color: var(--clr-text-enforced-white);
   }
 
   body.darkmode .ui-checkboxradio-radio-label.ui-checkboxradio-checked.ui-state-focus .ui-icon {
-    border-color: var(--color-link-focus);
-    background-color: var(--color-text-enforced-white);
+    border-color: var(--clr-focus);
+    background-color: var(--clr-text-enforced-white);
   }
 
   body.darkmode .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
-    border-color: var(--color-border-extra-dark);
-    background-color: var(--color-text-enforced-white);
+    border-color: var(--clr-brdr-x-dark);
+    background-color: var(--clr-text-enforced-white);
   }
 
   .ui-checkboxradio-disabled {
@@ -1797,9 +1797,9 @@ input[type=button] .ui-icon,
    * <label for="check" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-checked ui-state-active">Dogs</label>
    */
   .ui-checkboxradio-checked.ui-button {
-    background-color: var(--color-button-selected-gradient-to);
-    background-image: linear-gradient(var(--color-button-selected-gradient-from), var(--color-button-selected-gradient-to));
-    border-color: var(--color-button-selected-border);
+    background-color: var(--clr-btn-selected-grad-to);
+    background-image: linear-gradient(var(--clr-btn-selected-grad-from), var(--clr-btn-selected-grad-to));
+    border-color: var(--clr-btn-selected-brdr);
   }
 
   /* Controlgroup
@@ -1847,8 +1847,8 @@ input[type=button] .ui-icon,
   }
 
   .ui-controlgroup .ui-state-highlight {
-    border-color: var(--color-button-selected-gradient-to);
-    background-color: var(--color-button-selected-gradient-from);
+    border-color: var(--clr-btn-selected-grad-to);
+    background-color: var(--clr-btn-selected-grad-from);
   }
 
   .ui-controlgroup-horizontal .ui-controlgroup-label + .ui-controlgroup-item {
@@ -2012,7 +2012,7 @@ input[type=button] .ui-icon,
 
   .ui-datepicker .ui-datepicker-prev-hover,
 .ui-datepicker .ui-datepicker-next-hover {
-    background-color: var(--color-background-box);
+    background-color: var(--clr-bkgd-box);
   }
 
   .ui-datepicker .ui-datepicker-title {
@@ -2352,7 +2352,7 @@ input[type=button] .ui-icon,
     display: block;
     margin: 0;
     padding: 0;
-    border-color: var(--color-border-light);
+    border-color: var(--clr-brdr-lite);
     outline: 0;
     list-style: none;
     /* 1 */
@@ -2374,7 +2374,7 @@ input[type=button] .ui-icon,
   }
 
   .ui-menu .ui-menu-item a {
-    color: var(--color-text);
+    color: var(--clr-text);
     text-decoration: none;
   }
 
@@ -2409,7 +2409,7 @@ input[type=button] .ui-icon,
 
   .ui-menu .ui-state-focus,
 .ui-menu .ui-state-active {
-    background-color: var(--color-selected);
+    background-color: var(--clr-selected);
   }
 
   .ui-menu .ui-icon {
@@ -2472,18 +2472,18 @@ input[type=button] .ui-icon,
   .ui-progressbar {
     margin-bottom: 1em;
     overflow: hidden;
-    background-color: var(--color-background-box);
+    background-color: var(--clr-bkgd-box);
     text-align: left;
   }
 
   body.darkmode .ui-progressbar {
-    border-color: var(--color-border-extra-dark);
+    border-color: var(--clr-brdr-x-dark);
   }
 
   .ui-progressbar-value {
     height: 6px;
     animation: progressbar-stripes linear 4s infinite;
-    background-color: var(--color-accent-gradient-to);
+    background-color: var(--clr-accent-grad-to);
     background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.33) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.33) 50%, rgba(255, 255, 255, 0.33) 75%, transparent 75%, transparent);
     background-size: 24px 24px;
   }
@@ -2500,7 +2500,7 @@ input[type=button] .ui-icon,
    * </div>
    */
   .ui-progressbar-indeterminate .ui-progressbar-value {
-    background-color: var(--color-border);
+    background-color: var(--clr-brdr);
     background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
   }
 
@@ -2604,7 +2604,7 @@ input[type=button] .ui-icon,
     height: auto;
     margin: 0.5em 0 0;
     padding: 2px 0.6153846154em;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--clr-brdr);
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.5384615385;
@@ -2639,7 +2639,7 @@ input[type=button] .ui-icon,
     padding: 0;
     border: 0;
     background: transparent;
-    color: var(--color-link);
+    color: var(--clr-a);
     font-family: inherit;
     cursor: pointer;
     -webkit-user-select: auto;
@@ -2648,13 +2648,13 @@ input[type=button] .ui-icon,
 
   .no-ui-button .ui-selectmenu-button:hover, .no-ui-button .ui-selectmenu-button:active {
     background: transparent;
-    color: var(--color-link-hover);
+    color: var(--clr-a-interact);
     text-decoration: underline;
     box-shadow: none;
   }
 
   .no-ui-button .ui-selectmenu-button:focus {
-    outline: thin solid var(--color-link-focus);
+    outline: thin solid var(--clr-focus);
   }
 
   .no-ui-button .ui-selectmenu-button .ui-selectmenu-icon {
@@ -2684,24 +2684,24 @@ input[type=button] .ui-icon,
   .ui-slider {
     position: relative;
     box-sizing: border-box;
-    border-color: var(--color-border);
-    background-color: var(--color-background-box);
+    border-color: var(--clr-brdr);
+    background-color: var(--clr-bkgd-box);
     text-align: start;
   }
 
   .ui-slider:hover {
-    border-color: var(--color-border-extra-dark);
+    border-color: var(--clr-brdr-x-dark);
   }
 
   .ui-slider .ui-slider-handle {
-    background-color: var(--color-button-gradient-to);
-    background-image: linear-gradient(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    background-color: var(--clr-btn-grad-to);
+    background-image: linear-gradient(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
     position: absolute;
     z-index: 2;
     box-sizing: border-box;
     width: 20px;
     height: 20px;
-    border: 1px solid var(--color-border-extra-dark);
+    border: 1px solid var(--clr-brdr-x-dark);
     border-radius: 50%;
     box-shadow: var(--standard-shadow);
     cursor: pointer;
@@ -2709,7 +2709,7 @@ input[type=button] .ui-icon,
   }
 
   .ui-slider .ui-slider-handle:hover {
-    border-color: var(--color-border-extra-dark);
+    border-color: var(--clr-brdr-x-dark);
     filter: brightness(1.05);
   }
 
@@ -2722,20 +2722,20 @@ input[type=button] .ui-icon,
     position: absolute;
     z-index: 1;
     border: 0;
-    background: var(--color-gradient-to);
+    background: var(--clr-grad-to);
     font-size: 10px;
   }
 
   body.darkmode .ui-slider {
-    border-color: var(--color-border-extra-dark);
+    border-color: var(--clr-brdr-x-dark);
   }
 
   body.darkmode .ui-slider:hover {
-    border-color: var(--color-border-extra-light);
+    border-color: var(--clr-brdr-x-lite);
   }
 
   body.darkmode .ui-slider .ui-slider-handle {
-    border-color: var(--color-border-extra-light);
+    border-color: var(--clr-brdr-x-lite);
   }
 
   /**
@@ -2908,7 +2908,7 @@ input[type=button] .ui-icon,
   }
 
   .ui-tabs .ui-tabs-nav:not(.switcher-list) .ui-tabs-anchor {
-    color: var(--color-text);
+    color: var(--clr-text);
     text-decoration: none;
   }
 
@@ -2926,7 +2926,7 @@ input[type=button] .ui-icon,
   }
 
   .ui-tabs .ui-tabs-nav .ui-state-focus a {
-    outline: thin solid var(--color-link-focus);
+    outline: thin solid var(--clr-focus);
   }
 
   .ui-tabs .ui-tabs-panel {
@@ -2979,12 +2979,12 @@ input[type=button] .ui-icon,
    * Additonal styling for tabs vertical.
    */
   .ui-tabs-vertical .ui-tabs-nav {
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--clr-brdr);
   }
 
   .ui-tabs-vertical .ui-tabs-nav li {
     display: block;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--clr-brdr);
     border-bottom: 1px solid transparent;
   }
 
