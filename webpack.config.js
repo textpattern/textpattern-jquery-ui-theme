@@ -19,20 +19,31 @@ module.exports = {
                 test: /\.(scss)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    // Translates CSS into CommonJS modules.
-                    { loader: 'css-loader', options: { importLoaders: 2 } },
-                    // Run postCSS actions.
-                    { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
-                    // Compiles Sass to CSS.
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2,
+                        },
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    'autoprefixer',
+                                ],
+                            },
+                        },
+                    },
                     {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
                             sassOptions: {
-                                outputStyle: 'expanded'
-                            }
-                        }
-                    }
+                                outputStyle: 'expanded',
+                            },
+                        },
+                    },
                 ]
             },
         ]
