@@ -169,7 +169,7 @@ a.ui-state-default:focus {
   }
 
   body.darkmode .ui-state-highlight.ui-state-hover {
-    --clr-warning-text-dark: hsl(40, 100%, 40%);
+    --clr-warning-text-dark: hsl(40 100% 40%);
     border-color: var(--clr-warning-text-dark);
   }
 
@@ -186,7 +186,7 @@ a.ui-state-default:focus {
   }
 
   body.darkmode .ui-state-active.ui-state-hover {
-    --clr-a-interact-dark: hsl(210, 100%, 60%);
+    --clr-a-interact-dark: hsl(210 100% 60%);
     border-color: var(--clr-a-interact-dark);
   }
 
@@ -204,7 +204,7 @@ a.ui-state-default:focus {
   }
 
   body.darkmode .ui-state-error.ui-state-hover {
-    --clr-error-text-dark: hsl(337, 100%, 40%);
+    --clr-error-text-dark: hsl(337 100% 40%);
     border-color: var(--clr-error-text-dark);
   }
 
