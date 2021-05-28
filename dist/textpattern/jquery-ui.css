@@ -575,7 +575,6 @@ a.ui-state-default:focus {
   /* 4 */
   cursor: pointer;
   -webkit-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .ui-button:hover {
@@ -1549,7 +1548,6 @@ input.ui-button.ui-icon-notext .ui-icon {
   font-family: inherit;
   cursor: pointer;
   -webkit-user-select: auto;
-      -ms-user-select: auto;
           user-select: auto;
 }
 .no-ui-button .ui-selectmenu-button:hover, .no-ui-button .ui-selectmenu-button:active {
