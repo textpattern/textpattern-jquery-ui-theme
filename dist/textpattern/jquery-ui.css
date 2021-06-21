@@ -1182,6 +1182,10 @@ input[type=button] .ui-icon,
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg%3E%3Cpath d='m2 16h12v-16h-12zm11-15v6h-2v2h2v6h-10v-6h2v-2h-2v-6z'/%3E%3Cpath d='m9 10h2l-3 3-3-3h2v-4h-2l3-3 3 3h-2z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+.ui-extra-icon-more {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='2'/%3E%3Ccircle cx='2' cy='8' r='2'/%3E%3Ccircle cx='14' cy='8' r='2'/%3E%3C/svg%3E");
+}
+
 .ui-extra-icon-code {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m7 5-2-2-5 5 5 5 2-2-3-3zm2 6 2 2 5-5-5-5-2 2 3 3z'/%3E%3C/svg%3E");
 }
