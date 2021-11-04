@@ -20,7 +20,7 @@
     "autoprefixer": "10.4.0",
     "clean-webpack-plugin": "4.0.0",
     "cross-env": "7.0.3",
-    "css-loader": "6.5.0",
+    "css-loader": "6.5.1",
     "fibers": "5.0.0",
     "mini-css-extract-plugin": "2.4.3",
     "postcss": "8.3.11",
