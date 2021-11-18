@@ -22,7 +22,7 @@
     "cross-env": "7.0.3",
     "css-loader": "6.5.1",
     "fibers": "5.0.0",
-    "mini-css-extract-plugin": "2.4.4",
+    "mini-css-extract-plugin": "2.4.5",
     "postcss": "8.3.11",
     "postcss-loader": "6.2.0",
     "sass": "1.43.4",
