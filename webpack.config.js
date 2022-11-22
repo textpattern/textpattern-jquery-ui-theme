@@ -52,8 +52,6 @@ module.exports = {
         new CleanWebpackPlugin(),
         new StyleLintPlugin({
             configFile: '.stylelintrc.yml',
-            syntax: 'scss',
-            context: 'scss',
             files: '**/*.scss',
             failOnError: false,
             quiet: false
