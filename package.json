@@ -24,7 +24,7 @@
     "fibers": "5.0.1",
     "mini-css-extract-plugin": "2.7.0",
     "postcss": "8.4.12",
-    "postcss-loader": "6.2.1",
+    "postcss-loader": "7.0.1",
     "sass": "1.56.1",
     "sass-loader": "12.6.0",
     "stylelint": "14.15.0",
