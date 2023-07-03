@@ -250,7 +250,7 @@ body.darkmode .ui-state-disabled:not(.ui-button) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: hsla(0deg, 0%, 0%, 0.66);
+  background: hsla(0, 0%, 0%, 0.66);
 }
 
 /* Shadows
@@ -2405,7 +2405,7 @@ body.darkmode .ui-progressbar {
   height: 6px;
   animation: progressbar-stripes linear 4s infinite;
   background-color: var(--clr-accent-grad-to);
-  background-image: linear-gradient(135deg, hsla(0deg, 0%, 100%, 0.33) 25%, transparent 25%, transparent 50%, hsla(0deg, 0%, 100%, 0.33) 50%, hsla(0deg, 0%, 100%, 0.33) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, hsla(0, 0%, 100%, 0.33) 25%, transparent 25%, transparent 50%, hsla(0, 0%, 100%, 0.33) 50%, hsla(0, 0%, 100%, 0.33) 75%, transparent 75%, transparent);
   background-size: 24px 24px;
 }
 
@@ -2422,14 +2422,14 @@ body.darkmode .ui-progressbar {
  */
 .ui-progressbar-indeterminate .ui-progressbar-value {
   background-color: var(--clr-brdr);
-  background-image: linear-gradient(135deg, hsla(0deg, 0%, 100%, 0.25) 25%, transparent 25%, transparent 50%, hsla(0deg, 0%, 100%, 0.25) 50%, hsla(0deg, 0%, 100%, 0.25) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, hsla(0, 0%, 100%, 0.25) 25%, transparent 25%, transparent 50%, hsla(0, 0%, 100%, 0.25) 50%, hsla(0, 0%, 100%, 0.25) 75%, transparent 75%, transparent);
 }
 
 body.darkmode .ui-progressbar-value {
-  background-image: linear-gradient(135deg, hsla(0deg, 0%, 100%, 0.33) 25%, transparent 25%, transparent 50%, hsla(0deg, 0%, 100%, 0.33) 50%, hsla(0deg, 0%, 100%, 0.33) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, hsla(0, 0%, 100%, 0.33) 25%, transparent 25%, transparent 50%, hsla(0, 0%, 100%, 0.33) 50%, hsla(0, 0%, 100%, 0.33) 75%, transparent 75%, transparent);
 }
 body.darkmode .ui-progressbar-indeterminate .ui-progressbar-value {
-  background-image: linear-gradient(135deg, hsla(0deg, 0%, 100%, 0.25) 25%, transparent 25%, transparent 50%, hsla(0deg, 0%, 100%, 0.25) 50%, hsla(0deg, 0%, 100%, 0.25) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, hsla(0, 0%, 100%, 0.25) 25%, transparent 25%, transparent 50%, hsla(0, 0%, 100%, 0.25) 50%, hsla(0, 0%, 100%, 0.25) 75%, transparent 75%, transparent);
 }
 
 /**
@@ -2839,7 +2839,7 @@ body.darkmode .ui-tabs .ui-tabs-nav li:hover {
   border-bottom-width: 0;
   list-style: none;
   white-space: nowrap;
-  box-shadow: inset 0 -0.25em 0.5em hsla(0deg, 0%, 40%, 0.15);
+  box-shadow: inset 0 -0.25em 0.5em hsla(0, 0%, 40%, 0.15);
 }
 .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active {
   margin-bottom: -1px;
@@ -2848,7 +2848,7 @@ body.darkmode .ui-tabs .ui-tabs-nav li:hover {
 }
 
 body.darkmode .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
-  box-shadow: inset 0 -0.25em 0.5em hsla(0deg, 0%, 0%, 0.3);
+  box-shadow: inset 0 -0.25em 0.5em hsla(0, 0%, 0%, 0.3);
 }
 body.darkmode .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active {
   box-shadow: none;
