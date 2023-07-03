@@ -11,6 +11,7 @@
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
     $filename: $hdfile + "." + $hdtype !default;
     $hdfilename: $hdfile + "@2x." + $hdtype !default;
+
     background-image: url("../img/" + $filename);
     background-size: $hdwidth $hdheight;
 

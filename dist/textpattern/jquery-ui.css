@@ -32,7 +32,7 @@
   outline: 0;
   list-style: none;
   font-size: 1rem;
-  line-height: 1.5384615385;
+  line-height: 1.5384615;
   text-decoration: none;
 }
 
@@ -1563,14 +1563,14 @@ input[type=button] .ui-icon,
   position: relative;
   box-sizing: border-box;
   margin: 0;
-  padding: 0.3076923077em 0.6153846154em;
+  padding: 0.3076923em 0.6153846em;
   overflow: visible; /* 1 */
   border: 1px solid var(--clr-btn-brdr);
   background-clip: padding-box;
   color: var(--clr-text-btn);
   font-family: inherit;
   font-size: 1rem; /* 2 */
-  line-height: 1.5384615385;
+  line-height: 1.5384615;
   vertical-align: baseline;
   text-align: center;
   -webkit-appearance: none;
@@ -1985,7 +1985,7 @@ body.darkmode .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-i
 }
 .ui-datepicker .ui-datepicker-title {
   margin: 0 2.2em;
-  line-height: 1.8461538462;
+  line-height: 1.8461538;
   text-align: center;
 }
 .ui-datepicker .ui-datepicker-title select {
@@ -2293,7 +2293,7 @@ body.darkmode .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-i
   outline: 0;
   list-style: none;
   font-size: 1rem; /* 1 */
-  line-height: 1.5384615385;
+  line-height: 1.5384615;
   box-shadow: var(--standard-shadow);
 }
 .ui-menu .ui-menu {
@@ -2494,9 +2494,9 @@ body.darkmode .ui-progressbar-indeterminate .ui-progressbar-value {
 .ui-selectmenu-icon {
   flex: none;
   order: 2;
-  margin: 0.2em 0.2307692308em 0;
-  -webkit-margin-end: -0.2307692308em;
-          margin-inline-end: -0.2307692308em;
+  margin: 0.2em 0.2307692em 0;
+  -webkit-margin-end: -0.2307692em;
+          margin-inline-end: -0.2307692em;
 }
 
 .ui-selectmenu-text {
@@ -2521,11 +2521,11 @@ body.darkmode .ui-progressbar-indeterminate .ui-progressbar-value {
 .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
   height: auto;
   margin: 0.5em 0 0;
-  padding: 2px 0.6153846154em;
+  padding: 2px 0.6153846em;
   border-top: 1px solid var(--clr-brdr);
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.5384615385;
+  line-height: 1.5384615;
 }
 .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup:first-child {
   margin: 0;
@@ -2740,8 +2740,8 @@ body.darkmode .ui-slider .ui-slider-handle {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-size: 0.5384615385rem;
-  line-height: 1.5714285714;
+  font-size: 0.5384615rem;
+  line-height: 1.5714286;
   cursor: default;
 }
 
@@ -2807,7 +2807,7 @@ body.darkmode .ui-slider .ui-slider-handle {
 }
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
   display: block;
-  padding: 0.3846153846em 1em;
+  padding: 0.3846154em 1em;
 }
 .ui-tabs .ui-tabs-nav li:hover {
   filter: brightness(1.05);
