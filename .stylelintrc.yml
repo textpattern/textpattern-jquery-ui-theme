@@ -11,7 +11,6 @@ plugins:
   - stylelint-order
 
 rules:
-
   # Specify percentage or number notation for alpha-values.
   alpha-value-notation: number
 
@@ -25,8 +24,7 @@ rules:
   # Require or disallow an empty line before at-rules.
   at-rule-empty-line-before:
     - always
-    -
-      except:
+    - except:
         - blockless-after-blockless
         - first-nested
       ignore:
@@ -37,8 +35,7 @@ rules:
   # Disallow unknown at-rules.
   at-rule-no-unknown:
     - true
-    -
-      ignoreAtRules:
+    - ignoreAtRules:
         - at-root
         - each
         - else
@@ -84,7 +81,7 @@ rules:
   color-no-invalid-hex: true
 
   # Require or disallow an empty line before comments.
-  comment-empty-line-before: null
+  #comment-empty-line-before:
 
   # Disallow empty comments.
   comment-no-empty: true
@@ -102,7 +99,7 @@ rules:
   #custom-media-pattern:
 
   # Require or disallow an empty line before custom properties (Autofixable).
-  #custom-property-empty-line-before:
+  custom-property-empty-line-before: never
 
   # Disallow missing `var` function for custom properties.
   #custom-property-no-missing-var-function: true
@@ -114,7 +111,7 @@ rules:
   declaration-block-no-duplicate-custom-properties: true
 
   # Disallow duplicate properties within declaration blocks.
-  declaration-block-no-duplicate-properties: true
+  #declaration-block-no-duplicate-properties:
 
   # Disallow longhand properties that can be combined into one shorthand property.
   declaration-block-no-redundant-longhand-properties: true
@@ -264,7 +261,11 @@ rules:
   #no-invalid-double-slash-comments: true
 
   # Disallow invalid position `@import` rules within a stylesheet.
-  no-invalid-position-at-import-rule: null
+  no-invalid-position-at-import-rule:
+    - true
+    - ignoreAtRules:
+        - forward
+        - use
 
   # Disallow irregular whitespaces.
   no-irregular-whitespace: true
@@ -284,15 +285,13 @@ rules:
   # Disallow unknown properties.
   property-no-unknown:
     - true
-    -
-      ignoreProperties:
+    - ignoreProperties:
         - contains-intrinsic-size
 
   # Disallow vendor prefixes for properties.
   property-no-vendor-prefix:
     - true
-    -
-      ignoreProperties:
+    - ignoreProperties:
         - appearance
 
   # Specify a whitelist of allowed properties.
@@ -301,8 +300,7 @@ rules:
   # Require or disallow an empty line before rules.
   rule-empty-line-before:
     - always-multi-line
-    -
-      except:
+    - except:
         - first-nested
 
   # Specify a list of disallowed properties for selectors within rules.
@@ -336,13 +334,13 @@ rules:
   #selector-disallowed-list:
 
   # Specify a pattern for ID selectors.
-  #selector-id-pattern:
+  selector-id-pattern: null
 
   # Limit the number of attribute selectors in a selector.
   selector-max-attribute: 2
 
   # Limit the number of classes in a selector.
-  selector-max-class: 4
+  selector-max-class: 5
 
   # Limit the number of combinators in a selector.
   selector-max-combinators: 4
@@ -351,16 +349,16 @@ rules:
   selector-max-compound-selectors: 5
 
   # Limit the number of id selectors in a selector.
-  selector-max-id: 1
+  selector-max-id: 2
 
   # Limit the number of pseudo-classes in a selector.
   selector-max-pseudo-class: 3
 
   # Limit the specificity of selectors.
-  selector-max-specificity: 1,2,1
+  selector-max-specificity: 2,2,1
 
   # Limit the number of type in a selector.
-  selector-max-type: 3
+  selector-max-type: 4
 
   # Limit the number of universal selectors in a selector.
   selector-max-universal: 1
@@ -382,7 +380,6 @@ rules:
 
   # Disallow unknown pseudo-class selectors.
   selector-pseudo-class-no-unknown: true
-
 
   # Specify a whitelist of allowed pseudo-class selectors.
   #selector-pseudo-class-whitelist:
@@ -429,10 +426,8 @@ rules:
   # Disallow vendor prefixes for values.
   value-no-vendor-prefix: true
 
-
- # SMACSS-like property order rules (stylelint-order plugin).
+  # SMACSS-like property order rules (stylelint-order plugin).
   order/properties-order:
-
     # Heading.
 
     - content
@@ -875,10 +870,18 @@ rules:
     - size
     - marks
 
- # Additional SCSS rules (stylelint-scss plugin).
+  # Additional SCSS rules (stylelint-scss plugin).
 
   # Require or disallow whitespace after the colon in `$`-variable declarations.
   scss/dollar-variable-colon-space-after: null
+
+  # Require an empty line or disallow empty lines before `$`-variable declarations.
+  scss/dollar-variable-empty-line-before:
+    - always
+    - except:
+        - first-nested
+        - after-comment
+        - after-dollar-variable
 
   # Require or disallow an empty line before `//`-comments.
   scss/double-slash-comment-empty-line-before: null

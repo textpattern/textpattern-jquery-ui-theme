@@ -21,7 +21,10 @@
  */
 
 .ui-button {
-    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
+    @include setup.gradient-linear(
+        var(--clr-btn-grad-from),
+        var(--clr-btn-grad-to)
+    );
 
     display: inline-block;
     position: relative;
