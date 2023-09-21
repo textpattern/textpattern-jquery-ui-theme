@@ -1502,8 +1502,7 @@ input[type=button] .ui-icon,
 }
 .ui-accordion .ui-accordion-icons,
 .ui-accordion .ui-accordion-icons .ui-accordion-icons {
-  -webkit-padding-start: 2em;
-          padding-inline-start: 2em;
+  padding-inline-start: 2em;
 }
 
 /**
@@ -1573,8 +1572,7 @@ input[type=button] .ui-icon,
   line-height: 1.5384615;
   vertical-align: baseline;
   text-align: center;
-  -webkit-appearance: none;
-          appearance: none; /* 3 */
+  appearance: none; /* 3 */
   cursor: pointer; /* 4 */
   -webkit-user-select: none;
           user-select: none;
@@ -2212,8 +2210,7 @@ body.darkmode .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-i
 }
 .ui-dialog .ui-dialog-buttonpane button {
   margin: 0.5em 0;
-  -webkit-margin-end: 0.4em;
-          margin-inline-end: 0.4em;
+  margin-inline-end: 0.4em;
   cursor: pointer;
 }
 
@@ -2312,8 +2309,7 @@ body.darkmode .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-i
   display: block;
   margin: -0.3076923em -0.6153846em;
   padding: 0.3076923em 0.6153846em;
-  -webkit-padding-start: 2em;
-          padding-inline-start: 2em;
+  padding-inline-start: 2em;
   cursor: pointer;
 }
 .ui-menu .ui-menu-item label [type=checkbox],
@@ -2495,8 +2491,7 @@ body.darkmode .ui-progressbar-indeterminate .ui-progressbar-value {
   flex: none;
   order: 2;
   margin: 0.2em 0.2307692em 0;
-  -webkit-margin-end: -0.2307692em;
-          margin-inline-end: -0.2307692em;
+  margin-inline-end: -0.2307692em;
 }
 
 .ui-selectmenu-text {
@@ -2727,8 +2722,7 @@ body.darkmode .ui-slider .ui-slider-handle {
   vertical-align: baseline;
 }
 .ui-spinner .ui-spinner-input {
-  -webkit-padding-end: 24px;
-          padding-inline-end: 24px;
+  padding-inline-end: 24px;
 }
 
 .ui-spinner-button {
