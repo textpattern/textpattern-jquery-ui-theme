@@ -1572,7 +1572,8 @@ input[type=button] .ui-icon,
   line-height: 1.5384615;
   vertical-align: baseline;
   text-align: center;
-  appearance: none; /* 3 */
+  -webkit-appearance: none;
+          appearance: none; /* 3 */
   cursor: pointer; /* 4 */
   -webkit-user-select: none;
           user-select: none;
