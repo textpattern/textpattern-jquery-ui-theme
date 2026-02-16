@@ -270,6 +270,9 @@ rules:
         - forward
         - use
 
+  # Disallow invalid position declarations.
+  no-invalid-position-declaration: false
+
   # Disallow irregular whitespaces.
   no-irregular-whitespace: true
 
