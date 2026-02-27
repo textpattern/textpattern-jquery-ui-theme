@@ -31,7 +31,7 @@
     "stylelint": "17.3.0",
     "stylelint-order": "7.0.1",
     "stylelint-webpack-plugin": "5.1.0",
-    "webpack": "5.105.2",
+    "webpack": "5.105.3",
     "webpack-cli": "6.0.1"
   },
   "browserslist": [
