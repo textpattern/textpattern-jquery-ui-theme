@@ -32,7 +32,7 @@
     "stylelint-order": "8.1.1",
     "stylelint-webpack-plugin": "5.1.0",
     "webpack": "5.106.2",
-    "webpack-cli": "7.0.2"
+    "webpack-cli": "7.0.3"
   },
   "browserslist": [
     "> 0.5%",
