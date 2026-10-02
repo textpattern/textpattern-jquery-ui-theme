@@ -9,10 +9,17 @@ module.exports = {
     entry: {
         'jquery-ui.css': './scss/jquery-ui.scss'
     },
+
     output: {
         path: distDir,
         filename: '.Trashes'
     },
+
+    // Keep the generated CSS readable rather than minified.
+    optimization: {
+        minimize: false,
+    },
+
     module: {
         rules: [
             {
@@ -38,9 +45,8 @@ module.exports = {
                     {
                         loader: 'sass-loader',
                         options: {
-                            implementation: require('sass'),
                             sassOptions: {
-                                outputStyle: 'expanded',
+                                style: 'expanded',
                             },
                         },
                     },
@@ -50,12 +56,14 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
+
         new StyleLintPlugin({
             configFile: '.stylelintrc.yml',
             files: '**/*.scss',
             failOnError: false,
             quiet: false
         }),
+
         new MiniCssExtractPlugin({
             filename: 'jquery-ui.css'
         }),
