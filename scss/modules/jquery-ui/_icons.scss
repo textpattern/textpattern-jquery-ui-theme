@@ -69,22 +69,22 @@ a:active.ui-icon,
 a:active .ui-icon,
 button:not(.ui-button):active .ui-icon,
 a:focus.ui-icon,
-a:focus .ui-icon,
-button:not(.ui-button):focus .ui-icon {
+a:focus-visible .ui-icon,
+button:not(.ui-button):focus-visible .ui-icon {
     opacity: 1;
 }
 
 a:focus.ui-icon,
-a:focus .ui-icon,
-button:not(.ui-button):focus .ui-icon {
+a:focus-visible .ui-icon,
+button:not(.ui-button):focus-visible .ui-icon {
     filter: invert(32%) sepia(81%) saturate(5962%) hue-rotate(212deg)
         brightness(104%) contrast(105%);
 }
 
 @include setup.dark-mode {
     a:focus.ui-icon,
-    a:focus .ui-icon,
-    button:not(.ui-button):focus .ui-icon {
+    a:focus-visible .ui-icon,
+    button:not(.ui-button):focus-visible .ui-icon {
         filter: invert(19%) sepia(50%) saturate(7476%) hue-rotate(303deg)
             brightness(103%) contrast(119%);
     }
@@ -214,20 +214,14 @@ button:not(.ui-button):focus .ui-icon {
 
 .ui-icon-inversed,
 #messagepane .ui-icon {
-    filter: invert(100%);
-}
-
-@include setup.dark-mode {
-    .ui-icon-inversed {
-        filter: invert(100%);
-    }
+    filter: invert(100%) !important;
 }
 
 /**
  * Weighted content icons and interaction state icons.
  */
 
-button:not(.destroy),
+button:not(.destroy, .txp-reduced-ui-button),
 [type="reset"],
 [type="submit"]:not(.destroy),
 input[type="button"],
@@ -709,6 +703,10 @@ input[type="button"],
 
 .ui-icon-copy {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cg%3E%3Cpath d='M8 11v2h7V3H8v2H7V2h9v12H7v-3zM6 3V2H0v12h6v-1H1V3z'/%3E%3Cpath d='M13 8l-3-3v2H4v2h6v2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.ui-icon-view-page {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M14 4v11H2V1h9l3 3Zm-3-2H3v12h10V4l-2-2Z'/%3E%3Cpath d='M11 4V2h-1v3h3V4h-2ZM11.5 5.951H7.638l1.207 1.207L4.5 11.503l1.448 1.448 4.345-4.345L11.5 9.813'/%3E%3C/svg%3E");
 }
 
 .ui-icon-contact {
